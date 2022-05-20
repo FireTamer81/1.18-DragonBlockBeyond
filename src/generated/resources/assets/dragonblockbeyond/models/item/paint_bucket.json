@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dragonblockbeyond:item/paint_bucket",
+    "layer1": "dragonblockbeyond:item/paint_bucket_color"
+  }
+}

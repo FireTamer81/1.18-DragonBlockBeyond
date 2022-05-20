@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dragonblockbeyond:block/test_block"
+    }
+  }
+}

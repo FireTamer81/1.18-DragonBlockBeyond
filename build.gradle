@@ -90,15 +90,18 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    //maven { url "https://dl.cloudsmith.io/public/matyrobbrt/matylib/maven/" }
-
-
+    maven { //TOP
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
 
-    //implementation fg.deobf("com.matyrobbrt:matylib-${mc_version}:${matylib_version}")
+    implementation fg.deobf("curse.maven:top-245211:3671753")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

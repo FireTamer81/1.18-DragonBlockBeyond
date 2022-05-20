@@ -1,0 +1,15 @@
+{
+  "block.dragonblockbeyond.test_block": "Test Block",
+  "block.dragonblockbeyond.warenai_full_block": "Warenai Full Block",
+  "gui.dragonblockbeyond.blue": "Blue",
+  "gui.dragonblockbeyond.brightness": "Brightness",
+  "gui.dragonblockbeyond.green": "Green",
+  "gui.dragonblockbeyond.hue": "Hue",
+  "gui.dragonblockbeyond.red": "Red",
+  "gui.dragonblockbeyond.saturation": "Saturation",
+  "gui.dragonblockbeyond.useHSB": "Use HSB",
+  "gui.dragonblockbeyond.useRGB": "Use RGB",
+  "item.dragonblockbeyond.test_item": "Test Item",
+  "itemGroup.dbb_blocks_tab": "DBB Blocks",
+  "itemGroup.dbb_items_tab": "DBB Items"
+}
