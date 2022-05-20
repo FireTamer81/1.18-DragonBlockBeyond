@@ -15,6 +15,15 @@ import java.util.Collections;
 import java.util.List;
 
 public class ModelHelper {
+
+    /**
+     * This just builds vectors and is useful for clean code
+     *
+     * @param x x component
+     * @param y y component
+     * @param z z component
+     * @return 3D-Vector with input values. Why am I writing this...
+     */
     public static DBVector3d v(double x, double y, double z) {
         return new DBVector3d(x, y, z);
     }
@@ -159,6 +168,9 @@ public class ModelHelper {
     }
 
     /**
+     * Important Note: These versions of the methods always has the quads rendered as true. My best guess as for why this is possible is because logic
+     * Might cause some quads to not render when they should because the are not actually obstructed.
+     * -----------------------------------------------------------------------
      * This method is used to create a cuboid from six faces. Input values determine
      * the dimensions of the cuboid and the texture to apply.
      * Example 1: full block with dirt texture would be:
@@ -177,12 +189,10 @@ public class ModelHelper {
      * @param texture   TextureAtlasSprite of the block
      * @return List of baked quads, i.e. List of six faces
      */
-    public static List<BakedQuad> createCuboid(float xl, float xh, float yl, float yh, float zl, float zh, TextureAtlasSprite texture, int tintIndex) {
-        return createCuboid(xl, xh, yl, yh, zl, zh, texture, tintIndex, true, true, true, true, true, true);
-    }
+
 
 	@SuppressWarnings("resource")
-	public static List<BakedQuad> createCuboid(float xl, float xh, float yl, float yh, float zl, float zh, TextureAtlasSprite texture, int tintIndex,
+    public static List<BakedQuad> createCuboid(float xl, float xh, float yl, float yh, float zl, float zh, TextureAtlasSprite texture, int tintIndex,
                                                boolean north, boolean south, boolean east, boolean west, boolean up, boolean down) {
         List<BakedQuad> quads = new ArrayList<>();
         //Eight corners of the block
@@ -217,44 +227,39 @@ public class ModelHelper {
         return quads;
     }
 
-
-
-    public static List<BakedQuad> createCuboid(float xl, float xh, float yl, float yh, float zl, float zh, TextureAtlasSprite texture, int tintIndex, int[] ulow, int[] uhigh, int[] vlow, int[] vhigh) {
-        return createCuboid(xl, xh, yl, yh, zl, zh, texture, tintIndex, true, true, true, true, true, true, ulow, uhigh, vlow, vhigh);
-    }
-
-    public static List<BakedQuad> createCuboid(float xl, float xh, float yl, float yh, float zl, float zh, TextureAtlasSprite texture, int tintIndex, boolean north, boolean south, boolean east, boolean west, boolean up, boolean down, int[] ulow, int[] uhigh, int[] vlow, int[] vhigh) {
-        if (ulow.length != 6 || uhigh.length != 6 || vlow.length != 6 || vhigh.length != 6) {
-            return Collections.emptyList();
-        }
+    public static List<BakedQuad> createCuboid(float xl, float xh, float yl, float yh, float zl, float zh, TextureAtlasSprite texture, int tintIndex) {
         List<BakedQuad> quads = new ArrayList<>();
         //Eight corners of the block
         DBVector3d NWU = v(xl, yh, zl); //North-West-Up
-        DBVector3d NEU = v(xl, yh, zh); //...
-        DBVector3d NWD = v(xl, yl, zl);
-        DBVector3d NED = v(xl, yl, zh);
-        DBVector3d SWU = v(xh, yh, zl);
-        DBVector3d SEU = v(xh, yh, zh);
-        DBVector3d SWD = v(xh, yl, zl);
+        DBVector3d SWU = v(xl, yh, zh); //South-West-Up
+        DBVector3d NWD = v(xl, yl, zl); //North-West-Down
+        DBVector3d SWD = v(xl, yl, zh); //South-West-Down
+        DBVector3d NEU = v(xh, yh, zl); //North-East-Up
+        DBVector3d SEU = v(xh, yh, zh); //South-East-Up
+        DBVector3d NED = v(xh, yl, zl); //North-East-Down
         DBVector3d SED = v(xh, yl, zh); //South-East-Down
 
-        if (up) { quads.add(createQuad(NWU, NEU, SEU, SWU, texture, ulow[0], uhigh[0], vlow[0], vhigh[0], tintIndex)); }
-        if (down) { quads.add(createQuad(NED, NWD, SWD, SED, texture, ulow[1], uhigh[1], vlow[1], vhigh[1], tintIndex)); }
-        if (north) { quads.add(createQuad(NWU, NWD, NED, NEU, texture, ulow[2], uhigh[2], vlow[2], vhigh[2], tintIndex)); }
-        if (east) { quads.add(createQuad(NEU, NED, SED, SEU, texture, ulow[3], uhigh[3], vlow[3], vhigh[3], tintIndex)); }
-        if (south) { quads.add(createQuad(SEU, SED, SWD, SWU, texture, ulow[4], uhigh[4], vlow[4], vhigh[4], tintIndex)); }
-        if (west) { quads.add(createQuad(SWU, SWD, NWD, NWU, texture, ulow[5], uhigh[5], vlow[5], vhigh[5], tintIndex)); }
+        if (xh - xl > 1 || yh - yl > 1 || zh - zl > 1) {
+            if (Minecraft.getInstance().player != null) {
+                Minecraft.getInstance().player.displayClientMessage(new TextComponent("message.blockcarpentry.block_error"), true);
+            }
+            return quads;
+        }
+
+        if (xl < 0) { xl++; xh++; }
+        if (xh > 1) { xh--; xl--; }
+        if (yl < 0) { yl++; yh++; }
+        if (yh > 1) { yh--; yl--; }
+        if (zl < 0) { zl++; zh++; }
+        if (zh > 1) { zh--; zl--; }
+
+        quads.add(createQuad(NWU, SWU, SEU, NEU, texture, xl * 16, xh * 16, zl * 16, zh * 16, tintIndex));
+        quads.add(createQuad(NED, SED, SWD, NWD, texture, xh * 16, xl * 16, 16 - zl * 16, 16 - zh * 16, tintIndex));
+        quads.add(createQuad(NWU, NWD, SWD, SWU, texture, zl * 16, zh * 16, 16 - yh * 16, 16 - yl * 16, tintIndex));
+        quads.add(createQuad(SEU, SED, NED, NEU, texture, 16 - zh * 16, 16 - zl * 16, 16 - yh * 16, 16 - yl * 16, tintIndex));
+        quads.add(createQuad(NEU, NED, NWD, NWU, texture, 16 - xh * 16, 16 - xl * 16, 16 - yh * 16, 16 - yl * 16, tintIndex));
+        quads.add(createQuad(SWU, SWD, SED, SEU, texture, xl * 16, xh * 16, 16 - yh * 16, 16 - yl * 16, tintIndex));
 
         return quads;
     }
-
-    /**
-     * This just builds vectors and is useful for clean code
-     *
-     * @param x x component
-     * @param y y component
-     * @param z z component
-     * @return 3D-Vector with input values. Why am I writing this...
-     */
-
 }

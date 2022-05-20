@@ -76,44 +76,25 @@ public class WarenaiBlockModel implements IDynamicBakedModel {
 		double l = 0;
 		double r = 1;
 
-		boolean renderNorth = true;
-		boolean renderEast = true;
-		boolean renderSouth = true;
-		boolean renderWest = true;
-		boolean renderUp = true;
-		boolean renderDown = true;
-
 		if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.POLISHED) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, polishedUnderlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, polishedUnderlayTexture, 0));
 		} else if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.NORMAL) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0));
 		} else if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.SCUFFED) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, scuffed_OverlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, scuffed_OverlayTexture, 0));
 		} else if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.CRACKED1) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c1_OverlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c1_OverlayTexture, 0));
 		} else if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.CRACKED2) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c2_OverlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c2_OverlayTexture, 0));
 		} else if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.CRACKED3) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c3_OverlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c3_OverlayTexture, 0));
 		} else if (state.getValue(WarenaiBlock.BLOCK_CONDITION) == WarenaiBlockConditionEnum.CRACKED4) {
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
-			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c4_OverlayTexture, 0,
-					renderNorth, renderEast, renderSouth, renderWest, renderUp, renderDown));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, underlayTexture, 0));
+			allQuads.addAll(ModelHelper.createCuboid(0f, 1f, 0f, 1f, 0f, 1f, c4_OverlayTexture, 0));
 		}
 
 		return allQuads;
