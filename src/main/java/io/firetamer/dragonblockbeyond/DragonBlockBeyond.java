@@ -1,10 +1,10 @@
 package io.firetamer.dragonblockbeyond;
 
 import com.mojang.logging.LogUtils;
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.ColorableStrongBlockModule;
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.dispenser.DispensePaintbucketBehaviour;
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.util.network.PacketHandler;
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.util.top.TOPMain;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.dispenser.DispensePaintbucketBehaviour;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.network.PacketHandler;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.top.TOPMain;
 import io.firetamer.dragonblockbeyond.handlers.CreativeTabHandler;
 import io.firetamer.dragonblockbeyond.handlers.RegistryHandler;
 import net.minecraft.world.item.CreativeModeTab;
@@ -46,7 +46,7 @@ public class DragonBlockBeyond {
     public void setup(final FMLCommonSetupEvent event) {
         PacketHandler.register();
 
-        event.enqueueWork(() -> DispenserBlock.registerBehavior(ColorableStrongBlockModule.PAINT_BUCKET.get(),
+        event.enqueueWork(() -> DispenserBlock.registerBehavior(StrongBlockModule.PAINT_BUCKET.get(),
                 new DispensePaintbucketBehaviour()));
     }
 

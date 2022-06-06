@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "dragonblockbeyond:warenai_full_block"
+    "dragonblockbeyond:warenai_full_block",
+    "dragonblockbeyond:warenai_stairs",
+    "dragonblockbeyond:warenai_slab",
+    "dragonblockbeyond:warenai_fence",
+    "dragonblockbeyond:warenai_glass",
+    "dragonblockbeyond:warenai_glass_slab",
+    "dragonblockbeyond:warenai_glass_stairs"
   ]
 }

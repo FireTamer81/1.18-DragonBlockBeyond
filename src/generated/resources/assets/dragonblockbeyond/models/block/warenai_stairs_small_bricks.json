@@ -1,0 +1,6 @@
+{
+  "parent": "dragonblockbeyond:block/templates/stairs",
+  "textures": {
+    "all": "dragonblockbeyond:block/warenai_blocks/warenai_small_bricks"
+  }
+}

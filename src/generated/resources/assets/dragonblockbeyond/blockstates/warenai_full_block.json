@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "block_condition=polished,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block_polished"
+    },
+    "block_condition=normal,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block"
+    },
+    "block_condition=scuffed,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block_scuffed"
+    },
+    "block_condition=cracked1,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block_cracked1"
+    },
+    "block_condition=cracked2,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block_cracked2"
+    },
+    "block_condition=cracked3,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block_cracked3"
+    },
+    "block_condition=cracked4,block_pattern=smooth": {
+      "model": "dragonblockbeyond:block/warenai_full_block_cracked4"
+    },
+    "block_condition=polished,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks_polished"
+    },
+    "block_condition=normal,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks"
+    },
+    "block_condition=scuffed,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks_scuffed"
+    },
+    "block_condition=cracked1,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks_cracked1"
+    },
+    "block_condition=cracked2,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks_cracked2"
+    },
+    "block_condition=cracked3,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks_cracked3"
+    },
+    "block_condition=cracked4,block_pattern=large_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_large_bricks_cracked4"
+    },
+    "block_condition=polished,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks_polished"
+    },
+    "block_condition=normal,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks"
+    },
+    "block_condition=scuffed,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks_scuffed"
+    },
+    "block_condition=cracked1,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks_cracked1"
+    },
+    "block_condition=cracked2,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks_cracked2"
+    },
+    "block_condition=cracked3,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks_cracked3"
+    },
+    "block_condition=cracked4,block_pattern=small_brick": {
+      "model": "dragonblockbeyond:block/warenai_full_block_small_bricks_cracked4"
+    }
+  }
+}

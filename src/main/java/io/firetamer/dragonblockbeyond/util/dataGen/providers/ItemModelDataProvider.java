@@ -1,8 +1,7 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.ColorableStrongBlockModule;
-import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -20,11 +19,11 @@ public class ItemModelDataProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        makeSimpleBlockItem(BlockInit.TEST_BLOCK.get());
+        //makeSimpleBlockItem(BlockInit.TEST_BLOCK.get());
 
         simpleItem(ItemInit.TEST_ITEM.get());
 
-        item2Layers(ColorableStrongBlockModule.PAINT_BUCKET.get());
+        item2Layers(StrongBlockModule.PAINT_BUCKET.get());
 
         /**
         singleTexture(ColorableBlockTest.RGB_GLASS_PANE.getId().getPath(),

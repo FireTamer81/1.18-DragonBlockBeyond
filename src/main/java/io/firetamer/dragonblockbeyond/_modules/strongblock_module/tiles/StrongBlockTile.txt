@@ -1,0 +1,80 @@
+package io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles;
+
+import io.firetamer.dragonblockbeyond._modules.strong_block_module.StrongBlockModule;
+import io.firetamer.dragonblockbeyond._modules.strong_block_module.blocks.full_block.WarenaiFullBlock;
+import io.firetamer.dragonblockbeyond._modules.strong_block_module.properties.WarenaiBlockConditionEnum;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class StrongBlockTile extends BlockEntity {
+
+    private int strongBlockHealth = 3000;
+
+
+
+
+    public StrongBlockTile(BlockPos pos, BlockState state) {
+        super(StrongBlockModule.STRONG_BLOCK_TILE_ENTITY.get(), pos, state);
+    }
+
+    public void setStrongBlockCondition(WarenaiBlockConditionEnum setToCondition) {
+        Block thisBlock = this.level.getBlockState(this.worldPosition).getBlock();
+        BlockState thisBlockState = this.level.getBlockState(this.worldPosition);
+
+        if (thisBlock instanceof WarenaiFullBlock) {
+            this.level.setBlock(this.worldPosition, thisBlockState.setValue(WarenaiFullBlock.BLOCK_CONDITION, setToCondition), 3);
+        }
+
+        //Do similar bits for the other shape variations (stairs, slabs, fences, etc.)
+    }
+
+    public void tickServer() {
+        int currentHealth = strongBlockHealth;
+
+        if (currentHealth >= 3001 && currentHealth <= 3100) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.POLISHED);
+        }
+        if (currentHealth >= 1601 && currentHealth <= 3000) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.NORMAL);
+        }
+        if (currentHealth >= 801 && currentHealth <= 1600) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.SCUFFED);
+        }
+        if (currentHealth >= 631 && currentHealth <= 800) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.CRACKED1);
+        }
+        if (currentHealth >= 461 && currentHealth <= 630) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.CRACKED2);
+        }
+        if (currentHealth >= 291 && currentHealth <= 460) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.CRACKED3);
+        }
+        if (currentHealth >= 120 && currentHealth <= 290) {
+            setStrongBlockCondition(WarenaiBlockConditionEnum.CRACKED4);
+        }
+        if (currentHealth == 0) {
+            this.level.setBlockAndUpdate(this.worldPosition, Blocks.AIR.defaultBlockState());
+        }
+    }
+
+
+
+
+
+
+    @Override
+    public void saveAdditional(CompoundTag tags) {
+        tags.putInt("BlockHealth", this.strongBlockHealth);
+        super.saveAdditional(tags);
+    }
+
+    @Override
+    public void load(CompoundTag tags) {
+        super.load(tags);
+        if (tags.contains("BlockHealth")) this.strongBlockHealth = tags.getInt("BlockHealth");
+    }
+}

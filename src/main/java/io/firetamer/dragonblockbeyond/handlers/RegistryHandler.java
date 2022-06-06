@@ -1,6 +1,7 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.ColorableStrongBlockModule;
+import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.FabricatorTempModule;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
 import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,9 +28,17 @@ public class RegistryHandler {
             BlockInit.BLOCKS,
             BlockInit.ITEMS,
 
-            ColorableStrongBlockModule.BLOCKS,
-            ColorableStrongBlockModule.ITEMS,
-            ColorableStrongBlockModule.TILES
+            StrongBlockModule.BLOCKS,
+            StrongBlockModule.ITEMS,
+            StrongBlockModule.TILES,
+            StrongBlockModule.CONTAINER_MENUS,
+            StrongBlockModule.RECIPE_SERIALIZERS,
+
+            FabricatorTempModule.BLOCKS,
+            FabricatorTempModule.ITEMS,
+            FabricatorTempModule.TILES,
+            FabricatorTempModule.CONTAINER_MENUS,
+            FabricatorTempModule.RECIPE_SERIALIZERS
         };
 
         for (DeferredRegister<?> register : registers) {

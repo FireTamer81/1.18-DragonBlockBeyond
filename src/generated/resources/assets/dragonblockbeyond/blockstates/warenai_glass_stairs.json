@@ -1,0 +1,4309 @@
+{
+  "variants": {
+    "block_condition=polished,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=top,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=bottom,shape=straight": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs"
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=top,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=bottom,shape=inner_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=top,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=bottom,shape=inner_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_inner"
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=top,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=bottom,shape=outer_left": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=top,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=north,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 270,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=south,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=west,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "block_condition=polished,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=normal,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=scuffed,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked1,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked2,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked3,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked4,block_pattern=smooth,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=polished,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=normal,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=scuffed,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked1,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked2,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked3,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked4,block_pattern=large_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=polished,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=normal,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=scuffed,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked1,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked2,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked3,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    },
+    "block_condition=cracked4,block_pattern=small_brick,facing=east,half=bottom,shape=outer_right": {
+      "model": "dragonblockbeyond:block/warenai_glass_stairs_outer"
+    }
+  }
+}

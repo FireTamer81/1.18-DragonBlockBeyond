@@ -1,13 +1,10 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers.lang;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond._modules.colorable_strongblock_module.ColorableStrongBlockModule;
-import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
+import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.fluids.FluidStack;
 
 public class EnUSLangDataProvider extends LanguageProvider {
 
@@ -18,9 +15,9 @@ public class EnUSLangDataProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add(ItemInit.TEST_ITEM.get(), "Test Item");
-        add(BlockInit.TEST_BLOCK.get(), "Test Block");
+        //add(BlockInit.TEST_BLOCK.get(), "Test Block");
 
-        add(ColorableStrongBlockModule.WARENAI_FULL_BLOCK.get(), "Warenai Full Block");
+        add(StrongBlockModule.WARENAI_FULL_BLOCK.get(), "Warenai Full Block");
 
         addItemGroup("dbb_items_tab", "DBB Items");
         addItemGroup("dbb_blocks_tab", "DBB Blocks");

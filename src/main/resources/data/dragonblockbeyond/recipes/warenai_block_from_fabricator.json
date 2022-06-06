@@ -1,0 +1,12 @@
+{
+  "type": "dragonblockbeyond:fabricator",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+
+  "output": {
+    "item": "dragonblockbeyond:warenai_full_block"
+  }
+}

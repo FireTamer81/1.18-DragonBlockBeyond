@@ -1,0 +1,6 @@
+{
+  "parent": "dragonblockbeyond:block/templates/slab_top",
+  "textures": {
+    "all": "dragonblockbeyond:block/warenai_blocks/warenai_small_bricks_cracked3"
+  }
+}

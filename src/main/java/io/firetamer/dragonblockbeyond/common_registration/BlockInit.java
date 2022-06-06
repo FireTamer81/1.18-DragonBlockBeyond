@@ -4,6 +4,7 @@ import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,10 +18,11 @@ public class BlockInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DragonBlockBeyond.MOD_ID);
 
 
-
+    /**
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(-1, -1)));
+    **/
 
 
 

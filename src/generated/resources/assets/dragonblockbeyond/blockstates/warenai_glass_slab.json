@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "dragonblockbeyond:block/warenai_glass_slab_top"
+    },
+    "type=bottom": {
+      "model": "dragonblockbeyond:block/warenai_glass_slab"
+    },
+    "type=double": {
+      "model": "dragonblockbeyond:block/warenai_glass"
+    }
+  }
+}
