@@ -27,7 +27,7 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
 
     public FabricatorContainerMenu(int pContainerId, Inventory inv, BlockEntity entity) {
         super(MachinesModule.FABRICATOR_MENU_TYPE.get(), pContainerId);
-        checkContainerSize(inv, 41);
+        //checkContainerSize(inv, 41);
         blockEntity = ((FabricatorBlockTile) entity);
         this.level = inv.player.level;
 
@@ -35,10 +35,10 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 44, -9));
+            this.addSlot(new SlotItemHandler(handler, 0, 44, -11));
             this.addSlot(new SlotItemHandler(handler, 1, 44, 13));
             this.addSlot(new SlotItemHandler(handler, 2, 44, 37));
-            this.addSlot(new SlotItemHandler(handler, 3, 80, -13));
+            this.addSlot(new SlotItemHandler(handler, 3, 80, -15));
             this.addSlot(new ModResultSlot(handler, 4, 116, 13));
         });
     }
@@ -63,7 +63,7 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 41;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 56;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

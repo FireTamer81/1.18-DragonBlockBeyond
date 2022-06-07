@@ -1,46 +1,25 @@
+The newest versions of the "DragonBlock Beyond" mod project will now be developed on Minecraft 1.18
 
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+The current goal is to reproduce the features present in the version of the mod for Minecraft 1.16, but with MUCH better
+execution and simply better content (the mod shouldn't look like it's from MCreator people [Me]).
 
-Note also that the patches are built against "un-renamed" MCP source code (aka
-SRG Names) - this means that you will not be able to read them directly against
-normal code.
+Afterwards, the goal is to finally start with the "more dragonball" type content.
 
-Setup Process:
-==============================
+    Custom Animated Player Models (with elbows, knees, and more) abound with customization options
+    (more akin to character creators for other games that start with a base model that user build off of)
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+    Better 3rd person camera movement (don't want people getting sick with excess rotation of the camera for certain things)
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: `gradlew genEclipseRuns` (`./gradlew genEclipseRuns` if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run `gradlew eclipse` to generate the project.
+    A fighting system with both Physical and Ki skills (that are leveled up through use and possibly a "tweaking" system
+    [IRL skills rarely become better by doing them the EXACT same way everytime, finding more efficient methods mean improvement])
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: `gradlew genIntellijRuns` (`./gradlew genIntellijRuns` if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
+    A Heavy Duty Story System (This isn't FTB Quests). Options to include images and text in a visual novel style,
+    video clips, or just a simple perspective change of the existing world location and a text box.
+    (The biggest point is user created stories to allow people to make their own stories [literally] and let other people play them)
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can 
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+    And More.... but it will probably be a while before the mod arrives at the point of adding more than the above listed features.
 
-Mapping Names:
-=============================
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
 
-Additional Resources: 
-=========================
-Community Documentation: http://mcforge.readthedocs.io/en/latest/gettingstarted/  
-LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0  
-Forge Forum: https://forums.minecraftforge.net/  
-Forge Discord: https://discord.gg/UvedJ9m  
+All help is appreciated, and if you are on this github page then you probably have access to the mod's discord server.
+If you want ot help with the project, go there.
+If you don't have access to the server, post a github "issue" about joining the team.
