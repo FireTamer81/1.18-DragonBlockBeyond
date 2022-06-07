@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.widget;
+package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;

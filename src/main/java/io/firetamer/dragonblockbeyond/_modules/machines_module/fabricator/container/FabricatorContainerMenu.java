@@ -1,9 +1,8 @@
-package io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.gui.container_menu;
+package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container;
 
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.FabricatorTempModule;
-import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.widget.ModResultSlot;
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.FabricatorBlockTile;
+import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTile;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -17,43 +16,31 @@ import net.minecraftforge.items.SlotItemHandler;
 public class FabricatorContainerMenu extends AbstractContainerMenu {
     private final FabricatorBlockTile blockEntity;
     private final Level level;
-    private final ContainerData data;
+    private static final int playerInvOffsetY = 24;
+    private static final int playerInvOffsetX = 0;
+    private final FabricatorInvContainer fabricatorStorageSlots = new FabricatorInvContainer(this, 24);
+    private final FabricatorInvContainer fabricatorOutputSlots = new FabricatorInvContainer(this, 24);
 
     public FabricatorContainerMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()));
     }
 
-    public FabricatorContainerMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(FabricatorTempModule.FABRICATOR_MENU_TYPE.get(), pContainerId);
-        checkContainerSize(inv, 4);
+    public FabricatorContainerMenu(int pContainerId, Inventory inv, BlockEntity entity) {
+        super(MachinesModule.FABRICATOR_MENU_TYPE.get(), pContainerId);
+        checkContainerSize(inv, 41);
         blockEntity = ((FabricatorBlockTile) entity);
         this.level = inv.player.level;
-        this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 34, 40));
-            this.addSlot(new SlotItemHandler(handler, 1, 57, 18));
-            this.addSlot(new SlotItemHandler(handler, 2, 103, 18));
-            this.addSlot(new ModResultSlot(handler, 3, 80, 60));
+            this.addSlot(new SlotItemHandler(handler, 0, 44, -9));
+            this.addSlot(new SlotItemHandler(handler, 1, 44, 13));
+            this.addSlot(new SlotItemHandler(handler, 2, 44, 37));
+            this.addSlot(new SlotItemHandler(handler, 3, 80, -13));
+            this.addSlot(new ModResultSlot(handler, 4, 116, 13));
         });
-
-        addDataSlots(data);
-    }
-
-
-    public boolean isCrafting() {
-        return data.get(0) > 0;
-    }
-
-    public int getScaledProgress() {
-        int progress = this.data.get(0);
-        int maxProgress = this.data.get(1);
-        int progressArrowSize = 26; //The Height of the arrow graphic in pixels (Need to figure out if it can be used for width as well)
-
-        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
 
 
@@ -76,7 +63,7 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 41;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
@@ -119,20 +106,30 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player pPlayer) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, FabricatorTempModule.FABRICATOR.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, MachinesModule.FABRICATOR.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+                //int xPos = playerInvOffsetX < 0 ? (8 + l * 18) + playerInvOffsetX : (8 + l * 18) - playerInvOffsetX;
+                //int yPos = playerInvOffsetY < 0 ? (86 + i * 18) + playerInvOffsetY : (86 + i * 18) - playerInvOffsetY;
+                int xPos = (8 + l * 18) + playerInvOffsetX;
+                int yPos = (86 + i * 18) + playerInvOffsetY;
+
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, xPos, yPos));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
+            //int xPos = playerInvOffsetX < 0 ? (8 + i * 18) + playerInvOffsetX : (8 + i * 18) - playerInvOffsetX;
+            //int yPos = playerInvOffsetY < 0 ? 144 + playerInvOffsetY : 144 - playerInvOffsetY;
+            int xPos = (8 + i * 18) + playerInvOffsetX;
+            int yPos = 144 + playerInvOffsetY;
+
+            this.addSlot(new Slot(playerInventory, i, xPos, yPos));
         }
     }
 }

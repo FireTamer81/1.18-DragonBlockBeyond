@@ -1,9 +1,9 @@
-package io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.gui.screen;
+package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.gui.container_menu.FabricatorContainerMenu;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -11,7 +11,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class FabricatorScreen extends AbstractContainerScreen<FabricatorContainerMenu> {
-    private static final ResourceLocation BG_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/gem_cutting_station_gui.png");
+    private static final ResourceLocation BG_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
+    protected int imageWidth = 176;
+    protected int imageHeight = 218;
 
     public FabricatorScreen(FabricatorContainerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -22,14 +24,11 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, BG_TEXTURE);
-        int x = (width - imageWidth) / 2;
-        int y = (height - imageHeight) / 2;
+        int x = (width - this.imageWidth) / 2;
+        int y = (height - this.imageHeight) / 2;
 
-        this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+        this.blit(pPoseStack, x, y, 0, 0, this.imageWidth, this.imageHeight);
 
-        if(menu.isCrafting()) {
-            blit(pPoseStack, x + 102, y + 41, 176, 0, 8, menu.getScaledProgress());
-        }
     }
 
     @Override
@@ -39,5 +38,9 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
         renderTooltip(pPoseStack, mouseX, mouseY);
     }
 
-
+    @Override
+    protected void renderLabels(PoseStack p_97808_, int p_97809_, int p_97810_) {
+        //this.font.draw(p_97808_, this.title, (float)this.titleLabelX, (float)this.titleLabelY, 4210752);
+        //this.font.draw(p_97808_, this.playerInventoryTitle, (float)this.inventoryLabelX, (float)this.inventoryLabelY, 4210752);
+    }
 }

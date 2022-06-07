@@ -1,7 +1,6 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.FabricatorTempModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.*;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.properties.WarenaiBlockConditionEnum;
@@ -32,7 +31,6 @@ public class BlockStateDataProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         //simpleBlock(BlockInit.TEST_BLOCK.get());
-        simpleBlock(FabricatorTempModule.FABRICATOR.get());
 
         warenaiBlock(StrongBlockModule.WARENAI_FULL_BLOCK.get());
         warenaiBlockStair(StrongBlockModule.WARENAI_STAIRS_BLOCK.get());
@@ -45,7 +43,6 @@ public class BlockStateDataProvider extends BlockStateProvider {
                 .stream()
                 .filter((block) ->
                         block.get() != StrongBlockModule.WARENAI_FENCE_BLOCK.get()
-                        //&& block.get() != FabricatorTempModule.FABRICATOR.get()
                         //&& block.get() != StrongBlockModule.WARENAI_WALL_BLOCK.get()
                 )
                 .forEach((block) -> blockItems(block.get()));

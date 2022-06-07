@@ -56,15 +56,13 @@ public class PaintBucketItem extends Item {
             MutableComponent blue = new TranslatableComponent("gui.dragonblockbeyond.blue").append(": " + color.getBlue());
             tooltip.add(red.append(", ").append(green).append(", ").append(blue));
             float[] hsb = DBBColor.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue());
+
             MutableComponent hue = new TranslatableComponent("gui.dragonblockbeyond.hue").append(": " +
-                                                                                         Math.round(hsb[0] *
-                                                                                                    ColorSelectScreen.MAX_VALUE_HUE));
+                    Math.round(hsb[0] * ColorSelectScreen.MAX_VALUE_HUE));
             MutableComponent saturation = new TranslatableComponent("gui.dragonblockbeyond.saturation").append(": " +
-                                                                                                       Math.round(hsb[1] *
-                                                                                                                  ColorSelectScreen.MAX_VALUE_SB));
+                    Math.round(hsb[1] * ColorSelectScreen.MAX_VALUE_SB));
             MutableComponent brightness = new TranslatableComponent("gui.dragonblockbeyond.brightness").append(": " +
-                                                                                                       Math.round(hsb[2] *
-                                                                                                                  ColorSelectScreen.MAX_VALUE_SB));
+                    Math.round(hsb[2] * ColorSelectScreen.MAX_VALUE_SB));
             tooltip.add(hue.append("\u00B0, ").append(saturation).append("%, ").append(brightness).append("%"));
         } else {
             tooltip.add(new TextComponent("#" + Integer.toHexString(color.getRGB()).substring(2)));
@@ -105,16 +103,15 @@ public class PaintBucketItem extends Item {
                     if (context.getItemInHand().getDamageValue() == context.getItemInHand().getMaxDamage() - 1) {
                         context.getPlayer().setItemInHand(context.getHand(), new ItemStack(Items.BUCKET));
                     } else {
-                        context.getItemInHand()
-                               .hurtAndBreak(1, context.getPlayer(), e -> e.broadcastBreakEvent(context.getHand()));
+                        context.getItemInHand().hurtAndBreak(1, context.getPlayer(), e -> e.broadcastBreakEvent(context.getHand()));
                     }
                 }
                 ((StrongBlockTile) tileEntity).setColor(context.getItemInHand().getTag().getInt("color"));
                 context.getLevel()
                        .sendBlockUpdated(context.getClickedPos(),
-                                         tileEntity.getBlockState(),
-                                         tileEntity.getBlockState(),
-                                         Block.UPDATE_ALL_IMMEDIATE);
+                               tileEntity.getBlockState(),
+                               tileEntity.getBlockState(),
+                               Block.UPDATE_ALL_IMMEDIATE);
             }
             return InteractionResult.SUCCESS;
         } else {

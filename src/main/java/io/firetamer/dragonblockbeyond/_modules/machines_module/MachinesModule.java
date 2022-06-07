@@ -1,10 +1,11 @@
-package io.firetamer.dragonblockbeyond._modules.fabricator_temp_module;
+package io.firetamer.dragonblockbeyond._modules.machines_module;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.gui.container_menu.FabricatorContainerMenu;
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.gui.screen.FabricatorScreen;
-import io.firetamer.dragonblockbeyond._modules.strongblock_module.items.WarenaiBlockItem;
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.recipe.FabricatorRecipe;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlock;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTile;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTileRenderer;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.Registry;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -31,12 +32,13 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = DragonBlockBeyond.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class FabricatorTempModule {
+public class MachinesModule {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DragonBlockBeyond.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DragonBlockBeyond.MOD_ID);
     public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, DragonBlockBeyond.MOD_ID);
     public static final DeferredRegister<MenuType<?>> CONTAINER_MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, DragonBlockBeyond.MOD_ID);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, DragonBlockBeyond.MOD_ID);
+
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
@@ -56,6 +58,9 @@ public class FabricatorTempModule {
 
 
 
+    /******************************************************************************************************************/
+    //Fabricator Machine
+    /******************************************************************************************************************/
 
 
     public static final RegistryObject<Block> FABRICATOR = registerBlock("fabricator", () ->
@@ -67,11 +72,11 @@ public class FabricatorTempModule {
     public static final RegistryObject<MenuType<FabricatorContainerMenu>> FABRICATOR_MENU_TYPE =
             registerMenuType(FabricatorContainerMenu::new, "fabricator_menu");
 
-    public static final RegistryObject<RecipeSerializer<FabricatorRecipe>> FABRICATOR_RECIPE =
-            RECIPE_SERIALIZERS.register("fabricator_recipe", () -> FabricatorRecipe.Serializer.INSTANCE);
 
 
-
+    /******************************************************************************************************************/
+    //Events
+    /******************************************************************************************************************/
 
 
     @SubscribeEvent
@@ -80,12 +85,8 @@ public class FabricatorTempModule {
     }
 
     @SubscribeEvent
-    public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
-        Registry.register(Registry.RECIPE_TYPE, FabricatorRecipe.Type.ID, FabricatorRecipe.Type.INSTANCE);
-    }
-
-    @SubscribeEvent
     public static void doClientStuff(final FMLClientSetupEvent event) {
         MenuScreens.register(FABRICATOR_MENU_TYPE.get(), FabricatorScreen::new);
     }
+
 }

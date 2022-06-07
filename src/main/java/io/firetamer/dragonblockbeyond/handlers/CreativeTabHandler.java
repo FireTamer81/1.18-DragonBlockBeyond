@@ -1,6 +1,6 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.FabricatorTempModule;
+import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
 import net.minecraft.core.NonNullList;
@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class CreativeTabHandler {
 
     public static ItemStack[] blockTabItems = {
-            FabricatorTempModule.FABRICATOR.get().asItem().getDefaultInstance(),
+            MachinesModule.FABRICATOR.get().asItem().getDefaultInstance(),
 
             StrongBlockModule.WARENAI_FULL_BLOCK.get().asItem().getDefaultInstance(),
             StrongBlockModule.WARENAI_STAIRS_BLOCK.get().asItem().getDefaultInstance(),
@@ -24,7 +24,7 @@ public class CreativeTabHandler {
 
             StrongBlockModule.WARENAI_GLASS.get().asItem().getDefaultInstance(),
             StrongBlockModule.WARENAI_GLASS_SLAB.get().asItem().getDefaultInstance(),
-            StrongBlockModule.WARENAI_GLASS_STAIRS.get().asItem().getDefaultInstance()
+            StrongBlockModule.WARENAI_GLASS_STAIRS.get().asItem().getDefaultInstance(),
     };
 
     public static ItemStack[] itemTabItems = {

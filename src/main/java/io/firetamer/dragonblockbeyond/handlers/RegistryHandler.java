@@ -1,6 +1,6 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
-import io.firetamer.dragonblockbeyond._modules.fabricator_temp_module.FabricatorTempModule;
+import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
 import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
@@ -23,22 +23,22 @@ public class RegistryHandler {
 
     public void init() {
         DeferredRegister<?>[] registers = {
-            ItemInit.ITEMS,
+                ItemInit.ITEMS,
 
-            BlockInit.BLOCKS,
-            BlockInit.ITEMS,
+                BlockInit.BLOCKS,
+                BlockInit.ITEMS,
 
-            StrongBlockModule.BLOCKS,
-            StrongBlockModule.ITEMS,
-            StrongBlockModule.TILES,
-            StrongBlockModule.CONTAINER_MENUS,
-            StrongBlockModule.RECIPE_SERIALIZERS,
+                StrongBlockModule.BLOCKS,
+                StrongBlockModule.ITEMS,
+                StrongBlockModule.TILES,
+                StrongBlockModule.CONTAINER_MENUS,
+                StrongBlockModule.RECIPE_SERIALIZERS,
 
-            FabricatorTempModule.BLOCKS,
-            FabricatorTempModule.ITEMS,
-            FabricatorTempModule.TILES,
-            FabricatorTempModule.CONTAINER_MENUS,
-            FabricatorTempModule.RECIPE_SERIALIZERS
+                MachinesModule.BLOCKS,
+                MachinesModule.ITEMS,
+                MachinesModule.TILES,
+                MachinesModule.CONTAINER_MENUS,
+                MachinesModule.RECIPE_SERIALIZERS,
         };
 
         for (DeferredRegister<?> register : registers) {

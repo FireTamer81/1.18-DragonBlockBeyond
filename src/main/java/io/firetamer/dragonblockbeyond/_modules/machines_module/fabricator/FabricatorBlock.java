@@ -1,6 +1,6 @@
-package io.firetamer.dragonblockbeyond._modules.fabricator_temp_module;
+package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator;
 
-import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
+import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -74,6 +74,7 @@ public class FabricatorBlock extends BaseEntityBlock {
                 ((FabricatorBlockTile) blockEntity).drops();
             }
         }
+
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
@@ -110,6 +111,6 @@ public class FabricatorBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, FabricatorTempModule.FABRICATOR_TILE.get(), FabricatorBlockTile::tick);
+        return createTickerHelper(pBlockEntityType, MachinesModule.FABRICATOR_TILE.get(), FabricatorBlockTile::tick);
     }
 }

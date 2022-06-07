@@ -1,8 +1,9 @@
-package io.firetamer.dragonblockbeyond._modules.fabricator_temp_module;
+package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
