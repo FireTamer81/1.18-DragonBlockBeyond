@@ -18,8 +18,11 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
     private final Level level;
     private static final int playerInvOffsetY = 24;
     private static final int playerInvOffsetX = 0;
-    private final FabricatorInvContainer fabricatorStorageSlots = new FabricatorInvContainer(this, 24);
-    private final FabricatorInvContainer fabricatorOutputSlots = new FabricatorInvContainer(this, 24);
+    public static final int fabricatorInputInventoryMenuTopLeftX = -100;
+    public static final int fabricatorInputInventoryMenuTopLeftY = 0;
+    public static final int fabricatorOutputInventoryMenuTopLeftX = -100;
+    public static final int fabricatorOutputInventoryMenuTopLeftY = 130;
+
 
     public FabricatorContainerMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()));
@@ -35,14 +38,50 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 44, -11));
-            this.addSlot(new SlotItemHandler(handler, 1, 44, 13));
-            this.addSlot(new SlotItemHandler(handler, 2, 44, 37));
-            this.addSlot(new SlotItemHandler(handler, 3, 80, -15));
-            this.addSlot(new ModResultSlot(handler, 4, 116, 13));
+            int f = -1; //This is for the index values, hopefully it will keep them from making double indexes
+
+
+            //TODO Make it so the fabricator's input/output inventory is only seen (screen rendering and slots) when the menu button is active
+            //For the Fabricator Input Inventory
+            for(int i = 0; i < 6; ++i) {
+                for(int j = 0; j < 4; ++j) {
+                    this.addSlot(new SlotItemHandler(handler,
+                            ++f,
+                            (fabricatorInputInventoryMenuTopLeftX + 8) + (j * 18) + 13,
+                            (fabricatorInputInventoryMenuTopLeftY + 8) + (i * 18) - 25
+                    ));
+                }
+            }
+
+            //The crafting slots
+            this.addSlot(new SlotItemHandler(handler, ++f, 44, -11));
+            this.addSlot(new SlotItemHandler(handler, ++f, 44, 13));
+            this.addSlot(new SlotItemHandler(handler, ++f, 44, 37));
+            this.addSlot(new SlotItemHandler(handler, ++f, 44, 61));
+
+            this.addSlot(new SlotItemHandler(handler, ++f, 20, -11));
+            this.addSlot(new SlotItemHandler(handler, ++f, 20, 13));
+            this.addSlot(new SlotItemHandler(handler, ++f, 20, 37));
+            this.addSlot(new SlotItemHandler(handler, ++f, 20, 61));
+
+
+            //The display slot to show what is being crafted, and the result slot
+            this.addSlot(new SlotItemHandler(handler, ++f, 80, -15));
+            this.addSlot(new ModResultSlot(handler, ++f, 116, 13));
+
+
+            //For the Fabricator Output Inventory
+            for(int i = 0; i < 6; ++i) {
+                for(int j = 0; j < 4; ++j) {
+                    this.addSlot(new ModResultSlot(handler,
+                            ++f,
+                            (fabricatorOutputInventoryMenuTopLeftX + 8) + (j * 18) + 13,
+                            (fabricatorOutputInventoryMenuTopLeftY + 8) + (i * 18) - 23
+                    ));
+                }
+            }
         });
     }
-
 
 
 
@@ -63,7 +102,7 @@ public class FabricatorContainerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 56;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 58;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

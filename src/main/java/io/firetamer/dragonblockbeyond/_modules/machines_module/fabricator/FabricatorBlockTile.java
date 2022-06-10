@@ -36,7 +36,7 @@ import java.util.Random;
 
 public class FabricatorBlockTile extends BlockEntity implements MenuProvider {
 
-    private ItemStackHandler itemHandler = new ItemStackHandler(56) {
+    private ItemStackHandler itemHandler = new ItemStackHandler(58) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
