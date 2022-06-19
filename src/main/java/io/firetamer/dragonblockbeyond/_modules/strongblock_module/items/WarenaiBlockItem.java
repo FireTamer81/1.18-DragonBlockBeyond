@@ -56,7 +56,7 @@ public class WarenaiBlockItem extends BlockItem {
                     Math.round(hsb[2] * ColorSelectScreen.MAX_VALUE_SB));
             tooltip.add(hue.append("°, ").append(saturation).append("%, ").append(brightness).append("%"));
         } else {
-            tooltip.add(new TextComponent("Color #" + Integer.toHexString(color.getRGB()).substring(2)));
+            tooltip.add(new TextComponent("Color #" + Integer.toHexString(color.getRGBA()).substring(2)));
         }
     }
 }

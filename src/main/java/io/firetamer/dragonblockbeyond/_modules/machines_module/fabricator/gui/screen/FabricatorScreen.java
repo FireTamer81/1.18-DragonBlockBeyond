@@ -4,21 +4,96 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget.StateSwitchingActionButton;
+import io.firetamer.dragonblockbeyond.util.DBBColor;
+import io.firetamer.dragonblockbeyond.util.guiHelpers.GUIElementCreator;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 
 public class FabricatorScreen extends AbstractContainerScreen<FabricatorContainerMenu> {
     private static final ResourceLocation BG_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
-    private static final ResourceLocation INV_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_inventory.png");
+    private static final ResourceLocation EXTRAS_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu_extras.png");
+    private static final ResourceLocation PANEL_PIECES_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/dynamic_panel_test.png");
+
     protected int imageWidth = 176;
     protected int imageHeight = 218;
+    protected StateSwitchingActionButton testButton;
+    protected boolean isTestButtonActive = false;
+
+    //private final RecipeScreenComponent recipeScreenComponent = new RecipeScreenComponent();
+
 
     public FabricatorScreen(FabricatorContainerMenu menuIn, Inventory playerInventory, Component title) {
         super(menuIn, playerInventory, title);
+
+        //minecraft.level.getBlockEntity()
+    }
+
+    @Override
+    protected void init() {
+        super.init();
+        //this.recipeScreenComponent.init(232, 194, this.minecraft);
+        //this.recipeScreenComponent.initVisuals();
+        this.createScreenControlButtons();
+    }
+
+    protected void createScreenControlButtons() {
+        int x = (width - this.imageWidth) / 2;
+        int y = (height - this.imageHeight) / 2;
+
+        this.testButton = new StateSwitchingActionButton(x + 124, y + 5, 45, 18, isTestButtonActive, (onPress) -> {
+            //this.recipeComponent.toggleVisibility();
+        });
+
+        this.initButtonTextures();
+    }
+
+    protected void initButtonTextures() {
+        this.testButton.initVisuals(166, 0, 45, 18, EXTRAS_TEXTURE);
+    }
+
+    @Override
+    public boolean mouseClicked(double p_97748_, double p_97749_, int p_97750_) {
+        if (this.testButton.mouseClicked(p_97748_, p_97749_, p_97750_)) {
+            this.testButton.setStateTriggered(!this.testButton.isStateTriggered());
+            return true;
+        } else {
+            return super.mouseClicked(p_97748_, p_97749_, p_97750_);
+        }
+    }
+
+    private void renderMachineInv(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderTexture(0, EXTRAS_TEXTURE);
+        int x = ((width - this.imageWidth) / 2) - 88;
+        int y = (height - this.imageHeight) / 2;
+
+        this.blit(pPoseStack, x, y, 0, 0, 88, 256);
+    }
+
+    @Override
+    public void render(PoseStack pPoseStack, int mouseX, int mouseY, float delta) {
+        renderBackground(pPoseStack);
+        //renderMachineInv(pPoseStack, delta, mouseX, mouseY);
+
+        super.render(pPoseStack, mouseX, mouseY, delta);
+
+        this.testButton.render(pPoseStack, mouseX, mouseY, delta);
+
+        //int testColor = new DBBColor(255, 0, 0, 100).getRGBA();
+        //fill(pPoseStack, 0, 0, width, height, testColor);
+        GUIElementCreator.drawBordered_FilledPanel(pPoseStack, 50, 50, 100, 100,
+                0, 0, PANEL_PIECES_TEXTURE, 1,
+                9, 8, 0, 0,
+                8, 8, 0, 0,
+                8, 8, 0, 0,
+                8, 8, 0, 0);
+
+        renderTooltip(pPoseStack, mouseX, mouseY);
     }
 
     @Override
@@ -30,24 +105,6 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
         int y = (height - this.imageHeight) / 2;
 
         this.blit(pPoseStack, x, y, 0, 0, this.imageWidth, this.imageHeight);
-    }
-
-    private void renderMachineInv(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, INV_TEXTURE);
-        int x = ((width - this.imageWidth) / 2) - 88;
-        int y = (height - this.imageHeight) / 2;
-
-        this.blit(pPoseStack, x, y, 0, 0, 88, 256);
-    }
-
-    @Override
-    public void render(PoseStack pPoseStack, int mouseX, int mouseY, float delta) {
-        renderBackground(pPoseStack);
-        renderMachineInv(pPoseStack, delta, mouseX, mouseY);
-        super.render(pPoseStack, mouseX, mouseY, delta);
-        renderTooltip(pPoseStack, mouseX, mouseY);
     }
 
     @Override

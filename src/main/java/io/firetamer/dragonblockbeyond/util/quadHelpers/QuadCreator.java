@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util;
+package io.firetamer.dragonblockbeyond.util.quadHelpers;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.VertexFormatElement;

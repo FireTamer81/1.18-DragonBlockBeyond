@@ -61,11 +61,11 @@ public class ColorSelectScreen extends Screen {
         if (isRGBSelected) {
             return new DBBColor(this.redSlider.getValueInt(),
                              this.greenSlider.getValueInt(),
-                             this.blueSlider.getValueInt()).getRGB();
+                             this.blueSlider.getValueInt()).getRGBA();
         } else {
             return DBBColor.getHSBColor((float) (hueSlider.getValueInt() / MAX_VALUE_HUE),
                                      (float) (saturationSlider.getValueInt() / MAX_VALUE_SB),
-                                     (float) (brightnessSlider.getValueInt() / MAX_VALUE_SB)).getRGB();
+                                     (float) (brightnessSlider.getValueInt() / MAX_VALUE_SB)).getRGBA();
         }
     }
 
@@ -241,7 +241,7 @@ public class ColorSelectScreen extends Screen {
         this.hexBox.setValue("#" +
                              Integer.toHexString(new DBBColor(redSlider.getValueInt(),
                                                            greenSlider.getValueInt(),
-                                                           blueSlider.getValueInt()).getRGB())
+                                                           blueSlider.getValueInt()).getRGBA())
                                     .substring(2)
                                     .toUpperCase(Locale.ENGLISH));
 
@@ -280,7 +280,7 @@ public class ColorSelectScreen extends Screen {
                                                  blueSlider.setValueInt(color.getBlue());
 
                                                  hexBox.setValue("#" +
-                                                                 Integer.toHexString(color.getRGB())
+                                                                 Integer.toHexString(color.getRGBA())
                                                                         .substring(2)
                                                                         .toUpperCase(Locale.ENGLISH));
 

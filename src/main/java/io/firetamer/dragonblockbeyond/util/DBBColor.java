@@ -42,18 +42,18 @@ public class DBBColor {
     }
 
     public int getRed() {
-        return (getRGB() >> 16) & 0xFF;
+        return (getRGBA() >> 16) & 0xFF;
     }
 
     public int getGreen() {
-        return (getRGB() >> 8) & 0xFF;
+        return (getRGBA() >> 8) & 0xFF;
     }
 
     public int getBlue() {
-        return (getRGB() >> 0) & 0xFF;
+        return (getRGBA() >> 0) & 0xFF;
     }
 
-    public int getRGB() {
+    public int getRGBA() {
         return value;
     }
 

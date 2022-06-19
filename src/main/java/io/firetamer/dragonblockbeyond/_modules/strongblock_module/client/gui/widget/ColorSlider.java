@@ -47,7 +47,7 @@ public class ColorSlider extends AbstractSliderButton {
                     new DBBColor(
                             screen.redSlider.getValueInt(),
                             screen.greenSlider.getValueInt(),
-                            screen.blueSlider.getValueInt()).getRGB())
+                            screen.blueSlider.getValueInt()).getRGBA())
                     .substring(2)
                     .toUpperCase(Locale.ENGLISH));
         }
@@ -109,8 +109,8 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderRedBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = new DBBColor(0x00, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGB();
-        int rightColor = new DBBColor(0xFF, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGB();
+        int leftColor = new DBBColor(0x00, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGBA();
+        int rightColor = new DBBColor(0xFF, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGBA();
         ScreenUtils.fillGradient(matrixStack,
                                  this.x + 1,
                                  this.y + 1,
@@ -122,8 +122,8 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderGreenBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = new DBBColor(screen.redSlider.getValueInt(), 0x00, screen.blueSlider.getValueInt()).getRGB();
-        int rightColor = new DBBColor(screen.redSlider.getValueInt(), 0xFF, screen.blueSlider.getValueInt()).getRGB();
+        int leftColor = new DBBColor(screen.redSlider.getValueInt(), 0x00, screen.blueSlider.getValueInt()).getRGBA();
+        int rightColor = new DBBColor(screen.redSlider.getValueInt(), 0xFF, screen.blueSlider.getValueInt()).getRGBA();
         ScreenUtils.fillGradient(matrixStack,
                                  this.x + 1,
                                  this.y + 1,
@@ -135,8 +135,8 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderBlueBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = new DBBColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0x00).getRGB();
-        int rightColor = new DBBColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0xFF).getRGB();
+        int leftColor = new DBBColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0x00).getRGBA();
+        int rightColor = new DBBColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0xFF).getRGBA();
         ScreenUtils.fillGradient(matrixStack,
                                  this.x + 1,
                                  this.y + 1,

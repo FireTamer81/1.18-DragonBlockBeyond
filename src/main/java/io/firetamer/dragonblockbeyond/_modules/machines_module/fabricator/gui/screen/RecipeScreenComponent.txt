@@ -1,0 +1,150 @@
+package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiComponent;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.resources.ResourceLocation;
+
+public class RecipeScreenComponent extends Screen {
+    protected static final ResourceLocation BODY_TEXTURE =
+            new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_recipe_component_body.png");
+    private int width;
+    private int height;
+    protected Minecraft minecraft;
+    private boolean visible;
+
+    private double topLeftX;
+    private double topLeftY;
+    private boolean isDragging;
+    private double lastMouseX;
+    private double lastMouseY;
+
+
+    public RecipeScreenComponent() {
+        super(new TextComponent(""));
+    }
+
+    public void init(int widthIn, int heightIn, Minecraft instance) {
+        this.minecraft = instance;
+        this.width = widthIn;
+        this.height = heightIn;
+
+        this.topLeftX = 200;
+        this.topLeftY = 150;
+
+        this.visible = false;
+    }
+
+    protected void initVisuals() {
+
+    }
+
+    public void toggleVisibility() {
+        this.setVisible(!this.isVisible());
+    }
+
+    public boolean isVisible() {
+        return this.visible;
+    }
+
+    protected void setVisible(boolean newVisibilityState) {
+        if(newVisibilityState) {
+            this.initVisuals();
+        }
+
+        this.visible = newVisibilityState;
+    }
+
+    public void render(PoseStack stack, int mouseX, int mouseY, float delta) {
+        if(this.isVisible()) {
+            stack.pushPose();
+            stack.translate(0.0D, 0.0D, 100.0D);
+            RenderSystem.setShader(GameRenderer::getPositionTexShader);
+            RenderSystem.setShaderTexture(0, BODY_TEXTURE);
+            RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+            /**********************************************************************************************************/
+
+            int x = ((width - this.width) / 2) - 88;
+            int y = ((height - this.height) / 2);
+
+            this.blit(stack, );
+
+            /**********************************************************************************************************/
+            stack.popPose();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /******************************************************************************************************************/
+    //Component Movement Stuff
+    /******************************************************************************************************************/
+
+    @Override
+    public boolean mouseClicked(double xDouble, double yDouble, int button) {
+        super.mouseClicked(xDouble, yDouble, button);
+
+        final double minX = this.topLeftX;
+        final double minY = this.topLeftY;
+        final double maxX = minX + this.width;
+        final double maxY = minY + this.height;
+
+        if(xDouble >= minX && xDouble <= maxX && yDouble >= minY && yDouble <= maxY) {
+            this.isDragging = true;
+            this.lastMouseX = xDouble;
+            this.lastMouseY = yDouble;
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean mouseReleased(double mouseX, double mouseY, int action) {
+        this.isDragging = false;
+        return super.mouseReleased(mouseX, mouseY, action);
+    }
+
+    @Override
+    public boolean mouseDragged(double mouseX, double mouseY, int lastButtonClicked, double p_94702_, double p_94703_) {
+        if (this.isDragging) {
+            double tempXChange;
+            double tempYChange;
+
+            if (mouseX > lastMouseX) {
+                tempXChange = mouseX - lastMouseX;
+                this.topLeftX = this.topLeftX + tempXChange;
+            } else {
+                tempXChange = lastMouseX - mouseX;
+                this.topLeftX = this.topLeftX - tempXChange;
+            }
+
+            if (mouseY > lastMouseY) {
+                tempYChange = mouseY - lastMouseY;
+                this.topLeftY = this.topLeftY + tempYChange;
+            } else {
+                tempYChange = lastMouseY - mouseY;
+                this.topLeftY = this.topLeftY - tempYChange;
+            }
+
+            this.lastMouseX = mouseX;
+            this.lastMouseY = mouseY;
+        }
+
+        return super.mouseDragged(mouseX, mouseY, lastButtonClicked, p_94702_, p_94703_);
+    }
+}

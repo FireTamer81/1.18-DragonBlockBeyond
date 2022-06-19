@@ -15,11 +15,11 @@ public class StrongBlockTile extends BlockEntity {
 
     public StrongBlockTile(BlockPos pos, BlockState state) {
         super(StrongBlockModule.STRONG_BLOCK_TILE.get(), pos, state);
-        this.color = new DBBColor(242, 242, 242).getRGB();
+        this.color = new DBBColor(242, 242, 242).getRGBA();
     }
 
     public void setColor(int color) {
-        this.color = new DBBColor(color).getRGB();
+        this.color = new DBBColor(color).getRGBA();
         setChanged();
     }
 

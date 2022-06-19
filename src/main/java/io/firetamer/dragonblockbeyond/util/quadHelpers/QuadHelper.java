@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util;
+package io.firetamer.dragonblockbeyond.util.quadHelpers;
 
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Transformation;
