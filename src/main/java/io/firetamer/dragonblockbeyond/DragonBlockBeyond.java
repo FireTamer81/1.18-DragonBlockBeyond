@@ -7,6 +7,7 @@ import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.network.P
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.top.TOPMain;
 import io.firetamer.dragonblockbeyond.handlers.CreativeTabHandler;
 import io.firetamer.dragonblockbeyond.handlers.RegistryHandler;
+import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,11 +38,20 @@ public class DragonBlockBeyond {
         RegistryHandler registryHandler = new RegistryHandler(modEventBus);
         registryHandler.init();
 
+        TextureHandler textureHandler = new TextureHandler();
+        textureHandler.init();
+
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::enqueueIMC);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
+
+
+
+
+
+
 
     public void setup(final FMLCommonSetupEvent event) {
         PacketHandler.register();
@@ -55,14 +65,4 @@ public class DragonBlockBeyond {
             InterModComms.sendTo("theoneprobe", "getTheOneProbe", TOPMain::new);
         }
     }
-
-
-
-
-
-
-
-
-
-
 }

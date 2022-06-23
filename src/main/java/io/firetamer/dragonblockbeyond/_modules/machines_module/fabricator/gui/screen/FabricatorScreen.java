@@ -5,8 +5,9 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget.StateSwitchingActionButton;
+import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
 import io.firetamer.dragonblockbeyond.util.DBBColor;
-import io.firetamer.dragonblockbeyond.util.guiHelpers.GUIElementCreator;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.GUIHelper;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -17,6 +18,7 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
     private static final ResourceLocation BG_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
     private static final ResourceLocation EXTRAS_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu_extras.png");
     private static final ResourceLocation PANEL_PIECES_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/dynamic_panel_test.png");
+    private static final ResourceLocation PANEL_TEST = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/border1.png");
 
     protected int imageWidth = 176;
     protected int imageHeight = 218;
@@ -65,46 +67,34 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
         }
     }
 
-    private void renderMachineInv(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, EXTRAS_TEXTURE);
-        int x = ((width - this.imageWidth) / 2) - 88;
+    @Override
+    public void render(PoseStack poseStack, int mouseX, int mouseY, float delta) {
+        int x = (width - this.imageWidth) / 2;
         int y = (height - this.imageHeight) / 2;
 
-        this.blit(pPoseStack, x, y, 0, 0, 88, 256);
+        renderBackground(poseStack);
+        super.render(poseStack, mouseX, mouseY, delta);
+        this.testButton.render(poseStack, mouseX, mouseY, delta);
+
+        //GUIHelper.renderBackgroundTexture(pPoseStack, PANEL_TEST, 4, 4, leftPos, topPos, imageWidth, imageHeight, 256, 256, 0);
+        DBBColor testColor = new DBBColor(255, 0, 0, 150);
+        DBBColor testColor2 = new DBBColor(0, 0, 255, 150);
+        GUIHelper.drawBorderedFilledPanel(poseStack, x, y, this.imageWidth, this.imageHeight, TextureHandler.BORDER_1, testColor, testColor2, 0);
+
+        renderTooltip(poseStack, mouseX, mouseY);
     }
 
     @Override
-    public void render(PoseStack pPoseStack, int mouseX, int mouseY, float delta) {
-        renderBackground(pPoseStack);
-        //renderMachineInv(pPoseStack, delta, mouseX, mouseY);
-
-        super.render(pPoseStack, mouseX, mouseY, delta);
-
-        this.testButton.render(pPoseStack, mouseX, mouseY, delta);
-
-        //int testColor = new DBBColor(255, 0, 0, 100).getRGBA();
-        //fill(pPoseStack, 0, 0, width, height, testColor);
-        GUIElementCreator.drawBordered_FilledPanel(pPoseStack, 50, 50, 100, 100,
-                0, 0, PANEL_PIECES_TEXTURE, 1,
-                9, 8, 0, 0,
-                8, 8, 0, 0,
-                8, 8, 0, 0,
-                8, 8, 0, 0);
-
-        renderTooltip(pPoseStack, mouseX, mouseY);
-    }
-
-    @Override
-    protected void renderBg(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
+    protected void renderBg(PoseStack poseStack, float pPartialTick, int pMouseX, int pMouseY) {
+        /*
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, BG_TEXTURE);
         int x = (width - this.imageWidth) / 2;
         int y = (height - this.imageHeight) / 2;
 
-        this.blit(pPoseStack, x, y, 0, 0, this.imageWidth, this.imageHeight);
+        this.blit(poseStack, x, y, 0, 0, this.imageWidth, this.imageHeight);
+        */
     }
 
     @Override
