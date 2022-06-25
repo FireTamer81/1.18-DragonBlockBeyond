@@ -1,10 +1,10 @@
-package io.firetamer.dragonblockbeyond.util.gui_stuff;
+package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
-import io.firetamer.dragonblockbeyond.util.DBBColor;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.BorderTextureObject;
+import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.BorderTextureObject;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;

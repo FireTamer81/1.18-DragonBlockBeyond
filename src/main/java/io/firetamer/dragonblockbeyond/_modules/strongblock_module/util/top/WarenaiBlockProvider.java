@@ -3,7 +3,7 @@ package io.firetamer.dragonblockbeyond._modules.strongblock_module.util.top;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.screen.ColorSelectScreen;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
-import io.firetamer.dragonblockbeyond.util.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;

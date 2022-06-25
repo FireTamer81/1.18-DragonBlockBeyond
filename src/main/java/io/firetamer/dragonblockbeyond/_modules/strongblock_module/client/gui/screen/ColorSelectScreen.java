@@ -8,7 +8,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.widget.ColorSlider;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.widget.SliderType;
-import io.firetamer.dragonblockbeyond.util.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.network.PacketHandler;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.network.packets.PaintBucketSyncPKT;
 import net.minecraft.client.gui.components.Button;

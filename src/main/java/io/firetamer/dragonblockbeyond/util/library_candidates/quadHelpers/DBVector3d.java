@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util.quadHelpers;
+package io.firetamer.dragonblockbeyond.util.library_candidates.quadHelpers;
 
 import com.mojang.math.Vector3d;
 import net.minecraft.util.Mth;

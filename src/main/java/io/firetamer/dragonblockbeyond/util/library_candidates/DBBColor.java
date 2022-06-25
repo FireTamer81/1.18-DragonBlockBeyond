@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util;
+package io.firetamer.dragonblockbeyond.util.library_candidates;
 
 public class DBBColor {
     private int value;

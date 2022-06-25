@@ -6,17 +6,18 @@ import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.contai
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget.StateSwitchingActionButton;
 import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
 import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GUIHelper;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.PlayerInventoryComponent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class FabricatorScreen extends AbstractContainerScreen<FabricatorContainerMenu> {
-    private static final ResourceLocation BG_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
-    private static final ResourceLocation EXTRAS_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu_extras.png");
-    private static final ResourceLocation PANEL_PIECES_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/dynamic_panel_test.png");
-    private static final ResourceLocation PANEL_TEST = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/border1.png");
+@OnlyIn(Dist.CLIENT)
+public class FabricatorScreen_TEST extends AbstractContainerScreen<FabricatorContainerMenu> {
+    private static final ResourceLocation EXTRAS_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
+    private final PlayerInventoryComponent playerInventoryPanelComponent = new PlayerInventoryComponent();
 
     protected int imageWidth = 176;
     protected int imageHeight = 218;
@@ -26,7 +27,7 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
     //private final RecipeScreenComponent recipeScreenComponent = new RecipeScreenComponent();
 
 
-    public FabricatorScreen(FabricatorContainerMenu menuIn, Inventory playerInventory, Component title) {
+    public FabricatorScreen_TEST(FabricatorContainerMenu menuIn, Inventory playerInventory, Component title) {
         super(menuIn, playerInventory, title);
 
         //minecraft.level.getBlockEntity()
@@ -35,8 +36,12 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
     @Override
     protected void init() {
         super.init();
-        //this.recipeScreenComponent.init(232, 194, this.minecraft);
-        //this.recipeScreenComponent.initVisuals();
+
+        DBBColor interiorPanelColor1 = new DBBColor(100, 100, 100, 180);
+        this.playerInventoryPanelComponent.init(0, 64, 170, 92, width, height, minecraft, TextureHandler.BORDER_1, interiorPanelColor1, null);
+
+        this.setInitialFocus(this.playerInventoryPanelComponent);
+
         this.createScreenControlButtons();
     }
 
@@ -45,14 +50,14 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
         int y = (height - this.imageHeight) / 2;
 
         this.testButton = new StateSwitchingActionButton(x + 124, y + 5, 45, 18, isTestButtonActive, (onPress) -> {
-            //this.recipeComponent.toggleVisibility();
+            this.playerInventoryPanelComponent.toggleVisibility();
         });
 
         this.initButtonTextures();
     }
 
     protected void initButtonTextures() {
-        this.testButton.initVisuals(166, 0, 45, 18, EXTRAS_TEXTURE);
+        this.testButton.initVisuals(0, 0, 45, 18, EXTRAS_TEXTURE);
     }
 
     @Override
@@ -71,29 +76,15 @@ public class FabricatorScreen extends AbstractContainerScreen<FabricatorContaine
         int y = (height - this.imageHeight) / 2;
 
         renderBackground(poseStack);
+        this.playerInventoryPanelComponent.render(poseStack, mouseX, mouseY, delta);
         super.render(poseStack, mouseX, mouseY, delta);
         this.testButton.render(poseStack, mouseX, mouseY, delta);
-
-        //GUIHelper.renderBackgroundTexture(pPoseStack, PANEL_TEST, 4, 4, leftPos, topPos, imageWidth, imageHeight, 256, 256, 0);
-        DBBColor testColor = new DBBColor(255, 0, 0, 150);
-        DBBColor testColor2 = new DBBColor(0, 0, 255, 150);
-        GUIHelper.drawBorderedFilledPanel(poseStack, x, y, this.imageWidth, this.imageHeight, TextureHandler.BORDER_2, testColor, testColor2, 0);
 
         renderTooltip(poseStack, mouseX, mouseY);
     }
 
     @Override
-    protected void renderBg(PoseStack poseStack, float pPartialTick, int pMouseX, int pMouseY) {
-        /*
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, BG_TEXTURE);
-        int x = (width - this.imageWidth) / 2;
-        int y = (height - this.imageHeight) / 2;
-
-        this.blit(poseStack, x, y, 0, 0, this.imageWidth, this.imageHeight);
-        */
-    }
+    protected void renderBg(PoseStack poseStack, float pPartialTick, int pMouseX, int pMouseY) { }
 
     @Override
     protected void renderLabels(PoseStack p_97808_, int p_97809_, int p_97810_) {

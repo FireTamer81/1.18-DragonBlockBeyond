@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles;
 
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond.util.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;

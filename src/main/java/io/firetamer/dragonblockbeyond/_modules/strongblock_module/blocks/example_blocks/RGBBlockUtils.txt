@@ -1,6 +1,6 @@
 package io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.example_blocks;
 
-import io.firetamer.dragonblockbeyond.util.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

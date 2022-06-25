@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util.gui_stuff.objects;
+package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects;
 
 import net.minecraft.resources.ResourceLocation;
 

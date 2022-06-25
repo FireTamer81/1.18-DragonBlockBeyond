@@ -6,7 +6,7 @@ import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.Warenai
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.WarenaiGlassSlabBlock;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.WarenaiGlassStairsBlock;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
-import io.firetamer.dragonblockbeyond.util.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
