@@ -5,10 +5,8 @@ import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.Fabric
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTile;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTileRenderer;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
-import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen;
-import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen_TEST;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen_TEST_2;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.core.Registry;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
@@ -21,7 +19,6 @@ import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.extensions.IForgeMenuType;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -87,7 +84,7 @@ public class MachinesModule {
 
     @SubscribeEvent
     public static void doClientStuff(final FMLClientSetupEvent event) {
-        MenuScreens.register(FABRICATOR_MENU_TYPE.get(), FabricatorScreen_TEST::new);
+        MenuScreens.register(FABRICATOR_MENU_TYPE.get(), FabricatorScreen_TEST_2::new);
     }
 
 }

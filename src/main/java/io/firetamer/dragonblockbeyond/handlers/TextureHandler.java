@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.BorderTextureObject;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.BorderTextureObject;
 import net.minecraft.resources.ResourceLocation;
 
 public class TextureHandler {

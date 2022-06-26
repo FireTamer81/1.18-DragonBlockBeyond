@@ -1,9 +1,9 @@
-package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.base_objects;
+package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GUIHelper;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.BorderTextureObject;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.BorderTextureObject;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.components.Widget;
@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public abstract class BasePanelComponent extends GuiComponent implements Widget, GuiEventListener {
+public abstract class BasicPanelComponent extends GuiComponent implements Widget, GuiEventListener {
     protected Minecraft minecraft;
     protected boolean visible;
     protected boolean canToggleVisibility;
