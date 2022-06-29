@@ -6,6 +6,7 @@ import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.Fabric
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTileRenderer;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen_TEST_2;
+import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen_TEST_3;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -84,7 +85,7 @@ public class MachinesModule {
 
     @SubscribeEvent
     public static void doClientStuff(final FMLClientSetupEvent event) {
-        MenuScreens.register(FABRICATOR_MENU_TYPE.get(), FabricatorScreen_TEST_2::new);
+        MenuScreens.register(FABRICATOR_MENU_TYPE.get(), FabricatorScreen_TEST_3::new);
     }
 
 }

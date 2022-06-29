@@ -1,55 +1,47 @@
 package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GUIHelper;
 import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.BorderTextureObject;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiComponent;
-import net.minecraft.client.gui.components.Widget;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
 
-@OnlyIn(Dist.CLIENT)
-public class AdvancedPanelComponent extends Screen {
+public class AdvancedPanelComponent2 extends Screen implements GuiEventListener {
     protected Minecraft minecraft;
     protected boolean visible;
     protected boolean canToggleVisibility;
-
-    private boolean isDragging;
-    private double lastMouseX;
-    private double lastMouseY;
 
     protected int panelOriginX;
     protected int panelOriginY;
     protected int panelWidth;
     protected int panelHeight;
 
-    protected int minPanelWidth;
-    protected int minPanelHeight;
+    private boolean isDragging;
+    private double lastMouseX;
+    private double lastMouseY;
 
     BorderTextureObject borderStyle;
     DBBColor panelColor1; //Required (To not apply a color, just pass the color with 255 for the alpha value)
     DBBColor panelColor2; //Optional (Passing this parameter as null simply makes the panel fill the interior with a solid color)
 
-    public AdvancedPanelComponent() {
+    public AdvancedPanelComponent2() {
         super(new TextComponent(""));
     }
 
-    public void init(int originPosXIn, int originPosYIn, int panelWidthIn, int panelHeightIn, int minPanelWidthIn, int minPanelHeightIn, Minecraft instanceIn, boolean initialVisibility, boolean canToggleVisibility,
+    public void init(int originPosXIn, int originPosYIn, int panelWidthIn, int panelHeightIn, Minecraft instanceIn, boolean initialVisibility, boolean canToggleVisibility,
                      BorderTextureObject borderStyleIn, DBBColor panelColor1In, DBBColor panelColor2In) {
         this.minecraft = instanceIn;
         this.panelOriginX = originPosXIn;
         this.panelOriginY = originPosYIn;
         this.panelWidth = panelWidthIn;
         this.panelHeight = panelHeightIn;
-        this.minPanelWidth = minPanelWidthIn;
-        this.minPanelHeight = minPanelHeightIn;
 
         this.visible = initialVisibility;
         this.canToggleVisibility = canToggleVisibility;
@@ -66,21 +58,27 @@ public class AdvancedPanelComponent extends Screen {
     /******************************************************************************************************************/
 
 
+    public void updatePos(int newXOrigin, int newYOrigin) {
+        this.panelOriginX = newXOrigin;
+        this.panelOriginY = newYOrigin;
+    }
+
     @Override
     public boolean mouseClicked(double mousePosX, double mousePosY, int button) {
-        //GuiEventListener.super.mouseClicked(mousePosX, mousePosY, button);
+        super.mouseClicked(mousePosX, mousePosY, button);
 
-        double minX = this.panelOriginX;
-        double minY = this.panelOriginY;
+        final double minX = this.panelOriginX;
+        final double minY = this.panelOriginY;
+        final double maxX = minX + this.panelWidth;
+        final double maxY = minY + this.panelHeight;
 
-        if (minX <= mousePosX && mousePosX <= minX + this.panelWidth
-                && minY <= mousePosY && mousePosY <= minY + this.panelHeight
-                && button == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
+        if (mousePosX >= minX && mousePosX <= maxX && mousePosY >= minY && mousePosY <= maxY) {
             this.isDragging = true;
             this.lastMouseX = mousePosX;
             this.lastMouseY = mousePosY;
 
-            System.out.println("It clicks alright");
+            //This Works!!!!!!!!
+            System.out.println("Heyo, it only activates when within the GUI boundary");
 
             return true;
         } else {
@@ -89,10 +87,43 @@ public class AdvancedPanelComponent extends Screen {
     }
 
     @Override
-    public boolean mouseReleased(double p_94753_, double p_94754_, int p_94755_) {
+    public boolean mouseReleased(double p_94722_, double p_94723_, int p_94724_) {
         this.isDragging = false;
 
-        return super.mouseReleased(p_94753_, p_94754_, p_94755_);
+        return super.mouseReleased(p_94722_, p_94723_, p_94724_);
+    }
+
+    @Override
+    public boolean mouseDragged(double mouseX, double mouseY, int lastButtonClicked, double p_231045_6_, double p_231045_8_) {
+        if (this.isDragging) {
+            double tempXChange;
+            double tempYChange;
+
+            if (mouseX > lastMouseX) {
+                tempXChange = mouseX - lastMouseX;
+                this.panelOriginX = (int) (this.panelOriginX + tempXChange);
+            } else {
+                tempXChange = lastMouseX - mouseX;
+                this.panelOriginX = (int) (this.panelOriginX - tempXChange);
+            }
+
+            if (mouseY > lastMouseY) {
+                tempYChange = mouseY - lastMouseY;
+                this.panelOriginY = (int) (this.panelOriginY + tempYChange);
+            } else {
+                tempYChange = lastMouseY - mouseY;
+                this.panelOriginY = (int) (this.panelOriginY - tempYChange);
+            }
+
+            this.lastMouseX = mouseX;
+            this.lastMouseY = mouseY;
+
+            //this.initButtons();
+
+            System.out.println(mouseX + ", " + mouseY);
+        }
+
+        return super.mouseDragged(mouseX, mouseY, lastButtonClicked, p_231045_6_, p_231045_8_);
     }
 
 
@@ -110,13 +141,6 @@ public class AdvancedPanelComponent extends Screen {
     }
 
     public void renderBackground(PoseStack poseStack, int mouseX, int mouseY, float delta) {
-        if (panelWidth < minPanelWidth) {
-            panelWidth = minPanelWidth;
-        }
-        if (panelHeight < minPanelHeight) {
-           panelHeight = minPanelHeight;
-        }
-
         GUIHelper.drawBorderedFilledPanel(poseStack, panelOriginX, panelOriginY, panelWidth, panelHeight, borderStyle, panelColor1, panelColor2, 0);
     }
 

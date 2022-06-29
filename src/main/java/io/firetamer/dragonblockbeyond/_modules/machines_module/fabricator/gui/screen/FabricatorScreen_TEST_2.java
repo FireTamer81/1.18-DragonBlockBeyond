@@ -7,6 +7,7 @@ import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.wi
 import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
 import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
 import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.AdvancedPanelComponent;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.AdvancedPanelComponent2;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -14,10 +15,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
+
 @OnlyIn(Dist.CLIENT)
 public class FabricatorScreen_TEST_2 extends AbstractContainerScreen<FabricatorContainerMenu> {
     private static final ResourceLocation EXTRAS_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
-    private final AdvancedPanelComponent testPanelComponent = new AdvancedPanelComponent();
+    //private final AdvancedPanelComponent2 testPanelComponent = new AdvancedPanelComponent2();
 
     protected int imageWidth = 176;
     protected int imageHeight = 218;
@@ -31,14 +34,17 @@ public class FabricatorScreen_TEST_2 extends AbstractContainerScreen<FabricatorC
         //minecraft.level.getBlockEntity()
     }
 
+
     @Override
     protected void init() {
         super.init();
 
+        /*
         DBBColor interiorPanelColor1 = new DBBColor(100, 100, 100, 180);
-        this.testPanelComponent.init(20, 64, 100, 100, 50, 50, minecraft,
+        this.testPanelComponent.init(20, 64, 100, 100, minecraft,
                 true, true, TextureHandler.BORDER_1, interiorPanelColor1, null);
         this.setInitialFocus(this.testPanelComponent);
+        */
 
         this.createScreenControlButtons();
     }
@@ -48,7 +54,7 @@ public class FabricatorScreen_TEST_2 extends AbstractContainerScreen<FabricatorC
         int y = (height - this.imageHeight) / 2;
 
         this.testButton = new StateSwitchingActionButton(x + 124, y + 5, 45, 18, isTestButtonActive, (onPress) -> {
-            this.testPanelComponent.toggleVisibility();
+            //this.testPanelComponent.toggleVisibility();
         });
 
         this.initButtonTextures();
@@ -75,7 +81,7 @@ public class FabricatorScreen_TEST_2 extends AbstractContainerScreen<FabricatorC
 
         renderBackground(poseStack);
 
-        this.testPanelComponent.render(poseStack, mouseX, mouseY, delta);
+        //this.testPanelComponent.render(poseStack, mouseX, mouseY, delta);
 
         super.render(poseStack, mouseX, mouseY, delta);
         this.testButton.render(poseStack, mouseX, mouseY, delta);
