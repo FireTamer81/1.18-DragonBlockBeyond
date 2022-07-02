@@ -9,6 +9,7 @@ import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.scr
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.items.PaintBucketItem;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.items.WarenaiBlockItem;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
+import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -33,31 +34,21 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static io.firetamer.dragonblockbeyond.common_registration.ItemInit.ITEMS;
+
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = DragonBlockBeyond.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class StrongBlockModule {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<MenuType<?>> CONTAINER_MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, DragonBlockBeyond.MOD_ID);
-
-
-    private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
-        return BLOCKS.register(name, block);
+public class StrongBlockModule extends BlockInit {
+    public static void init() {
     }
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> ret = registerNoItem(name, block);
-        ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties()));
-        return ret;
-    }
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerWarenaiBlock(String name, Supplier<T> block) {
-        RegistryObject<T> ret = registerNoItem(name, block);
-        ITEMS.register(name, () -> new WarenaiBlockItem(ret.get()));
-        return ret;
+        return registerBlock(name, block, b->()-> new WarenaiBlockItem(b.get()));
     }
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {

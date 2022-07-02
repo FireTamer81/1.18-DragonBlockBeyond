@@ -11,12 +11,12 @@ public class TextureHandler {
 
     public TextureHandler() {}
 
-    public void init() {
+    public static void init() {
         createGUIBorderTextureData();
     }
 
 
-    private void createGUIBorderTextureData() {
+    private static void createGUIBorderTextureData() {
         BORDER_1 = new BorderTextureObject(BORDER_MAP_1,
                 0, 8, 0, 8, 0, 0,
                 9, 12, 0, 8, 0, 0,

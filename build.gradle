@@ -1,10 +1,13 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://maven.parchmentmc.org' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.parchmentmc:librarian:1.+'
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7.+'
     }
 }
 
@@ -12,11 +15,14 @@ buildscript {
 plugins {
     id 'eclipse'
     id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'org.spongepowered.mixin'
 
 
-version = '0.1'
+version = '0.1.0'
 group = 'io.firetamer.dragonblockbeyond' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'dragonblockbeyond'
 
@@ -96,12 +102,32 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name = '100Media'
+        url = 'https://maven.100media.dev/'
+    }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
+mixin {
+    add sourceSets.main, "${mod_id}.refmap.json"
 
+    config "${mod_id}.mixins.json"
+
+    debug.export = true
+}
+configurations {
+    implementation.extendsFrom shadow
+}
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.54'
+
+    // Mixin annotation processor - generates the refmap
+    annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 
     implementation fg.deobf("curse.maven:top-245211:3671753")
+    implementation fg.deobf("software.bernie.geckolib:geckolib-${geckolib_version}")
+    // Capability Syncer
+    shadow fg.deobf("dev._100media.capabilitysyncer:capabilitysyncer:${capabilitysyncer_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -119,7 +145,29 @@ jar {
     }
 }
 
+def relocateTargets = ['dev._100media.capabilitysyncer']
+shadowJar {
+    archiveClassifier = ''
+    configurations = [project.configurations.shadow]
+    relocateTargets.forEach {
+        relocate it, "${project.group}.relocated.$it"
+    }
+}
+
+reobf {
+    shadowJar {}
+}
+
+afterEvaluate {
+    jar.finalizedBy reobfJar
+    reobfShadowJar.dependsOn shadowJar
+}
+
+// Example configuration to allow publishing using the maven-publish plugin
+// This is the preferred method to reobfuscate your jar file
 jar.finalizedBy('reobfJar')
+// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
+// publish.dependsOn('reobfJar')
 
 publishing {
     publications {
@@ -132,8 +180,4 @@ publishing {
             url "file://${project.projectDir}/mcmodsrepo"
         }
     }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }

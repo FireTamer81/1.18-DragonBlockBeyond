@@ -3,14 +3,18 @@ package io.firetamer.dragonblockbeyond;
 import com.mojang.logging.LogUtils;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.dispenser.DispensePaintbucketBehaviour;
-import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.network.PacketHandler;
+import io.firetamer.dragonblockbeyond.network.PacketHandler;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.top.TOPMain;
+import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
 import io.firetamer.dragonblockbeyond.handlers.CreativeTabHandler;
 import io.firetamer.dragonblockbeyond.handlers.RegistryHandler;
 import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
+import io.firetamer.dragonblockbeyond.race.capability.RaceHolderAttacher;
+import io.firetamer.dragonblockbeyond.race.client.ClientGeckolibIntegration;
+import io.firetamer.dragonblockbeyond.race.event.NMCommonForgeEvents;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.DispenserBlock;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModList;
@@ -18,6 +22,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLLoader;
 import org.slf4j.Logger;
 
 
@@ -35,16 +40,17 @@ public class DragonBlockBeyond {
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        RegistryHandler registryHandler = new RegistryHandler(modEventBus);
-        registryHandler.init();
+        RegistryHandler.init(modEventBus);
 
-        TextureHandler textureHandler = new TextureHandler();
-        textureHandler.init();
+        TextureHandler.init();
+        NMCommonForgeEvents.register();
 
+        RaceHolderAttacher.register();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::enqueueIMC);
-
-        MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.register(this);
+        if (FMLLoader.getDist() == Dist.CLIENT && ModList.get().isLoaded("geckolib3"))
+            ClientGeckolibIntegration.registerClientReloadListener();
     }
 
 

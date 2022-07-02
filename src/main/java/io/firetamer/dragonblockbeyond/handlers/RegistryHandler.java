@@ -4,8 +4,11 @@ import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
 import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
+import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
+
+import java.util.stream.Stream;
 
 
 /**
@@ -15,34 +18,16 @@ import net.minecraftforge.registries.DeferredRegister;
  */
 
 public class RegistryHandler {
-    IEventBus modBus;
 
-    public RegistryHandler(IEventBus busIn) {
-        this.modBus = busIn;
-    }
-
-    public void init() {
-        DeferredRegister<?>[] registers = {
+    public static void init(IEventBus modBus) {
+        BlockInit.init();
+        Stream.of(
                 ItemInit.ITEMS,
-
                 BlockInit.BLOCKS,
-                BlockInit.ITEMS,
-
-                StrongBlockModule.BLOCKS,
-                StrongBlockModule.ITEMS,
-                StrongBlockModule.TILES,
-                StrongBlockModule.CONTAINER_MENUS,
-                StrongBlockModule.RECIPE_SERIALIZERS,
-
-                MachinesModule.BLOCKS,
-                MachinesModule.ITEMS,
-                MachinesModule.TILES,
-                MachinesModule.CONTAINER_MENUS,
-                MachinesModule.RECIPE_SERIALIZERS,
-        };
-
-        for (DeferredRegister<?> register : registers) {
-            register.register(modBus);
-        }
+                BlockInit.CONTAINER_MENUS,
+                BlockInit.RECIPE_SERIALIZERS,
+                BlockInit.TILES,
+                RaceInit.RACES
+        ).forEach(registry -> registry.register(modBus));
     }
 }

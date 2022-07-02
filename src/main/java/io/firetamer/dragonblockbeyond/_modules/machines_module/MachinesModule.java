@@ -5,14 +5,11 @@ import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.Fabric
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTile;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTileRenderer;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
-import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen_TEST_2;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.screen.FabricatorScreen_TEST_3;
+import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -24,30 +21,20 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.network.IContainerFactory;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.function.Supplier;
-
 @Mod.EventBusSubscriber(modid = DragonBlockBeyond.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class MachinesModule {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<MenuType<?>> CONTAINER_MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, DragonBlockBeyond.MOD_ID);
-    public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, DragonBlockBeyond.MOD_ID);
+public class MachinesModule extends BlockInit {
 
 
-    private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
-        return BLOCKS.register(name, block);
-    }
+    public static void init(){}
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> ret = registerNoItem(name, block);
-        ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties()));
-        return ret;
-    }
+//
+//    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+//        RegistryObject<T> ret = registerNoItem(name, block);
+//        ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties()));
+//        return ret;
+//    }
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return CONTAINER_MENUS.register(name, () -> IForgeMenuType.create(factory));

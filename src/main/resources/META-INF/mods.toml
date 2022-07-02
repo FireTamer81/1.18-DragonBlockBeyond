@@ -6,7 +6,7 @@ modId="dragonblockbeyond" #mandatory
 version="0.1" #mandatory
  # A display name for the mod
 displayName="DragonBlock Beyond" #mandatory
-authors="FireTamer, MatyRobert, Pierre the Wise, Echo" #optional
+authors="FireTamer, MatyRobert, Pierre the Wise, Echo,Nyfaria" #optional
 description='''
 The DragonBlock mod of the future.... hopefully.
 '''

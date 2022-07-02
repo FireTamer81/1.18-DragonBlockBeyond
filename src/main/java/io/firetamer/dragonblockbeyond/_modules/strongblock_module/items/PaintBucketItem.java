@@ -23,6 +23,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -122,5 +123,17 @@ public class PaintBucketItem extends Item {
     @Override
     public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         return false;
+    }
+
+
+    @Nullable
+    @Override
+    public CompoundTag getShareTag(ItemStack stack) {
+        return super.getShareTag(stack);
+    }
+
+    @Override
+    public void readShareTag(ItemStack stack, @Nullable CompoundTag nbt) {
+        super.readShareTag(stack, nbt);
     }
 }
