@@ -3,7 +3,7 @@ package io.firetamer.dragonblockbeyond._modules.machines_module.fabricator;
 import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
+import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -15,13 +15,10 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -31,7 +28,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-import java.util.Optional;
 import java.util.Random;
 
 public class FabricatorBlockTile extends BlockEntity implements MenuProvider {
@@ -111,8 +107,8 @@ public class FabricatorBlockTile extends BlockEntity implements MenuProvider {
 
 
     private static boolean hasRecipe(FabricatorBlockTile entity) {
-        boolean hasStoneInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == Blocks.STONE.asItem();
-        boolean hasTestItemInThirdSlot = entity.itemHandler.getStackInSlot(2).getItem() == ItemInit.TEST_ITEM.get();
+        boolean hasStoneInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == net.minecraft.world.level.block.Blocks.STONE.asItem();
+        boolean hasTestItemInThirdSlot = entity.itemHandler.getStackInSlot(2).getItem() == CommonObjects.TEST_ITEM.get();
 
 
         return hasStoneInFirstSlot && hasTestItemInThirdSlot;

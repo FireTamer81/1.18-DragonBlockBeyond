@@ -11,7 +11,7 @@ import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import com.mojang.brigadier.tree.LiteralCommandNode;
-import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
+import io.firetamer.dragonblockbeyond.init.RaceInit;
 import io.firetamer.dragonblockbeyond.race.Race;
 import io.firetamer.dragonblockbeyond.race.capability.RaceHolderAttacher;
 import io.firetamer.dragonblockbeyond.race.util.RaceUtil;

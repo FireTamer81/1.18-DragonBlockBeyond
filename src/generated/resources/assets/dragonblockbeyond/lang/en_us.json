@@ -9,13 +9,6 @@
   "gui.dragonblockbeyond.useHSB": "Use HSB",
   "gui.dragonblockbeyond.useRGB": "Use RGB",
   "item.dragonblockbeyond.test_item": "Test Item",
-  "itemGroup.dbb_blocks_tab": "DBB Blocks",
-  "itemGroup.dbb_items_tab": "DBB Items",
-  "commands.dragonblockbeyond.race.failure.not_living": "Invalid Entity",
-  "argument.dragonblockbeyond.race.id.invalid": "Invalid Race",
-  "argument.dragonblockbeyond.variant.invalid": "Invalid Variant",
-  "commands.dragonblockbeyond.race.failure.disabled_race": "Race is Disabled",
-  "commands.dragonblockbeyond.race.variant.suggestion": "variant",
-  "commands.dragonblockbeyond.derace.success.self": "Race set to Human",
-  "commands.dragonblockbeyond.race.success.self": "Race set to"
+  "itemGroup.dbb_blocks_tab": "DBB StrongBlockModule",
+  "itemGroup.dbb_items_tab": "DBB Items"
 }

@@ -1,12 +1,15 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import io.firetamer.dragonblockbeyond._modules.namek.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.*;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.properties.WarenaiBlockConditionEnum;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.properties.WarenaiBlockPatternEnum;
+import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -30,8 +33,8 @@ public class BlockStateDataProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //simpleBlock(BlockInit.TEST_BLOCK.get());
 
+        //StrongBlocks
         warenaiBlock(StrongBlockModule.WARENAI_FULL_BLOCK.get());
         warenaiBlockStair(StrongBlockModule.WARENAI_STAIRS_BLOCK.get());
         warenaiBlockSlab(StrongBlockModule.WARENAI_SLAB_BLOCK.get());
@@ -39,66 +42,49 @@ public class BlockStateDataProvider extends BlockStateProvider {
         warenaiReinforcedGlassSlab(StrongBlockModule.WARENAI_GLASS_SLAB.get());
         warenaiReinforcedGlassStairs(StrongBlockModule.WARENAI_GLASS_STAIRS.get());
 
-        StrongBlockModule.BLOCKS.getEntries()
-                .stream()
-                .filter((block) ->
-                        block.get() != StrongBlockModule.WARENAI_FENCE_BLOCK.get()
-                        //&& block.get() != StrongBlockModule.WARENAI_WALL_BLOCK.get()
-                )
-                .forEach((block) -> blockItems(block.get()));
+        blockItem(StrongBlockModule.WARENAI_FULL_BLOCK.get());
+        blockItem(StrongBlockModule.WARENAI_STAIRS_BLOCK.get());
+        blockItem(StrongBlockModule.WARENAI_SLAB_BLOCK.get());
+        blockItem(StrongBlockModule.WARENAI_GLASS.get());
+        blockItem(StrongBlockModule.WARENAI_GLASS_SLAB.get());
+        blockItem(StrongBlockModule.WARENAI_GLASS_STAIRS.get());
 
 
 
+        //Misc. Blocks
+        simpleBlock(CommonObjects.DIRTY_STONE.get());
+        simpleBlock(CommonObjects.CLAY_DIRT.get());
 
+        blockItem(CommonObjects.DIRTY_STONE.get());
+        blockItem(CommonObjects.CLAY_DIRT.get());
 
-        /**
-        simpleBlock(ColorableBlockTest.RGB_CARPET.get(),
-                models().singleTexture(ColorableBlockTest.RGB_CARPET.getId().getPath(),
-                        modLoc(ModelProvider.BLOCK_FOLDER + "/thin_block"),
-                        "all",
-                        modLoc(ModelProvider.BLOCK_FOLDER + "/wool")));
+        //Namek Blocks
+        grassBlock(NamekModule.NAMEK_GRASS_BLOCK.get(),
+                modLoc("block/namek_grass_block_side"),
+                modLoc("block/clay_dirt"),
+                modLoc("block/namek_grass_block_top"));
 
-        getVariantBuilder(ColorableBlockTest.RGB_REDSTONE_LAMP.get()).forAllStates(state -> {
-            return state.getValue(RedstoneLampBlock.LIT)
-                    ? ConfiguredModel.builder()
-                    .modelFile(models().singleTexture(ColorableBlockTest.RGB_REDSTONE_LAMP.getId()
-                                    .getPath() +
-                                    "_on",
-                            modLoc(ModelProvider.BLOCK_FOLDER +
-                                    "/example_blocks"),
-                            "all",
-                            modLoc(ModelProvider.BLOCK_FOLDER +
-                                    "/redstone_lamp_on")))
-                    .build()
-                    : ConfiguredModel.builder()
-                    .modelFile(models().singleTexture(ColorableBlockTest.RGB_REDSTONE_LAMP.getId().getPath(),
-                            modLoc(ModelProvider.BLOCK_FOLDER + "/example_blocks"),
-                            "all",
-                            modLoc(ModelProvider.BLOCK_FOLDER +
-                                    "/redstone_lamp")))
-                    .build();
-        });
+        blockItem(NamekModule.NAMEK_GRASS_BLOCK.get());
 
-
-        blocks(ColorableBlockTest.RGB_CONCRETE.get());
-        slabBlocks(ColorableBlockTest.RGB_CONCRETE_SLAB.get());
-        stairBlocks(ColorableBlockTest.RGB_DARK_PRISMARINE_STAIRS.get());
-
-        ColorableBlockTest.BLOCKS.getEntries()
-                .stream()
-                .filter((block) -> block.get() != ColorableBlockTest.RGB_GLASS_PANE.get())
-                .forEach((block) -> blockItems(block.get()));
-        **/
     }
 
+    private String name(Block block) {
+        return block.getRegistryName().getPath();
+    }
 
-
-
-
-    private void blockItems(Block block) {
+    private void blockItem(Block block) {
         String path = block.getRegistryName().getPath();
         simpleBlockItem(block, models().getExistingFile(modLoc(ModelProvider.BLOCK_FOLDER + "/" + path)));
     }
+
+    private void grassBlock(Block block, ResourceLocation sideTexturePathString, ResourceLocation bottomTexturePathString, ResourceLocation topTexturePathString) {
+        simpleBlock(block, models().cubeBottomTop(name(block),
+                sideTexturePathString,
+                bottomTexturePathString,
+                topTexturePathString));
+    }
+
+
 
 
 
@@ -765,28 +751,28 @@ public class BlockStateDataProvider extends BlockStateProvider {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     /*
-    paneBlock(BlockRegistry.RGB_GLASS_PANE.get(),
-                  models().withExistingParent(BlockRegistry.RGB_GLASS_PANE.getId().toString() + "_post",
+    paneBlock(BlockRegistry.WARENAI_GLASS_PANE.get(),
+                  models().withExistingParent(BlockRegistry.WARENAI_GLASS_PANE.getId().toString() + "_post",
                                               modLoc(ModelProvider.BLOCK_FOLDER + "/template_glass_pane_post"))
                           .texture("pane", modLoc(ModelProvider.BLOCK_FOLDER + "/glass"))
                           .texture("edge", modLoc(ModelProvider.BLOCK_FOLDER + "/glass_pane_top")),
-                  models().withExistingParent(BlockRegistry.RGB_GLASS_PANE.getId().toString() + "_side",
+                  models().withExistingParent(BlockRegistry.WARENAI_GLASS_PANE.getId().toString() + "_side",
                                               modLoc(ModelProvider.BLOCK_FOLDER + "/template_glass_pane_side"))
                           .texture("pane", modLoc(ModelProvider.BLOCK_FOLDER + "/glass"))
                           .texture("edge", modLoc(ModelProvider.BLOCK_FOLDER + "/glass_pane_top")),
-                  models().withExistingParent(BlockRegistry.RGB_GLASS_PANE.getId().toString() + "_side_alt",
+                  models().withExistingParent(BlockRegistry.WARENAI_GLASS_PANE.getId().toString() + "_side_alt",
                                               modLoc(ModelProvider.BLOCK_FOLDER + "/template_glass_pane_side_alt"))
                           .texture("pane", modLoc(ModelProvider.BLOCK_FOLDER + "/glass"))
                           .texture("edge", modLoc(ModelProvider.BLOCK_FOLDER + "/glass_pane_top")),
-                  models().withExistingParent(BlockRegistry.RGB_GLASS_PANE.getId().toString() + "_noside",
+                  models().withExistingParent(BlockRegistry.WARENAI_GLASS_PANE.getId().toString() + "_noside",
                                               modLoc(ModelProvider.BLOCK_FOLDER + "/template_glass_pane_noside"))
                           .texture("pane", modLoc(ModelProvider.BLOCK_FOLDER + "/glass")),
-                  models().withExistingParent(BlockRegistry.RGB_GLASS_PANE.getId().toString() + "_noside_alt",
+                  models().withExistingParent(BlockRegistry.WARENAI_GLASS_PANE.getId().toString() + "_noside_alt",
                                               modLoc(ModelProvider.BLOCK_FOLDER + "/template_glass_pane_noside_alt"))
                           .texture("pane", modLoc(ModelProvider.BLOCK_FOLDER + "/glass")));
      */
 
-    private void warenaiReinforcedGlassPane() {}
+    //private void warenaiReinforcedGlassPane() {}
 
 
 

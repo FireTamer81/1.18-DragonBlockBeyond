@@ -5,7 +5,6 @@ import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockMod
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.dispenser.DispensePaintbucketBehaviour;
 import io.firetamer.dragonblockbeyond.network.PacketHandler;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.util.top.TOPMain;
-import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
 import io.firetamer.dragonblockbeyond.handlers.CreativeTabHandler;
 import io.firetamer.dragonblockbeyond.handlers.RegistryHandler;
 import io.firetamer.dragonblockbeyond.handlers.TextureHandler;

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "dragonblockbeyond:block/namek_grass_block_side",
+    "bottom": "dragonblockbeyond:block/clay_dirt",
+    "top": "dragonblockbeyond:block/namek_grass_block_top"
+  }
+}

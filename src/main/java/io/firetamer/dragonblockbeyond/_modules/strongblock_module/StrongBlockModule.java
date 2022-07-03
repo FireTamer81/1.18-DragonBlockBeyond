@@ -9,50 +9,34 @@ import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.scr
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.items.PaintBucketItem;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.items.WarenaiBlockItem;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
-import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
+import io.firetamer.dragonblockbeyond.handlers.RegistryHandler;
+import io.firetamer.dragonblockbeyond.util.library_candidates.ModuleBase;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
-import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static io.firetamer.dragonblockbeyond.common_registration.ItemInit.ITEMS;
-
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = DragonBlockBeyond.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class StrongBlockModule extends BlockInit {
-    public static void init() {
-    }
-
-
-
-
+public class StrongBlockModule extends ModuleBase {
+    public static void init(){}
 
     private static <T extends Block> RegistryObject<T> registerWarenaiBlock(String name, Supplier<T> block) {
-        return registerBlock(name, block, b->()-> new WarenaiBlockItem(b.get()));
-    }
-
-    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
-        return CONTAINER_MENUS.register(name, () -> IForgeMenuType.create(factory));
+        return registerBlock(name, block, b -> ()-> new WarenaiBlockItem(b.get()), RegistryHandler.BLOCKS, RegistryHandler.ITEMS);
     }
 
 
@@ -60,8 +44,6 @@ public class StrongBlockModule extends BlockInit {
     /******************************************************************************************************************/
     //Blocks
     /******************************************************************************************************************/
-
-
 
 
     public static final RegistryObject<WarenaiBlock> WARENAI_FULL_BLOCK = registerWarenaiBlock("warenai_full_block", () ->
@@ -94,9 +76,9 @@ public class StrongBlockModule extends BlockInit {
     /******************************************************************************************************************/
 
 
-    public static final RegistryObject<BlockEntityType<StrongBlockTile>> STRONG_BLOCK_TILE = TILES.register("strong_block_tile",
+    public static final RegistryObject<BlockEntityType<StrongBlockTile>> STRONG_BLOCK_TILE = RegistryHandler.TILES.register("strong_block_tile",
             () -> BlockEntityType.Builder.of(StrongBlockTile::new,
-                    BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new)).build(null));
+                    RegistryHandler.BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new)).build(null));
 
 
 
@@ -106,21 +88,7 @@ public class StrongBlockModule extends BlockInit {
     /******************************************************************************************************************/
 
 
-    public static final RegistryObject<Item> PAINT_BUCKET = ITEMS.register("paint_bucket", PaintBucketItem::new);
-
-
-    /******************************************************************************************************************/
-    //Container Menus
-    /******************************************************************************************************************/
-
-
-
-
-    /******************************************************************************************************************/
-    //Recipes
-    /******************************************************************************************************************/
-
-
+    public static final RegistryObject<Item> PAINT_BUCKET = RegistryHandler.ITEMS.register("paint_bucket", PaintBucketItem::new);
 
 
 
@@ -129,26 +97,21 @@ public class StrongBlockModule extends BlockInit {
     /******************************************************************************************************************/
 
 
-
-
-
     @SubscribeEvent
     public static void doClientStuff(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(StrongBlockModule.WARENAI_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(StrongBlockModule.WARENAI_GLASS_STAIRS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(StrongBlockModule.WARENAI_GLASS_SLAB.get(), RenderType.translucent());
-
-        //ItemBlockRenderTypes.setRenderLayer();
     }
 
     @SubscribeEvent
     public static void registerColorHandlers(ColorHandlerEvent.Item event) {
         event.getBlockColors()
                 .register(new WarenaiBlockColor(),
-                        StrongBlockModule.BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new));
+                        RegistryHandler.BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new));
         event.getItemColors()
                 .register(new WarenaiBlockItemColor(),
-                        StrongBlockModule.BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new));
+                        RegistryHandler.BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new));
 
         event.getItemColors()
                 .register(new PaintBucketItemColor(),

@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond.race;
 
 
-import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
+import io.firetamer.dragonblockbeyond.init.RaceInit;
 import io.firetamer.dragonblockbeyond.race.api.RaceSoundData;
 import net.minecraft.Util;
 import net.minecraft.core.particles.ParticleTypes;

@@ -1,32 +1,42 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
+import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
+import io.firetamer.dragonblockbeyond._modules.namek.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond.common_registration.BlockInit;
-import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
-import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
+import io.firetamer.dragonblockbeyond.init.CommonObjects;
+import io.firetamer.dragonblockbeyond.util.library_candidates.ModuleBase;
+import io.firetamer.dragonblockbeyond.init.RaceInit;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.stream.Stream;
 
 
-/**
- * Since I couldn't figure out a work around to get annotations to work (thanks Mojang), this is my best alternative
- * All that is done in the main mod file is instantiate this class and call the init method, keeping the main mod file cleaner.
- * So, now all that needs to be done is call the deferred registers from each class that has them (see the commented example)
- */
-
 public class RegistryHandler {
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DragonBlockBeyond.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DragonBlockBeyond.MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, DragonBlockBeyond.MOD_ID);
+    public static final DeferredRegister<MenuType<?>> CONTAINER_MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, DragonBlockBeyond.MOD_ID);
+
 
     public static void init(IEventBus modBus) {
-        BlockInit.init();
+        CommonObjects.init();
+        StrongBlockModule.init();
+        MachinesModule.init();
+        NamekModule.init();
+
         Stream.of(
-                ItemInit.ITEMS,
-                BlockInit.BLOCKS,
-                BlockInit.CONTAINER_MENUS,
-                BlockInit.RECIPE_SERIALIZERS,
-                BlockInit.TILES,
+                ITEMS,
+                BLOCKS,
+                CONTAINER_MENUS,
+                TILES,
+
                 RaceInit.RACES
         ).forEach(registry -> registry.register(modBus));
     }

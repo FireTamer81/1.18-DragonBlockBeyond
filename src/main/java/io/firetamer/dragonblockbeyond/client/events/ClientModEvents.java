@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond.client.events;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
+import io.firetamer.dragonblockbeyond.init.RaceInit;
 import io.firetamer.dragonblockbeyond.race.client.animatable.SimpleAnimatable;
 import io.firetamer.dragonblockbeyond.race.client.model.SimpleGeoPlayerModel;
 import io.firetamer.dragonblockbeyond.race.client.renderer.GeoPlayerRenderer;

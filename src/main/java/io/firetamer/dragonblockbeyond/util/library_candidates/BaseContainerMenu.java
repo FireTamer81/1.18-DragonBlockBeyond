@@ -1,7 +1,6 @@
 package io.firetamer.dragonblockbeyond.util.library_candidates;
 
 import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
-import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.FabricatorBlockTile;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -11,9 +10,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class BaseContainerMenu extends AbstractContainerMenu {
@@ -40,7 +37,7 @@ public abstract class BaseContainerMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, MachinesModule.FABRICATOR.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, MachinesModule.FABRICATOR_BLOCK.get());
     }
 
 

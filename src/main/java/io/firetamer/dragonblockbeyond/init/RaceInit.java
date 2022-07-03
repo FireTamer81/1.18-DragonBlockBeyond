@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.common_registration;
+package io.firetamer.dragonblockbeyond.init;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond.race.Race;

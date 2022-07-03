@@ -5,7 +5,7 @@ import dev._100media.capabilitysyncer.core.PlayerCapability;
 import dev._100media.capabilitysyncer.network.EntityCapabilityStatusPacket;
 import dev._100media.capabilitysyncer.network.SimpleEntityCapabilityStatusPacket;
 import io.firetamer.dragonblockbeyond.network.PacketHandler;
-import io.firetamer.dragonblockbeyond.common_registration.RaceInit;
+import io.firetamer.dragonblockbeyond.init.RaceInit;
 import io.firetamer.dragonblockbeyond.race.Race;
 import io.firetamer.dragonblockbeyond.race.util.TagUtil;
 import io.firetamer.dragonblockbeyond.race.event.RaceEvent;

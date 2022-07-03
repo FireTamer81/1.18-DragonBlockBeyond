@@ -2,7 +2,7 @@ package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
+import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -19,9 +19,9 @@ public class ItemModelDataProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        //makeSimpleBlockItem(BlockInit.TEST_BLOCK.get());
+        //makeSimpleBlockItem(CommonObjects.TEST_BLOCK.get());
 
-        simpleItem(ItemInit.TEST_ITEM.get());
+        simpleItem(CommonObjects.TEST_ITEM.get());
 
         item2Layers(StrongBlockModule.PAINT_BUCKET.get());
 

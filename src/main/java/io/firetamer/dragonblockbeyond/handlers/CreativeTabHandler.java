@@ -1,20 +1,23 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
 import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
+import io.firetamer.dragonblockbeyond._modules.namek.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond.common_registration.ItemInit;
+import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.Arrays;
 
 public class CreativeTabHandler {
 
     public static ItemStack[] blockTabItems = {
-            MachinesModule.FABRICATOR.get().asItem().getDefaultInstance(),
+            CommonObjects.CLAY_DIRT.get().asItem().getDefaultInstance(),
+            CommonObjects.DIRTY_STONE.get().asItem().getDefaultInstance(),
+
+            MachinesModule.FABRICATOR_BLOCK.get().asItem().getDefaultInstance(),
 
             StrongBlockModule.WARENAI_FULL_BLOCK.get().asItem().getDefaultInstance(),
             StrongBlockModule.WARENAI_STAIRS_BLOCK.get().asItem().getDefaultInstance(),
@@ -25,10 +28,12 @@ public class CreativeTabHandler {
             StrongBlockModule.WARENAI_GLASS.get().asItem().getDefaultInstance(),
             StrongBlockModule.WARENAI_GLASS_SLAB.get().asItem().getDefaultInstance(),
             StrongBlockModule.WARENAI_GLASS_STAIRS.get().asItem().getDefaultInstance(),
+
+            NamekModule.NAMEK_GRASS_BLOCK.get().asItem().getDefaultInstance()
     };
 
     public static ItemStack[] itemTabItems = {
-            ItemInit.TEST_ITEM.get().getDefaultInstance(),
+            CommonObjects.TEST_ITEM.get().getDefaultInstance(),
 
             StrongBlockModule.PAINT_BUCKET.get().getDefaultInstance()
     };
@@ -44,7 +49,7 @@ public class CreativeTabHandler {
 
         @Override
         public ItemStack makeIcon() {
-            return Blocks.DIRT.asItem().getDefaultInstance();
+            return net.minecraft.world.level.block.Blocks.DIRT.asItem().getDefaultInstance();
         }
 
         @Override
