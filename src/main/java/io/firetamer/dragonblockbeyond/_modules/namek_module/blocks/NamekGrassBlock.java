@@ -1,5 +1,6 @@
-package io.firetamer.dragonblockbeyond._modules.namek.blocks;
+package io.firetamer.dragonblockbeyond._modules.namek_module.blocks;
 
+import io.firetamer.dragonblockbeyond._modules.namek_module.NamekModule;
 import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -15,9 +16,9 @@ import net.minecraft.world.level.lighting.LayerLightEngine;
 
 import java.util.Random;
 
-public class SpreadableNamekGrass extends Block implements BonemealableBlock {
+public class NamekGrassBlock extends Block implements BonemealableBlock {
 
-    public SpreadableNamekGrass(Properties p_49795_) {
+    public NamekGrassBlock(Properties p_49795_) {
         super(p_49795_);
     }
 
@@ -76,7 +77,41 @@ public class SpreadableNamekGrass extends Block implements BonemealableBlock {
     }
 
     @Override
-    public void performBonemeal(ServerLevel p_50893_, Random p_50894_, BlockPos p_50895_, BlockState p_50896_) {
+    public void performBonemeal(ServerLevel serverLevel, Random rand, BlockPos pos, BlockState state) {
+        BlockPos abovePos = pos.above();
+        BlockState defaultState = NamekModule.NAMEK_GRASS_BLOCK.get().defaultBlockState();
 
+        Task:
+        for (int i = 0; i < 128; ++i) {
+            BlockPos pos1 = abovePos;
+
+            for(int j = 0; j < i / 16; ++j) {
+                pos1 = pos1.offset(rand.nextInt(3) - 1, (rand.nextInt(3) - 1) * rand.nextInt(3) / 2, rand.nextInt(3) - 1);
+
+                if (!serverLevel.getBlockState(pos1.below()).is(this) || serverLevel.getBlockState(pos1).isCollisionShapeFullBlock(serverLevel, pos1)) {
+                    continue Task;
+                }
+            }
+
+            BlockState state1 = serverLevel.getBlockState(pos1);
+
+            if (state1.is(defaultState.getBlock()) && rand.nextInt(10) == 0) {
+                ((BonemealableBlock)defaultState.getBlock()).performBonemeal(serverLevel, rand, pos1, state1);
+            }
+
+            if (state1.isAir()) {
+                BlockState state2;
+
+                if (rand.nextInt(4) == 0) {
+                    state2 = NamekModule.TALL_NAMEK_GRASS.get().defaultBlockState();
+                } else {
+                    state2 = NamekModule.SHORT_NAMEK_GRASS.get().defaultBlockState();
+                }
+
+                if (state1.canSurvive(serverLevel, pos1)) {
+                    serverLevel.setBlockAndUpdate(pos1, state2);
+                }
+            }
+        }
     }
 }

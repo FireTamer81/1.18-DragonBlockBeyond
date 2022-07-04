@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
 import io.firetamer.dragonblockbeyond._modules.machines_module.MachinesModule;
-import io.firetamer.dragonblockbeyond._modules.namek.NamekModule;
+import io.firetamer.dragonblockbeyond._modules.namek_module.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.core.NonNullList;
@@ -29,13 +29,25 @@ public class CreativeTabHandler {
             StrongBlockModule.WARENAI_GLASS_SLAB.get().asItem().getDefaultInstance(),
             StrongBlockModule.WARENAI_GLASS_STAIRS.get().asItem().getDefaultInstance(),
 
-            NamekModule.NAMEK_GRASS_BLOCK.get().asItem().getDefaultInstance()
+            NamekModule.NAMEK_GRASS_BLOCK.get().asItem().getDefaultInstance(),
+            NamekModule.TALL_NAMEK_GRASS.get().asItem().getDefaultInstance(),
+            NamekModule.SHORT_NAMEK_GRASS.get().asItem().getDefaultInstance(),
+
+            NamekModule.NAMEK_LOG.get().asItem().getDefaultInstance(),
+            NamekModule.STRIPPED_NAMEK_LOG.get().asItem().getDefaultInstance(),
+            NamekModule.NAMEK_WOOD.get().asItem().getDefaultInstance(),
+            NamekModule.STRIPPED_NAMEK_WOOD.get().asItem().getDefaultInstance(),
+            NamekModule.NAMEK_PLANKS.get().asItem().getDefaultInstance(),
+
+            NamekModule.NAMEK_LEAVES.get().asItem().getDefaultInstance(),
+            NamekModule.NAMEK_TREE_SAPLING.get().asItem().getDefaultInstance(),
     };
 
     public static ItemStack[] itemTabItems = {
             CommonObjects.TEST_ITEM.get().getDefaultInstance(),
 
-            StrongBlockModule.PAINT_BUCKET.get().getDefaultInstance()
+            StrongBlockModule.PAINT_BUCKET.get().getDefaultInstance(),
+            NamekModule.NAMEK_FLUID_BUCKET.get().getDefaultInstance(),
     };
 
 

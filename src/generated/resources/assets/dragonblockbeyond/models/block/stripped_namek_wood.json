@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "dragonblockbeyond:block/stripped_namek_log",
+    "end": "dragonblockbeyond:block/stripped_namek_log"
+  }
+}

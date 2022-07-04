@@ -5,6 +5,10 @@ import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.
 import net.minecraft.resources.ResourceLocation;
 
 public class TextureHandler {
+    public static final ResourceLocation STILL_RL = new ResourceLocation("block/water_still");
+    public static final ResourceLocation FLOWING_RL = new ResourceLocation("block/water_flow");
+    public static final ResourceLocation OVERLAY_RL = new ResourceLocation("block/water_overlay");
+
     private static final ResourceLocation BORDER_MAP_1 = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/gui_panel_border_styles_map1.png");
     public static BorderTextureObject BORDER_1;
     public static BorderTextureObject BORDER_2;

@@ -1,10 +1,12 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import io.firetamer.dragonblockbeyond._modules.namek_module.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class BlockTagsDataProvider extends BlockTagsProvider {
@@ -25,6 +27,9 @@ public class BlockTagsDataProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.FENCES)
                 .add(StrongBlockModule.WARENAI_FENCE_BLOCK.get());
+
+        this.tag(BlockTags.LOGS)
+                .add(NamekModule.NAMEK_LOG.get());
 
         //this.tag(BlockTags.WALLS).add(StrongBlockModule.WARENAI_WALL_BLOCK.get());
     }

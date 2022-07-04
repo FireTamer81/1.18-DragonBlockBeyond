@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond._modules.namek.NamekModule;
+import io.firetamer.dragonblockbeyond._modules.namek_module.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.*;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.properties.WarenaiBlockConditionEnum;
@@ -11,6 +11,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.properties.Half;
@@ -26,10 +27,13 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 
 public class BlockStateDataProvider extends BlockStateProvider {
+    public static final String BLOCK_FOLDER = "block";
+
 
     public BlockStateDataProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, DragonBlockBeyond.MOD_ID, exFileHelper);
     }
+
 
     @Override
     protected void registerStatesAndModels() {
@@ -58,18 +62,45 @@ public class BlockStateDataProvider extends BlockStateProvider {
         blockItem(CommonObjects.DIRTY_STONE.get());
         blockItem(CommonObjects.CLAY_DIRT.get());
 
+
         //Namek Blocks
         grassBlock(NamekModule.NAMEK_GRASS_BLOCK.get(),
                 modLoc("block/namek_grass_block_side"),
                 modLoc("block/clay_dirt"),
                 modLoc("block/namek_grass_block_top"));
 
+        crossBlock(NamekModule.TALL_NAMEK_GRASS.get(), modLoc("block/tall_namek_grass"));
+        crossBlock(NamekModule.SHORT_NAMEK_GRASS.get(), modLoc("block/short_namek_grass"));
+
+        logBlock(NamekModule.NAMEK_LOG.get());
+        logBlock(NamekModule.STRIPPED_NAMEK_LOG.get());
+        axisBlockGivenTexturePath(NamekModule.NAMEK_WOOD.get(), modLoc("block/namek_log"), modLoc("block/namek_log"));
+        axisBlockGivenTexturePath(NamekModule.STRIPPED_NAMEK_WOOD.get(), modLoc("block/stripped_namek_log"), modLoc("block/stripped_namek_log"));
+        simpleBlock(NamekModule.NAMEK_PLANKS.get());
+        simpleBlock(NamekModule.NAMEK_LEAVES.get());
+        crossBlock(NamekModule.NAMEK_TREE_SAPLING.get(), modLoc("block/namek_tree_sapling"));
+
+        //Namek BlockItems
         blockItem(NamekModule.NAMEK_GRASS_BLOCK.get());
+        itemModels().cross(name(NamekModule.TALL_NAMEK_GRASS.get()), modLoc("block/tall_namek_grass"));
+        itemModels().cross(name(NamekModule.SHORT_NAMEK_GRASS.get()), modLoc("block/short_namek_grass"));
+
+        blockItem(NamekModule.NAMEK_LOG.get());
+        blockItem(NamekModule.STRIPPED_NAMEK_LOG.get());
+        blockItem(NamekModule.NAMEK_WOOD.get());
+        blockItem(NamekModule.STRIPPED_NAMEK_WOOD.get());
+        blockItem(NamekModule.NAMEK_PLANKS.get());
+        blockItem(NamekModule.NAMEK_LEAVES.get());
+        itemModels().cross(name(NamekModule.NAMEK_TREE_SAPLING.get()), modLoc("block/namek_tree_sapling"));
 
     }
 
     private String name(Block block) {
         return block.getRegistryName().getPath();
+    }
+
+    private ResourceLocation extend(ResourceLocation rl, String suffix) {
+        return new ResourceLocation(rl.getNamespace(), rl.getPath() + suffix);
     }
 
     private void blockItem(Block block) {
@@ -84,7 +115,19 @@ public class BlockStateDataProvider extends BlockStateProvider {
                 topTexturePathString));
     }
 
+    public void crossBlock(Block block, ResourceLocation texture) {
+        simpleBlock(block, cross(name(block), texture));
+    }
 
+    //The version of log blocks where the side texture is on all sides
+    public void axisBlockGivenTexturePath(RotatedPillarBlock block, ResourceLocation sideTexturePath, ResourceLocation topTexturePath) {
+        axisBlock(block, sideTexturePath, topTexturePath);
+    }
+
+    //ModelFiles
+    public ModelFile cross(String name, ResourceLocation cross) {
+        return models().singleTexture(name, new ResourceLocation(BLOCK_FOLDER + "/tinted_cross"), "cross", cross);
+    }
 
 
 

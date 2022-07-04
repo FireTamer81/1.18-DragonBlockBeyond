@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "dragonblockbeyond:block/tall_namek_grass"
+  }
+}

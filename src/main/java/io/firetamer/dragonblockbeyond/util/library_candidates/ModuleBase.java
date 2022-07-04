@@ -6,6 +6,8 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,7 +23,7 @@ public class ModuleBase {
     /**
      * Used for registering blocks without a corresponding blockItem.
      */
-    private static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block, DeferredRegister<Block> blockRegister) {
+    protected static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block, DeferredRegister<Block> blockRegister) {
         return blockRegister.register(name, block);
     }
 
@@ -43,6 +45,14 @@ public class ModuleBase {
     }
 
     /**
+     * Registers Items to a given Deferred Register
+     */
+    protected static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> item, DeferredRegister<Item> itemRegister) {
+        var reg = itemRegister.register(name, item);
+        return reg;
+    }
+
+    /**
      * More methods of this type could possibly be made for commonly used Item.Property configurations
      * @return a new blank Item.Properties
      */
@@ -50,6 +60,13 @@ public class ModuleBase {
         return new Item.Properties();
     }
 
+    /**
+     * Registers Fluids to a given Deferred Register
+     */
+    protected static <T extends FlowingFluid> RegistryObject<T> registerFluid(String name, Supplier<T> fluid, DeferredRegister<Fluid> fluidRegister) {
+        var reg = fluidRegister.register(name, fluid);
+        return reg;
+    }
 
 
     /**
