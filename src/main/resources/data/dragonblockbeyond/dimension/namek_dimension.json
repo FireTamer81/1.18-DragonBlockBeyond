@@ -1,0 +1,73 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -1,
+    "settings": "dragonblockbeyond:namek_noise_settings",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "dragonblockbeyond:namek_deep_ocean",
+          "parameters": {
+            "temperature": 0.2,
+            "humidity": 0.2,
+            "continentalness": -0.4,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "dragonblockbeyond:namek_ocean",
+          "parameters": {
+            "temperature": 0.1,
+            "humidity": 0.1,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "dragonblockbeyond:namek_beach",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0.1,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "dragonblockbeyond:namek_plains",
+          "parameters": {
+            "temperature": -0.1,
+            "humidity": -0.1,
+            "continentalness": 0.1,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "dragonblockbeyond:namek_hills",
+          "parameters": {
+            "temperature": -0.2,
+            "humidity": -0.2,
+            "continentalness": 0.5,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -14,8 +14,9 @@ import java.util.Arrays;
 public class CreativeTabHandler {
 
     public static ItemStack[] blockTabItems = {
-            CommonObjects.CLAY_DIRT.get().asItem().getDefaultInstance(),
             CommonObjects.DIRTY_STONE.get().asItem().getDefaultInstance(),
+            CommonObjects.CLAY_DIRT.get().asItem().getDefaultInstance(),
+            CommonObjects.COARSE_CLAY_DIRT.get().asItem().getDefaultInstance(),
 
             MachinesModule.FABRICATOR_BLOCK.get().asItem().getDefaultInstance(),
 
@@ -33,6 +34,16 @@ public class CreativeTabHandler {
             NamekModule.TALL_NAMEK_GRASS.get().asItem().getDefaultInstance(),
             NamekModule.SHORT_NAMEK_GRASS.get().asItem().getDefaultInstance(),
 
+            NamekModule.NAMEK_SEAGRASS.get().asItem().getDefaultInstance(),
+            NamekModule.TALL_NAMEK_SEAGRASS.get().asItem().getDefaultInstance(),
+
+            //NamekModule.NAMEK_KELP_BODY.get().asItem().getDefaultInstance(),
+            NamekModule.NAMEK_KELP_HEAD.get().asItem().getDefaultInstance(),
+
+            NamekModule.AJISA_BUSH.get().asItem().getDefaultInstance(),
+
+
+
             NamekModule.NAMEK_LOG.get().asItem().getDefaultInstance(),
             NamekModule.STRIPPED_NAMEK_LOG.get().asItem().getDefaultInstance(),
             NamekModule.NAMEK_WOOD.get().asItem().getDefaultInstance(),
@@ -47,6 +58,9 @@ public class CreativeTabHandler {
             CommonObjects.TEST_ITEM.get().getDefaultInstance(),
 
             StrongBlockModule.PAINT_BUCKET.get().getDefaultInstance(),
+
+            NamekModule.AJISA_FLOWERS.get().getDefaultInstance(),
+            NamekModule.NAMEK_KELP_BUDS.get().getDefaultInstance(),
             NamekModule.NAMEK_FLUID_BUCKET.get().getDefaultInstance(),
     };
 

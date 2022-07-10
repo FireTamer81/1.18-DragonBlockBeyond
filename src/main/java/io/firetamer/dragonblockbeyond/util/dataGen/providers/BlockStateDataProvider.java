@@ -10,13 +10,8 @@ import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -58,9 +53,12 @@ public class BlockStateDataProvider extends BlockStateProvider {
         //Misc. Blocks
         simpleBlock(CommonObjects.DIRTY_STONE.get());
         simpleBlock(CommonObjects.CLAY_DIRT.get());
+        simpleBlock(CommonObjects.COARSE_CLAY_DIRT.get());
 
         blockItem(CommonObjects.DIRTY_STONE.get());
         blockItem(CommonObjects.CLAY_DIRT.get());
+        blockItem(CommonObjects.COARSE_CLAY_DIRT.get());
+
 
 
         //Namek Blocks
@@ -80,6 +78,14 @@ public class BlockStateDataProvider extends BlockStateProvider {
         simpleBlock(NamekModule.NAMEK_LEAVES.get());
         crossBlock(NamekModule.NAMEK_TREE_SAPLING.get(), modLoc("block/namek_tree_sapling"));
 
+        crossBlock(NamekModule.NAMEK_SEAGRASS.get(), modLoc("block/namek_seagrass"));
+        doublePlantBlock(NamekModule.TALL_NAMEK_SEAGRASS.get(), modLoc("block/namek_tall_seagrass_bottom"), modLoc("block/namek_tall_seagrass_top"));
+
+        crossBlock(NamekModule.NAMEK_KELP_BODY.get(), modLoc("block/namek_kelp_stem"));
+        crossBlock(NamekModule.NAMEK_KELP_HEAD.get(), modLoc("block/namek_kelp_top"));
+
+
+
         //Namek BlockItems
         blockItem(NamekModule.NAMEK_GRASS_BLOCK.get());
         itemModels().cross(name(NamekModule.TALL_NAMEK_GRASS.get()), modLoc("block/tall_namek_grass"));
@@ -93,6 +99,11 @@ public class BlockStateDataProvider extends BlockStateProvider {
         blockItem(NamekModule.NAMEK_LEAVES.get());
         itemModels().cross(name(NamekModule.NAMEK_TREE_SAPLING.get()), modLoc("block/namek_tree_sapling"));
 
+        itemModels().cross(name(NamekModule.NAMEK_SEAGRASS.get()), modLoc("block/namek_seagrass"));
+        itemModels().cross(name(NamekModule.TALL_NAMEK_SEAGRASS.get()), modLoc("block/namek_tall_seagrass_bottom"));
+
+        itemModels().cross(name(NamekModule.NAMEK_KELP_BODY.get()), modLoc("block/namek_kelp_stem"));
+        itemModels().cross(name(NamekModule.NAMEK_KELP_HEAD.get()), modLoc("block/namek_kelp_top"));
     }
 
     private String name(Block block) {
@@ -129,7 +140,19 @@ public class BlockStateDataProvider extends BlockStateProvider {
         return models().singleTexture(name, new ResourceLocation(BLOCK_FOLDER + "/tinted_cross"), "cross", cross);
     }
 
+    public void doublePlantBlock(DoublePlantBlock block, ResourceLocation bottom, ResourceLocation top) {
+        doublePlantInternal(block, bottom, top);
+    }
 
+    private void doublePlantInternal(DoublePlantBlock block, ResourceLocation bottom, ResourceLocation top) {
+        ModelFile bottomCross = cross(name(block) + "_bottom", bottom);
+        ModelFile topCross = cross(name(block) + "_top", top);
+        doublePlantInternal2(block, bottomCross, topCross);
+    }
+
+    public void doublePlantInternal2(DoublePlantBlock block, ModelFile bottomCrossIn, ModelFile topCrossIn) {
+        getVariantBuilder(block).forAllStatesExcept(state -> ConfiguredModel.builder().modelFile(state.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER ? bottomCrossIn : topCrossIn).build());
+    }
 
 
 

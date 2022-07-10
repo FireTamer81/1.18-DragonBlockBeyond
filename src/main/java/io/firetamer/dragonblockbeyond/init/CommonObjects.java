@@ -1,6 +1,5 @@
 package io.firetamer.dragonblockbeyond.init;
 
-import io.firetamer.dragonblockbeyond.init.objects.blocks.TilledClayDirt;
 import io.firetamer.dragonblockbeyond.handlers.RegistryHandler;
 import io.firetamer.dragonblockbeyond.util.library_candidates.ModuleBase;
 import net.minecraft.world.item.Item;
@@ -24,6 +23,7 @@ public class CommonObjects extends ModuleBase {
     public static final RegistryObject<Block> CLAY_DIRT = registerBlock("clay_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)),
             RegistryHandler.BLOCKS, RegistryHandler.ITEMS);
 
-    //public static final RegistryObject<Block> TILLED_CLAY_DIRT = registerBlock("tilled_clay_dirt",
-    //        () -> new TilledClayDirt(BlockBehaviour.Properties.copy(Blocks.FARMLAND)), RegistryHandler.BLOCKS, RegistryHandler.ITEMS);
+    //Won't be turned to namek grass
+    public static final RegistryObject<Block> COARSE_CLAY_DIRT = registerBlock("coarse_clay_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)),
+            RegistryHandler.BLOCKS, RegistryHandler.ITEMS);
 }

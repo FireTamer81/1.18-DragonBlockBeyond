@@ -1,6 +1,10 @@
 package io.firetamer.dragonblockbeyond.util.library_candidates;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
@@ -18,6 +22,9 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ModuleBase {
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
     /**
@@ -44,6 +51,10 @@ public class ModuleBase {
         return reg;
     }
 
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
     /**
      * Registers Items to a given Deferred Register
      */
@@ -60,6 +71,10 @@ public class ModuleBase {
         return new Item.Properties();
     }
 
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
     /**
      * Registers Fluids to a given Deferred Register
      */
@@ -67,6 +82,16 @@ public class ModuleBase {
         var reg = fluidRegister.register(name, fluid);
         return reg;
     }
+
+    /**
+     * Creates a tag key for Fluids from a resource location. Used to reference fluids without using blockstates.
+     */
+    public static TagKey<Fluid> createFluidKey(String modid, String name) {
+        return FluidTags.create(new ResourceLocation(modid, name));
+    }
+
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
     /**

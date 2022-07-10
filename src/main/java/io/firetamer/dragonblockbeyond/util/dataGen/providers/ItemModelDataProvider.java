@@ -1,6 +1,7 @@
 package io.firetamer.dragonblockbeyond.util.dataGen.providers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import io.firetamer.dragonblockbeyond._modules.namek_module.NamekModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond.init.CommonObjects;
 import net.minecraft.data.DataGenerator;
@@ -19,11 +20,12 @@ public class ItemModelDataProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        //makeSimpleBlockItem(CommonObjects.TEST_BLOCK.get());
-
         simpleItem(CommonObjects.TEST_ITEM.get());
 
         item2Layers(StrongBlockModule.PAINT_BUCKET.get());
+
+        simpleItem(NamekModule.AJISA_FLOWERS.get());
+        simpleItem(NamekModule.NAMEK_KELP_BUDS.get());
 
         /**
         singleTexture(ColorableBlockTest.RGB_GLASS_PANE.getId().getPath(),
