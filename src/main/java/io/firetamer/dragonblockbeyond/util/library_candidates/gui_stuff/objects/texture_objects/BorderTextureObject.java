@@ -98,7 +98,7 @@ public class BorderTextureObject {
     }
 
 
-    public ResourceLocation getTextureResource() {return textureResource; }
+    public ResourceLocation getTextureResource() { return textureResource; }
 
     public int[] getTopLeftCornerTextureData() { return topLeftCornerData; }
 

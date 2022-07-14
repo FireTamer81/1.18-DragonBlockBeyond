@@ -2,6 +2,7 @@ package io.firetamer.dragonblockbeyond.network;
 
 import dev._100media.capabilitysyncer.network.SimpleEntityCapabilityStatusPacket;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import io.firetamer.dragonblockbeyond.network.packets.PaintBucketSyncPKT;
 import io.firetamer.dragonblockbeyond.race.capability.RaceHolderAttacher;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkRegistry;
@@ -19,7 +20,7 @@ public class PacketHandler {
 
     public static void register() {
         Stream.<BiConsumer<SimpleChannel,Integer>>builder()
-//                .add(PaintBucketSyncPKT::register)
+                .add(PaintBucketSyncPKT::register)
                 .add((channel, id) -> SimpleEntityCapabilityStatusPacket.register(RaceHolderAttacher.RACE_HOLDER_RL, RaceHolderAttacher::getRaceHolderUnwrap, channel, id))
                 .build().forEach(consumer -> consumer.accept(INSTANCE, getNextId()));
     }

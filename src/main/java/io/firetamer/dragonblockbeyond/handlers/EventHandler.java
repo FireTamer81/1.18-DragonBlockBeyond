@@ -33,6 +33,11 @@ public class EventHandler {
 
         @SubscribeEvent
         public static void onClientSetup(final FMLClientSetupEvent event) {
+
+            KeyBindHandler.init();
+
+
+            /*  RenderTypes  */
             ItemBlockRenderTypes.setRenderLayer(NamekModule.NAMEK_TREE_SAPLING.get(), RenderType.cutoutMipped());
 
             ItemBlockRenderTypes.setRenderLayer(NamekModule.SHORT_NAMEK_GRASS.get(), RenderType.cutoutMipped());
@@ -51,6 +56,7 @@ public class EventHandler {
 
     @Mod.EventBusSubscriber(modid = DragonBlockBeyond.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public class ForgeBusClientEvents {
+
 
         //TODO get this BoneMealEvent working (Grow plants in Namek Water when using Bonemeal)
         /**
