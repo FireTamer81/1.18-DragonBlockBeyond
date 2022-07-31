@@ -8,7 +8,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.widget.ColorSlider;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.widget.SliderType;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import io.firetamer.dragonblockbeyond.network.PacketHandler;
 import io.firetamer.dragonblockbeyond.network.packets.PaintBucketSyncPKT;
 import net.minecraft.client.gui.components.Button;
@@ -41,12 +41,12 @@ public class ColorSelectScreen extends Screen {
 
     public ColorSelectScreen(int colorIn, boolean isRGBSelected) {
         super(TextComponent.EMPTY);
-        DBBColor color = new DBBColor(colorIn);
+        FireLibColor color = new FireLibColor(colorIn);
         this.red = (double) color.getRed();
         this.green = (double) color.getGreen();
         this.blue = (double) color.getBlue();
 
-        float[] hsb = DBBColor.RGBtoHSB((int) red, (int) green, (int) blue);
+        float[] hsb = FireLibColor.RGBtoHSB((int) red, (int) green, (int) blue);
         this.hue = hsb[0] * MAX_VALUE_HUE;
         this.saturation = hsb[1] * MAX_VALUE_SB;
         this.brightness = hsb[2] * MAX_VALUE_SB;
@@ -59,11 +59,11 @@ public class ColorSelectScreen extends Screen {
 
     public int getColor() {
         if (isRGBSelected) {
-            return new DBBColor(this.redSlider.getValueInt(),
+            return new FireLibColor(this.redSlider.getValueInt(),
                              this.greenSlider.getValueInt(),
                              this.blueSlider.getValueInt()).getRGBA();
         } else {
-            return DBBColor.getHSBColor((float) (hueSlider.getValueInt() / MAX_VALUE_HUE),
+            return FireLibColor.getHSBColor((float) (hueSlider.getValueInt() / MAX_VALUE_HUE),
                                      (float) (saturationSlider.getValueInt() / MAX_VALUE_SB),
                                      (float) (brightnessSlider.getValueInt() / MAX_VALUE_SB)).getRGBA();
         }
@@ -201,7 +201,7 @@ public class ColorSelectScreen extends Screen {
                 textToWrite = textToWrite.toUpperCase(Locale.ENGLISH);
                 super.insertText(textToWrite);
                 try {
-                    DBBColor color = new DBBColor(Integer.parseInt(formatter.apply(getValue()), 16));
+                    FireLibColor color = new FireLibColor(Integer.parseInt(formatter.apply(getValue()), 16));
                     redSlider.setValueInt(color.getRed());
                     greenSlider.setValueInt(color.getGreen());
                     blueSlider.setValueInt(color.getBlue());
@@ -220,7 +220,7 @@ public class ColorSelectScreen extends Screen {
             public void deleteChars(int pNum) {
                 super.deleteChars(pNum);
                 try {
-                    DBBColor color = new DBBColor(Integer.parseInt(formatter.apply(getValue()), 16));
+                    FireLibColor color = new FireLibColor(Integer.parseInt(formatter.apply(getValue()), 16));
                     redSlider.setValueInt(color.getRed());
                     greenSlider.setValueInt(color.getGreen());
                     blueSlider.setValueInt(color.getBlue());
@@ -239,7 +239,7 @@ public class ColorSelectScreen extends Screen {
         this.hexBox.setMaxLength(7);
         this.hexBox.setFilter((string) -> string.matches("(#|)([0-9A-F]){0,6}"));
         this.hexBox.setValue("#" +
-                             Integer.toHexString(new DBBColor(redSlider.getValueInt(),
+                             Integer.toHexString(new FireLibColor(redSlider.getValueInt(),
                                                            greenSlider.getValueInt(),
                                                            blueSlider.getValueInt()).getRGBA())
                                     .substring(2)
@@ -268,7 +268,7 @@ public class ColorSelectScreen extends Screen {
                                              isRGBSelected = !isRGBSelected;
 
                                              if (isRGBSelected) {
-                                                 DBBColor color = DBBColor.getHSBColor((float) (hueSlider.getValueInt() /
+                                                 FireLibColor color = FireLibColor.getHSBColor((float) (hueSlider.getValueInt() /
                                                                                           MAX_VALUE_HUE),
                                                                                  (float) (saturationSlider.getValueInt() /
                                                                                           MAX_VALUE_SB),
@@ -288,7 +288,7 @@ public class ColorSelectScreen extends Screen {
 
                                                  button.setMessage(useHSBText);
                                              } else {
-                                                 float[] hsb = DBBColor.RGBtoHSB(redSlider.getValueInt(),
+                                                 float[] hsb = FireLibColor.RGBtoHSB(redSlider.getValueInt(),
                                                                               greenSlider.getValueInt(),
                                                                               blueSlider.getValueInt());
 

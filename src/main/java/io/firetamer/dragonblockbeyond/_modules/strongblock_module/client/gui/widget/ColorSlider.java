@@ -7,7 +7,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.ScreenUtils;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.screen.ColorSelectScreen;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.network.chat.Component;
@@ -44,7 +44,7 @@ public class ColorSlider extends AbstractSliderButton {
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.screen instanceof ColorSelectScreen screen) {
             screen.hexBox.setValue("#" + Integer.toHexString(
-                    new DBBColor(
+                    new FireLibColor(
                             screen.redSlider.getValueInt(),
                             screen.greenSlider.getValueInt(),
                             screen.blueSlider.getValueInt()).getRGBA())
@@ -109,8 +109,8 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderRedBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = new DBBColor(0x00, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGBA();
-        int rightColor = new DBBColor(0xFF, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGBA();
+        int leftColor = new FireLibColor(0x00, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGBA();
+        int rightColor = new FireLibColor(0xFF, screen.greenSlider.getValueInt(), screen.blueSlider.getValueInt()).getRGBA();
         ScreenUtils.fillGradient(matrixStack,
                                  this.x + 1,
                                  this.y + 1,
@@ -122,8 +122,8 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderGreenBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = new DBBColor(screen.redSlider.getValueInt(), 0x00, screen.blueSlider.getValueInt()).getRGBA();
-        int rightColor = new DBBColor(screen.redSlider.getValueInt(), 0xFF, screen.blueSlider.getValueInt()).getRGBA();
+        int leftColor = new FireLibColor(screen.redSlider.getValueInt(), 0x00, screen.blueSlider.getValueInt()).getRGBA();
+        int rightColor = new FireLibColor(screen.redSlider.getValueInt(), 0xFF, screen.blueSlider.getValueInt()).getRGBA();
         ScreenUtils.fillGradient(matrixStack,
                                  this.x + 1,
                                  this.y + 1,
@@ -135,8 +135,8 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderBlueBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = new DBBColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0x00).getRGBA();
-        int rightColor = new DBBColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0xFF).getRGBA();
+        int leftColor = new FireLibColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0x00).getRGBA();
+        int rightColor = new FireLibColor(screen.redSlider.getValueInt(), screen.greenSlider.getValueInt(), 0xFF).getRGBA();
         ScreenUtils.fillGradient(matrixStack,
                                  this.x + 1,
                                  this.y + 1,
@@ -151,7 +151,7 @@ public class ColorSlider extends AbstractSliderButton {
         Function<Integer, Integer> lerp = (pct) -> (int) Math.floor(Mth.lerp(pct / 100f,
                                                                              this.x + 1,
                                                                              this.x + this.width - 1));
-        Function<Integer, Integer> color = (pct) -> DBBColor.HSBtoRGB((float) ((pct / 100f)),
+        Function<Integer, Integer> color = (pct) -> FireLibColor.HSBtoRGB((float) ((pct / 100f)),
                                                                    (float) (screen.saturationSlider.getValueInt() /
                                                                             ColorSelectScreen.MAX_VALUE_SB),
                                                                    (float) (screen.brightnessSlider.getValueInt() /
@@ -207,10 +207,10 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderSaturationBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = DBBColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
+        int leftColor = FireLibColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
                                        0.0f,
                                        (float) (screen.brightnessSlider.getValue() / ColorSelectScreen.MAX_VALUE_SB));
-        int rightColor = DBBColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
+        int rightColor = FireLibColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
                                         1.0f,
                                         (float) (screen.brightnessSlider.getValue() / ColorSelectScreen.MAX_VALUE_SB));
         ScreenUtils.fillGradient(matrixStack,
@@ -224,10 +224,10 @@ public class ColorSlider extends AbstractSliderButton {
     }
 
     private void renderBrightnessBackground(PoseStack matrixStack, ColorSelectScreen screen) {
-        int leftColor = DBBColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
+        int leftColor = FireLibColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
                                        (float) (screen.saturationSlider.getValue() / ColorSelectScreen.MAX_VALUE_SB),
                                        0.0f);
-        int rightColor = DBBColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
+        int rightColor = FireLibColor.HSBtoRGB((float) (screen.hueSlider.getValue() / ColorSelectScreen.MAX_VALUE_HUE),
                                         (float) (screen.saturationSlider.getValue() / ColorSelectScreen.MAX_VALUE_SB),
                                         1.0f);
         ScreenUtils.fillGradient(matrixStack,

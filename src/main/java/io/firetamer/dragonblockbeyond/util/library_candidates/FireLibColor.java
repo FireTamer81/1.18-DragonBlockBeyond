@@ -1,18 +1,18 @@
 package io.firetamer.dragonblockbeyond.util.library_candidates;
 
-public class DBBColor {
+public class FireLibColor {
     private int value;
 
-    public DBBColor(int r, int g, int b) {
+    public FireLibColor(int r, int g, int b) {
         this(r, g, b, 255);
     }
 
-    public DBBColor(int r, int g, int b, int a) {
+    public FireLibColor(int r, int g, int b, int a) {
         value = ((a & 0xFF) << 24) | ((r & 0xFF) << 16) | ((g & 0xFF) << 8) | ((b & 0xFF) << 0);
         testColorValueRange(r, g, b, a);
     }
 
-    public DBBColor(int rgb) {
+    public FireLibColor(int rgb) {
         value = 0xff000000 | rgb;
     }
 
@@ -37,7 +37,7 @@ public class DBBColor {
             badComponentString = badComponentString + " Blue";
         }
         if (rangeError == true) {
-            throw new IllegalArgumentException("DBBColor parameter outside of expected range:" + badComponentString);
+            throw new IllegalArgumentException("FireLibColor parameter outside of expected range:" + badComponentString);
         }
     }
 
@@ -140,8 +140,8 @@ public class DBBColor {
         return 0xff000000 | (r << 16) | (g << 8) | (b << 0);
     }
 
-    public static DBBColor getHSBColor(float h, float s, float b) {
-        return new DBBColor(HSBtoRGB(h, s, b));
+    public static FireLibColor getHSBColor(float h, float s, float b) {
+        return new FireLibColor(HSBtoRGB(h, s, b));
     }
 
     public float[] getRGBColorComponents() {

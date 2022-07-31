@@ -1,6 +1,6 @@
-package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons;
+package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons;
 
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GuiDrawingContext;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.GuiDrawingContext;
 import net.minecraft.network.chat.Component;
 
 import java.util.ArrayList;

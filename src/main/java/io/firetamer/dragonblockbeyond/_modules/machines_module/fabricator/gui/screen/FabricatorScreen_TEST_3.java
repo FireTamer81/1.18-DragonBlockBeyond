@@ -4,9 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget.StateSwitchingActionButton;
-import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.AdvancedPanelComponent2;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
@@ -18,7 +16,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class FabricatorScreen_TEST_3 extends AbstractContainerScreen<FabricatorContainerMenu> {
     private static final ResourceLocation EXTRAS_TEXTURE = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/fabricator_menu.png");
-    private final AdvancedPanelComponent2 testPanelComponent = new AdvancedPanelComponent2();
 
     protected int imageWidth = 176;
     protected int imageHeight = 218;
@@ -40,13 +37,7 @@ public class FabricatorScreen_TEST_3 extends AbstractContainerScreen<FabricatorC
     protected void init() {
         super.init();
 
-        DBBColor interiorPanelColor1 = new DBBColor(100, 100, 100, 180);
-
-        this.testPanelComponent.init(20, 64, 100, 100, minecraft,
-                true, true, TextureHandler.BORDER_1, interiorPanelColor1, null);
-
-        this.children.add(this.testPanelComponent);
-        this.setInitialFocus(this.testPanelComponent);
+        FireLibColor interiorPanelColor1 = new FireLibColor(100, 100, 100, 180);
 
         minecraft.options.setCameraType(CameraType.THIRD_PERSON_FRONT);
 
@@ -91,8 +82,6 @@ public class FabricatorScreen_TEST_3 extends AbstractContainerScreen<FabricatorC
         int y = (height - this.imageHeight) / 2;
 
         renderBackground(poseStack);
-
-        this.testPanelComponent.render(poseStack, mouseX, mouseY, delta);
 
         super.render(poseStack, mouseX, mouseY, delta);
         this.testButton.render(poseStack, mouseX, mouseY, delta);

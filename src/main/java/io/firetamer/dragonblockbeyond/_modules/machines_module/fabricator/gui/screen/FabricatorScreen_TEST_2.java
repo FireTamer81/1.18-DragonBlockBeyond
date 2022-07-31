@@ -4,18 +4,12 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.container.FabricatorContainerMenu;
 import io.firetamer.dragonblockbeyond._modules.machines_module.fabricator.gui.widget.StateSwitchingActionButton;
-import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.AdvancedPanelComponent;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.AdvancedPanelComponent2;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nullable;
 
 @OnlyIn(Dist.CLIENT)
 public class FabricatorScreen_TEST_2 extends AbstractContainerScreen<FabricatorContainerMenu> {
@@ -40,7 +34,7 @@ public class FabricatorScreen_TEST_2 extends AbstractContainerScreen<FabricatorC
         super.init();
 
         /*
-        DBBColor interiorPanelColor1 = new DBBColor(100, 100, 100, 180);
+        FireLibColor interiorPanelColor1 = new FireLibColor(100, 100, 100, 180);
         this.testPanelComponent.init(20, 64, 100, 100, minecraft,
                 true, true, TextureHandler.BORDER_1, interiorPanelColor1, null);
         this.setInitialFocus(this.testPanelComponent);

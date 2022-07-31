@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff;
+package io.firetamer.dragonblockbeyond.util.gui_stuff;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.Font;

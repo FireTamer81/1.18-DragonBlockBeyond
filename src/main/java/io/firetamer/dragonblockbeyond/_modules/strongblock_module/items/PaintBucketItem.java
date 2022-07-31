@@ -3,7 +3,7 @@ package io.firetamer.dragonblockbeyond._modules.strongblock_module.items;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.screen.ColorSelectScreen;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -50,13 +50,13 @@ public class PaintBucketItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        DBBColor color = new DBBColor(stack.getOrCreateTag().getInt("color"));
+        FireLibColor color = new FireLibColor(stack.getOrCreateTag().getInt("color"));
         if (StrongBlockModule.hasShiftDown()) {
             MutableComponent red = new TranslatableComponent("gui.dragonblockbeyond.red").append(": " + color.getRed());
             MutableComponent green = new TranslatableComponent("gui.dragonblockbeyond.green").append(": " + color.getGreen());
             MutableComponent blue = new TranslatableComponent("gui.dragonblockbeyond.blue").append(": " + color.getBlue());
             tooltip.add(red.append(", ").append(green).append(", ").append(blue));
-            float[] hsb = DBBColor.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue());
+            float[] hsb = FireLibColor.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue());
 
             MutableComponent hue = new TranslatableComponent("gui.dragonblockbeyond.hue").append(": " +
                     Math.round(hsb[0] * ColorSelectScreen.MAX_VALUE_HUE));

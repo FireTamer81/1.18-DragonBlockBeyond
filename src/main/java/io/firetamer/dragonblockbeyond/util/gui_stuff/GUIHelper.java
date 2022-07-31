@@ -1,10 +1,10 @@
-package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff;
+package io.firetamer.dragonblockbeyond.util.gui_stuff;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.BorderTextureObject;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.BorderTextureObject;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -26,7 +26,7 @@ public class GUIHelper {
      * @param fillColor2 This color is optional, and placing null in it's parameter slot will simply make the method dra a solid color.
      * @param zOffset This is a weird value that in most cases only needs ot be "0". I believe it forcefully pushes what's drawn in front or behind other objects that would have been drawn before it. (Could be used for overlapping panels based on which was last interacted with)
      */
-    public static void drawBorderedFilledPanel(PoseStack poseStack, int panelTopLeftX, int panelTopLeftY, int panelWidth, int panelHeight, BorderTextureObject borderTexture, DBBColor fillColor1, DBBColor fillColor2, int zOffset) {
+    public static void drawBorderedFilledPanel(PoseStack poseStack, int panelTopLeftX, int panelTopLeftY, int panelWidth, int panelHeight, BorderTextureObject borderTexture, FireLibColor fillColor1, FireLibColor fillColor2, int zOffset) {
         /**
          * int0 = XOrigin
          * int1 = Width
@@ -80,7 +80,7 @@ public class GUIHelper {
 
         //Interior Fill
         if(fillColor2 == null) {
-            fillAreaWithColor(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, fillColor1.getRGBA());
+            fillAreaWithColor(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, 0, fillColor1.getRGBA());
         } else {
             fillAreaWithColorGradient(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, zOffset, fillColor1.getRGBA(), fillColor2.getRGBA());
         }
@@ -251,7 +251,7 @@ public class GUIHelper {
     //More Accessible Copy Methods
     /******************************************************************************************************************/
 
-    public static void fillAreaWithColor(PoseStack poseStack, int originX, int originY, int endX, int endY, int color) {
+    public static void fillAreaWithColor(PoseStack poseStack, int originX, int originY, int endX, int endY, int zOffset, int color) {
         if (originX < endX) {
             int i = originX;
             originX = endX;
@@ -276,10 +276,10 @@ public class GUIHelper {
         RenderSystem.setShader(GameRenderer::getPositionColorShader);
 
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
-        bufferbuilder.vertex(poseStack.last().pose(), (float)originX, (float)endY, 0.0F).color(f, f1, f2, f3).endVertex();
-        bufferbuilder.vertex(poseStack.last().pose(), (float)endX, (float)endY, 0.0F).color(f, f1, f2, f3).endVertex();
-        bufferbuilder.vertex(poseStack.last().pose(), (float)endX, (float)originY, 0.0F).color(f, f1, f2, f3).endVertex();
-        bufferbuilder.vertex(poseStack.last().pose(), (float)originX, (float)originY, 0.0F).color(f, f1, f2, f3).endVertex();
+        bufferbuilder.vertex(poseStack.last().pose(), (float)originX, (float)endY, zOffset).color(f, f1, f2, f3).endVertex();
+        bufferbuilder.vertex(poseStack.last().pose(), (float)endX, (float)endY, zOffset).color(f, f1, f2, f3).endVertex();
+        bufferbuilder.vertex(poseStack.last().pose(), (float)endX, (float)originY, zOffset).color(f, f1, f2, f3).endVertex();
+        bufferbuilder.vertex(poseStack.last().pose(), (float)originX, (float)originY, zOffset).color(f, f1, f2, f3).endVertex();
         bufferbuilder.end();
 
         BufferUploader.end(bufferbuilder);

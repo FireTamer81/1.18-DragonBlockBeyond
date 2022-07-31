@@ -2,6 +2,7 @@ package io.firetamer.dragonblockbeyond.handlers;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
+import io.firetamer.dragonblockbeyond._modules.player_gui_module.test_advanced_window.AdvancedWindowTestScreen;
 import io.firetamer.dragonblockbeyond._modules.player_gui_module.test_radial_screen.RadialTestScreen;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -18,14 +19,14 @@ public class KeyBindHandler {
     private KeyBindHandler() {}
 
     public static KeyMapping openRadialSkillMenu;
+    public static KeyMapping openPlayerMenu;
 
     public static void init() {
         /* Single Press Keybinds */
-
+        openPlayerMenu = registerKey("open_player_gui_key", InputConstants.KEY_NUMPAD2, KeyMapping.CATEGORY_INTERFACE);
 
         /* Continuous Press Keybinds */
-        openRadialSkillMenu = registerKey("open_player_gui_key", InputConstants.KEY_NUMPAD1, KeyMapping.CATEGORY_INTERFACE);
-
+        openRadialSkillMenu = registerKey("open_skill_gui_key", InputConstants.KEY_NUMPAD1, KeyMapping.CATEGORY_INTERFACE);
 
     }
 
@@ -49,14 +50,14 @@ public class KeyBindHandler {
         public static void clientTick(TickEvent.ClientTickEvent event) {
             final var player = Minecraft.getInstance().player;
 
-
             //keybind.isDown() should be a continuous action rather than a single action no matter how long the keybind is pressed
             if (KeyBindHandler.openRadialSkillMenu.consumeClick()) {
-                //NetworkHooks.openGui(((ServerPlayer)pPlayer), (FabricatorBlockTile)entity, pPos);
                 Minecraft.getInstance().setScreen(new RadialTestScreen());
-                //player.displayClientMessage(new TextComponent("Hello there... General Kenobi"), false);
             }
 
+            if (KeyBindHandler.openPlayerMenu.consumeClick()) {
+                Minecraft.getInstance().setScreen(new AdvancedWindowTestScreen());
+            }
         }
     }
 }

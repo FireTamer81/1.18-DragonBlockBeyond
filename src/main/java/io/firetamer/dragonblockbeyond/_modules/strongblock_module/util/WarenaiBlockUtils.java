@@ -6,7 +6,7 @@ import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.Warenai
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.WarenaiGlassSlabBlock;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.blocks.WarenaiGlassStairsBlock;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -53,7 +53,7 @@ public final class WarenaiBlockUtils {
     public static float[] getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
         BlockEntity tileEntity = world.getBlockEntity(pos);
         if (tileEntity instanceof StrongBlockTile) {
-            return new DBBColor(((StrongBlockTile) tileEntity).getColor()).getRGBColorComponents();
+            return new FireLibColor(((StrongBlockTile) tileEntity).getColor()).getRGBColorComponents();
         } else {
             return null;
         }

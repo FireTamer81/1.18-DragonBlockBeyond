@@ -1,8 +1,8 @@
 package io.firetamer.dragonblockbeyond.handlers;
 
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.BorderTextureObject;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.SimpleSpriteObject;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.BorderTextureObject;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.SimpleSpriteObject;
 import net.minecraft.resources.ResourceLocation;
 
 public class TextureHandler {
@@ -10,12 +10,7 @@ public class TextureHandler {
     public static final ResourceLocation FLOWING_RL = new ResourceLocation("block/water_flow");
     public static final ResourceLocation OVERLAY_RL = new ResourceLocation("block/water_overlay");
 
-
     public static SimpleSpriteObject BLUE_KI_BLAST_SPRITE;
-
-
-    private static final ResourceLocation BACKGROUND_TEXTURE1 = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/3d_background.png");
-
 
     private static final ResourceLocation BORDER_MAP_1 = new ResourceLocation(DragonBlockBeyond.MOD_ID, "textures/gui/gui_panel_border_styles_map1.png");
     public static BorderTextureObject BORDER_1;

@@ -1,9 +1,9 @@
-package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons;
+package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GuiDrawingContext;
-import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.SimpleSpriteObject;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.GuiDrawingContext;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.SimpleSpriteObject;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.components.MultiLineLabel;
@@ -13,10 +13,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
 
-public class RadialMenuCategoryButton implements IRadialMenuCategoryButton {
+public class RadialMenuButton implements IRadialMenuButton {
     private ItemStack stack;
     private BlockItem blockItem;
     private SimpleSpriteObject spriteIcon;
@@ -26,8 +24,6 @@ public class RadialMenuCategoryButton implements IRadialMenuCategoryButton {
     private int buttonTextColor;
 
     private boolean isHovered;
-
-    private final List<IRadialMenuButton> items = new ArrayList<>();
 
 
     /**
@@ -43,9 +39,9 @@ public class RadialMenuCategoryButton implements IRadialMenuCategoryButton {
      * @param buttonTextIn If this is the only value, then the text will be in the center of the button. If paired with 1 of the 3 other renders (itemstack, blockitem, or sprite texture), it will render under that.
      * @param buttonTextColor Changes the color of the button text from the default white.
      */
-    public RadialMenuCategoryButton(@Nullable ItemStack itemStackIn, @Nullable BlockItem blockItemIn, @Nullable SimpleSpriteObject spriteIconIn,
-                                    @Nullable Component radialCenterText, @Nullable ChatFormatting radialCenterTextColor,
-                                    @Nullable Component buttonTextIn, @Nullable ChatFormatting buttonTextColor) {
+    public RadialMenuButton(@Nullable ItemStack itemStackIn, @Nullable BlockItem blockItemIn, @Nullable SimpleSpriteObject spriteIconIn,
+                            @Nullable Component radialCenterText, @Nullable ChatFormatting radialCenterTextColor,
+                            @Nullable Component buttonTextIn, @Nullable ChatFormatting buttonTextColor) {
 
         if ((itemStackIn != null && blockItemIn != null) || (blockItemIn != null && spriteIconIn != null) || (spriteIconIn != null && itemStackIn != null)) {
             this.stack = null;
@@ -241,35 +237,11 @@ public class RadialMenuCategoryButton implements IRadialMenuCategoryButton {
     public void click() {}
 
     @Override
-    public boolean shouldCloseRadialOnClick() { return false; }
+    public boolean shouldCloseRadialOnClick() { return true; }
 
     @Override
     public Component getRadialCenterTextForHoveredButton() { return centerText; }
 
     @Override
     public int getCenterTextColor() { return centerTextColor; }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<IRadialMenuButton> getCategoryObjects() {
-        return items;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void addItem(IRadialMenuButton item) {
-        items.add(item);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean shouldRadialCloseIfCategoryIsEmpty() {
-        return false;
-    }
 }

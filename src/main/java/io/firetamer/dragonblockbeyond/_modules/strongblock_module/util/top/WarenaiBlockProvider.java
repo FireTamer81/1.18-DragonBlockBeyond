@@ -3,7 +3,7 @@ package io.firetamer.dragonblockbeyond._modules.strongblock_module.util.top;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.client.gui.screen.ColorSelectScreen;
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles.StrongBlockTile;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;
@@ -26,13 +26,13 @@ public class WarenaiBlockProvider implements IProbeInfoProvider {
             }
 
             if (mode == ProbeMode.EXTENDED) {
-                DBBColor color = new DBBColor(((StrongBlockTile) tileEntity).getColor());
+                FireLibColor color = new FireLibColor(((StrongBlockTile) tileEntity).getColor());
                 MutableComponent red = new TranslatableComponent("gui.dragonblockbeyond.red").append(": " + color.getRed());
                 MutableComponent green = new TranslatableComponent("gui.dragonblockbeyond.green").append(": " +
                                                                                                  color.getGreen());
                 MutableComponent blue = new TranslatableComponent("gui.dragonblockbeyond.blue").append(": " + color.getBlue());
                 info.text(red.append(", ").append(green).append(", ").append(blue));
-                float[] hsb = DBBColor.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue());
+                float[] hsb = FireLibColor.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue());
                 MutableComponent hue = new TranslatableComponent("gui.dragonblockbeyond.hue").append(": " +
                                                                                              Math.round(hsb[0] *
                                                                                                         ColorSelectScreen.MAX_VALUE_HUE));

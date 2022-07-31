@@ -1,7 +1,7 @@
 package io.firetamer.dragonblockbeyond._modules.strongblock_module.tiles;
 
 import io.firetamer.dragonblockbeyond._modules.strongblock_module.StrongBlockModule;
-import io.firetamer.dragonblockbeyond.util.library_candidates.DBBColor;
+import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
@@ -15,11 +15,11 @@ public class StrongBlockTile extends BlockEntity {
 
     public StrongBlockTile(BlockPos pos, BlockState state) {
         super(StrongBlockModule.STRONG_BLOCK_TILE.get(), pos, state);
-        this.color = new DBBColor(242, 242, 242).getRGBA();
+        this.color = new FireLibColor(242, 242, 242).getRGBA();
     }
 
     public void setColor(int color) {
-        this.color = new DBBColor(color).getRGBA();
+        this.color = new FireLibColor(color).getRGBA();
         setChanged();
     }
 

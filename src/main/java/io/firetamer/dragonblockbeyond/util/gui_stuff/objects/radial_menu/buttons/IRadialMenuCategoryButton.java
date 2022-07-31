@@ -1,4 +1,4 @@
-package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons;
+package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons;
 
 import java.util.List;
 
