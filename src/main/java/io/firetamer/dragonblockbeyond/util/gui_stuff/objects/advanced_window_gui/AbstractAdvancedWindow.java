@@ -34,6 +34,7 @@ public abstract class AbstractAdvancedWindow extends Screen {
     }
 
 
+    /* Abstract Methods **/
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -43,8 +44,7 @@ public abstract class AbstractAdvancedWindow extends Screen {
     @Override
     public abstract boolean isPauseScreen();
 
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    public abstract int getBackgroundColor();
 
 
     /** GUI Behaviour Methods **/
@@ -53,9 +53,6 @@ public abstract class AbstractAdvancedWindow extends Screen {
 
     @Override
     public void onClose() { super.onClose(); }
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
     /** Util Methods **/
@@ -67,7 +64,7 @@ public abstract class AbstractAdvancedWindow extends Screen {
         return new GuiDrawingContext(poseStack, width, height, x, y, z, font, itemRenderer);
     }
 
-    private void iterateSubMenus(Consumer<IContentBox> consumer) {
+    private void iterateElements(Consumer<IContentBox> consumer) {
         int numItems = items.size();
 
         for (int i = 0; i < numItems; i++) {
@@ -77,21 +74,18 @@ public abstract class AbstractAdvancedWindow extends Screen {
     }
 
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
     /** Rendering Methods **/
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
     private void drawContentBoxes(PoseStack poseStack, int x, int y, float z, int width, int height) {
-        iterateSubMenus(item -> {
+        iterateElements(item -> {
             item.draw(createDrawingContext(poseStack, width, height, x, y, z));
         });
     }
 
     private void drawBackground(PoseStack poseStack, float x, float y, float z) {
-        GUIHelper.fillAreaWithColor(poseStack, 0, 0, width, height, 0, new FireLibColor(50, 50, 50, 100).getRGBA());
+        GUIHelper.fillAreaWithColor(poseStack, 0, 0, width, height, 0, getBackgroundColor());
     }
 
     private void draw(PoseStack poseStack, float partialTicks, int mouseX, int mouseY) {
@@ -122,15 +116,10 @@ public abstract class AbstractAdvancedWindow extends Screen {
      */
     @SubscribeEvent
     public static void overlayEvent(RenderGameOverlayEvent.PreLayer event) {
-        if (event.getOverlay() != ForgeIngameGui.CROSSHAIR_ELEMENT)
-            return;
+        if (event.getOverlay() != ForgeIngameGui.CROSSHAIR_ELEMENT) return;
 
-        if (Minecraft.getInstance().screen instanceof AbstractRadialMenu) {
+        if (Minecraft.getInstance().screen instanceof AbstractAdvancedWindow) {
             event.setCanceled(true);
         }
     }
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 }

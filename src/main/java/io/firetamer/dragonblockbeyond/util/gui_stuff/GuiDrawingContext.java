@@ -11,8 +11,8 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
  */
 public class GuiDrawingContext {
     public final PoseStack poseStack;
-    public final int width;
-    public final int height;
+    public final int parentWidth;
+    public final int parentHeight;
     public final float originX;
     public final float originY;
     public final float originZ; //For controlling which elements are in front of or behind others
@@ -21,8 +21,8 @@ public class GuiDrawingContext {
 
     public GuiDrawingContext(PoseStack poseStackIn, int widthIn, int heightIn, float originXIn, float originYIn, float originZIn, Font fontRendererIn, ItemRenderer itemRendererIn) {
         this.poseStack = poseStackIn;
-        this.width = widthIn;
-        this.height = heightIn;
+        this.parentWidth = widthIn;
+        this.parentHeight = heightIn;
         this.originX = originXIn;
         this.originY = originYIn;
         this.originZ = originZIn;
@@ -31,6 +31,6 @@ public class GuiDrawingContext {
     }
 
     public GuiDrawingContext of(float xIn, float yIn) {
-        return new GuiDrawingContext(poseStack, width, height, xIn, yIn, originZ, fontRenderer, itemRenderer);
+        return new GuiDrawingContext(poseStack, parentWidth, parentHeight, xIn, yIn, originZ, fontRenderer, itemRenderer);
     }
 }
