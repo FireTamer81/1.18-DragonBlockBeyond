@@ -14,19 +14,16 @@ public class GUIHelper {
 
 
     /**
-     * A method that draws a "panel" with a border around it. The sizes given are for the fill area, and the border is placed just outside of the color filled area.
-     * So, depending on the "border style" used, the panel will be slightly larger than the size given (this is for later on when I want panels to be able to be "maximized" to fill the entire screen)
+     * A method that draws a bordered area. The position and size values are used for the interior square, with the border drawn just outside the given area.
      * @param poseStack Any old PoseStack
      * @param panelTopLeftX This is the topLeftX value for the panel, or more accurately the area inside the borders.
      * @param panelTopLeftY The Y value for the above X value
      * @param panelWidth This determined how wide the panel interior is
      * @param panelHeight This determines out tall the panel interior is
      * @param borderTexture This is an object that holds all of the UV data for the border textures. Instantiated in the TextureHandler class on mod load.
-     * @param fillColor1 This color value is required, but if you want the panel transparent you can just pass a color with 255 for the alpha value
-     * @param fillColor2 This color is optional, and placing null in it's parameter slot will simply make the method dra a solid color.
      * @param zOffset This is a weird value that in most cases only needs ot be "0". I believe it forcefully pushes what's drawn in front or behind other objects that would have been drawn before it. (Could be used for overlapping panels based on which was last interacted with)
      */
-    public static void drawBorderedFilledPanel(PoseStack poseStack, int panelTopLeftX, int panelTopLeftY, int panelWidth, int panelHeight, BorderTextureObject borderTexture, FireLibColor fillColor1, FireLibColor fillColor2, int zOffset) {
+    public static void drawBorderedArea(PoseStack poseStack, int panelTopLeftX, int panelTopLeftY, int panelWidth, int panelHeight, BorderTextureObject borderTexture, int zOffset) {
         /**
          * int0 = XOrigin
          * int1 = Width
@@ -78,13 +75,6 @@ public class GUIHelper {
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, borderTexture.getTextureResource());
 
-        //Interior Fill
-        if(fillColor2 == null) {
-            fillAreaWithColor(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, 0, fillColor1.getRGBA());
-        } else {
-            fillAreaWithColorGradient(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, zOffset, fillColor1.getRGBA(), fillColor2.getRGBA());
-        }
-
         //TopLeftCorner
         blit(poseStack, topLeftCornerPosX, topLeftCornerPosY, topLeftCornerTextureData[0], topLeftCornerTextureData[2], topLeftCornerTextureData[1], topLeftCornerTextureData[3], zOffset);
 
@@ -108,6 +98,34 @@ public class GUIHelper {
 
         //LeftBar
         drawVerticalBarTiledTexture(poseStack, leftBarPosX, leftBarPosY, panelHeight, zOffset, leftBarTextureData[0], leftBarTextureData[2], leftBarTextureData[1], leftBarTextureData[3]);
+    }
+
+    /**
+     * A method that draws a "panel" with a border around it. The sizes given are for the fill area, and the border is placed just outside of the color filled area.
+     * So, depending on the "border style" used, the panel will be slightly larger than the size given (this is for later on when I want panels to be able to be "maximized" to fill the entire screen)
+     * @param poseStack Any old PoseStack
+     * @param panelTopLeftX This is the topLeftX value for the panel, or more accurately the area inside the borders.
+     * @param panelTopLeftY The Y value for the above X value
+     * @param panelWidth This determined how wide the panel interior is
+     * @param panelHeight This determines out tall the panel interior is
+     * @param borderTexture This is an object that holds all of the UV data for the border textures. Instantiated in the TextureHandler class on mod load.
+     * @param fillColor1 This color value is required, but if you want the panel transparent you can just pass a color with 255 for the alpha value
+     * @param fillColor2 This color is optional, and placing null in it's parameter slot will simply make the method dra a solid color.
+     * @param zOffset This is a weird value that in most cases only needs ot be "0". I believe it forcefully pushes what's drawn in front or behind other objects that would have been drawn before it. (Could be used for overlapping panels based on which was last interacted with)
+     */
+    public static void drawBorderedFilledPanel(PoseStack poseStack, int panelTopLeftX, int panelTopLeftY, int panelWidth, int panelHeight, BorderTextureObject borderTexture, FireLibColor fillColor1, FireLibColor fillColor2, int zOffset) {
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderTexture(0, borderTexture.getTextureResource());
+
+        //Interior Fill
+        if(fillColor2 == null) {
+            fillAreaWithColor(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, 0, fillColor1.getRGBA());
+        } else {
+            fillAreaWithColorGradient(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, zOffset, fillColor1.getRGBA(), fillColor2.getRGBA());
+        }
+
+        drawBorderedArea(poseStack, panelTopLeftX, panelTopLeftY, panelTopLeftX + panelWidth, panelTopLeftY + panelHeight, borderTexture, zOffset);
     }
 
     private static void drawHorizontalBarTiledTexture(PoseStack poseStack, int barOriginX, int barOriginY, int barWidth, int zOffset, int barTextureOriginX, int barTextureOriginY, int barTextureWidth, int barTextureHeight) {

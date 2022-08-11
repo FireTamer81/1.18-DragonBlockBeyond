@@ -1,6 +1,7 @@
 package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.advanced_window_gui;
 
 import io.firetamer.dragonblockbeyond.util.gui_stuff.GuiDrawingContext;
+import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.BorderTextureObject;
 import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 
 import java.util.ArrayList;
@@ -37,16 +38,16 @@ public class ContentBoxBehaviour {
 
     public float widthPercentOfParent;
     public float heightPercentOfParent;
-    public int color1;
-    public int color2;
+    public FireLibColor color1;
+    public FireLibColor color2;
     public boolean isColor2Used;
-    public InteriorContentBoxPosition position;
-    public ExteriorContentBoxPosition exteriorPosition = ExteriorContentBoxPosition.RIGHT_TOP;
-    public int xOffset;
-    public int yOffset;
+    public InteriorContentBoxPosition interiorPosition;
+    public ExteriorContentBoxPosition exteriorPosition;
     public boolean shouldDrawContentBoxBackground;
+    public boolean shouldDrawBorder;
+    public BorderTextureObject borderFont;
 
-    public List<IContentBox> interiorDynamicItems;
+    public List<ContentBox> interiorDynamicItems;
     public List<ContentBox> exteriorPanels;
 
     public ContentBoxBehaviour(ContentBoxBehaviour.Properties properties, ContentBoxBehaviour.Children children) {
@@ -55,11 +56,11 @@ public class ContentBoxBehaviour {
         this.color1 = properties.color1;
         this.color2 = properties.color2;
         this.isColor2Used = properties.isColor2Used;
-        this.position = properties.interiorPosition;
+        this.interiorPosition = properties.interiorPosition;
         this.exteriorPosition = properties.exteriorPosition;
-        this.xOffset = properties.xOffset;
-        this.yOffset = properties.yOffset;
         this.shouldDrawContentBoxBackground = properties.shouldDrawContentBoxBackground;
+        this.shouldDrawBorder = properties.shouldDrawBorder;
+        this.borderFont = properties.borderFont;
 
         this.interiorDynamicItems = children.interiorDynamicItems;
         this.exteriorPanels = children.exteriorPanels;
@@ -69,41 +70,18 @@ public class ContentBoxBehaviour {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-    public int getXPosForPositionFromContext(InteriorContentBoxPosition position, GuiDrawingContext context, int contentBoxWidth) {
-        if (position == InteriorContentBoxPosition.TOP_LEFT || position == InteriorContentBoxPosition.MIDDLE_LEFT || position == InteriorContentBoxPosition.BOTTOM_LEFT) {
-            return 0;
-        } else if (position == InteriorContentBoxPosition.TOP_MIDDLE || position == InteriorContentBoxPosition.CENTER || position == InteriorContentBoxPosition.BOTTOM_MIDDLE) {
-            return (context.parentWidth - contentBoxWidth) / 2;
-        } else {
-            return context.parentWidth - contentBoxWidth;
-        }
-    }
-
-    public int getYPosForPositionFromContext(InteriorContentBoxPosition position, GuiDrawingContext context, int contentBoxHeight) {
-        if (position == InteriorContentBoxPosition.TOP_LEFT || position == InteriorContentBoxPosition.TOP_MIDDLE || position == InteriorContentBoxPosition.TOP_RIGHT) {
-            return 0;
-        } else if (position == InteriorContentBoxPosition.MIDDLE_LEFT || position == InteriorContentBoxPosition.CENTER || position == InteriorContentBoxPosition.MIDDLE_RIGHT) {
-            return (context.parentHeight - contentBoxHeight) / 2;
-        } else {
-            return context.parentHeight - contentBoxHeight;
-        }
-    }
-
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
     public static class Properties {
         protected float widthPercentage = 1.0F;
         protected float heightPercentage = 1.0F;
-        protected int color1 = 0xFFFFFFFF;
-        protected int color2 = 0xFFFFFFFF;
+        protected FireLibColor color1 = null;
+        protected FireLibColor color2 = null;
         protected boolean isColor2Used = false;
         protected InteriorContentBoxPosition interiorPosition = InteriorContentBoxPosition.TOP_LEFT;
         protected ExteriorContentBoxPosition exteriorPosition = ExteriorContentBoxPosition.RIGHT_TOP;
-        protected int xOffset = 0;
-        protected int yOffset = 0;
         protected boolean shouldDrawContentBoxBackground = true;
+
+        protected boolean shouldDrawBorder = false;
+        protected BorderTextureObject borderFont;
 
 
         /**
@@ -128,7 +106,7 @@ public class ContentBoxBehaviour {
          * Takes one FireLibColor variables to create a solid background
          */
         public ContentBoxBehaviour.Properties backgroundColor(FireLibColor color1In) {
-            color1 = color1In.getRGBA();
+            color1 = color1In;
             isColor2Used = false;
             return this;
         }
@@ -137,8 +115,8 @@ public class ContentBoxBehaviour {
          * Takes two FireLibColor variables to create a gradient background
          */
         public ContentBoxBehaviour.Properties backgroundColor(FireLibColor color1In, FireLibColor color2In) {
-            color1 = color1In.getRGBA();
-            color2 = color2In.getRGBA();
+            color1 = color1In;
+            color2 = color2In;
             isColor2Used = true;
             return this;
         }
@@ -162,23 +140,17 @@ public class ContentBoxBehaviour {
         }
 
         /**
-         * After the original position enum is assigned, this adds an additional offset. It's purpose is for fine tuning of content's position
+         * This method makes the content box draw a border around itself using a BorderTextureObject
          */
-        public ContentBoxBehaviour.Properties xOffset(int xOffsetIn) {
-            xOffset = xOffsetIn;
+        public ContentBoxBehaviour.Properties borderFont(BorderTextureObject borderFontIn) {
+            borderFont = borderFontIn;
+
+            shouldDrawBorder = true;
             return this;
         }
 
         /**
-         * After the original position enum is assigned, this adds an additional offset. It's purpose is for fine tuning of content's position
-         */
-        public ContentBoxBehaviour.Properties yOffset(int yOffsetIn) {
-            yOffset = yOffsetIn;
-            return this;
-        }
-
-        /**
-         * This method makes it where a content box will no longer draw the background, no matter if a single color or gradient is defined.
+         * This method makes it where a content box will no longer draw the background, no matter if a single color or gradient is defined. Borders will also not be drawn.
          */
         public ContentBoxBehaviour.Properties noBackground() {
             shouldDrawContentBoxBackground = false;
@@ -187,14 +159,14 @@ public class ContentBoxBehaviour {
     }
 
     public static class Children {
-        protected List<IContentBox> interiorDynamicItems = new ArrayList<>();
+        protected List<ContentBox> interiorDynamicItems = new ArrayList<>();
         protected List<ContentBox> exteriorPanels = new ArrayList<>();
 
         /**
          * Adds a IContentBox object to the interiorDynamicItems List, which are then added to the interior of the content box in question.
          * These objects are dynamically placed based on the order they were added and their own properties
          */
-        public ContentBoxBehaviour.Children addInteriorItem(IContentBox newItemIn) {
+        public ContentBoxBehaviour.Children addInteriorItem(ContentBox newItemIn) {
             interiorDynamicItems.add(newItemIn);
 
             return this;
