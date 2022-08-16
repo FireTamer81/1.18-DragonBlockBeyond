@@ -76,28 +76,36 @@ public class GUIHelper {
         RenderSystem.setShaderTexture(0, borderTexture.getTextureResource());
 
         //TopLeftCorner
-        blit(poseStack, topLeftCornerPosX, topLeftCornerPosY, topLeftCornerTextureData[0], topLeftCornerTextureData[2], topLeftCornerTextureData[1], topLeftCornerTextureData[3], zOffset);
+        blit(poseStack, topLeftCornerPosX, topLeftCornerPosY, topLeftCornerTextureData[0], topLeftCornerTextureData[2],
+                topLeftCornerTextureData[1], topLeftCornerTextureData[3], zOffset);
 
         //TopRightCorner
-        blit(poseStack, topRightCornerPosX, topRightCornerPosY, topRightCornerTextureData[0], topRightCornerTextureData[2], topRightCornerTextureData[1], topRightCornerTextureData[3], zOffset);
+        blit(poseStack, topRightCornerPosX, topRightCornerPosY, topRightCornerTextureData[0], topRightCornerTextureData[2],
+                topRightCornerTextureData[1], topRightCornerTextureData[3], zOffset);
 
         //BottomRightCorner
-        blit(poseStack, bottomRightCornerPosX, bottomRightCornerPosY, bottomRightCornerTextureData[0], bottomRightCornerTextureData[2], bottomRightCornerTextureData[1], bottomRightCornerTextureData[3], zOffset);
+        blit(poseStack, bottomRightCornerPosX, bottomRightCornerPosY, bottomRightCornerTextureData[0], bottomRightCornerTextureData[2],
+                bottomRightCornerTextureData[1], bottomRightCornerTextureData[3], zOffset);
 
         //BottomLeftCorner
-        blit(poseStack, bottomLeftCornerPosX, bottomLeftCornerPosY, bottomLeftCornerTextureData[0], bottomLeftCornerTextureData[2], bottomLeftCornerTextureData[1], bottomLeftCornerTextureData[3], zOffset);
+        blit(poseStack, bottomLeftCornerPosX, bottomLeftCornerPosY, bottomLeftCornerTextureData[0], bottomLeftCornerTextureData[2],
+                bottomLeftCornerTextureData[1], bottomLeftCornerTextureData[3], zOffset);
 
         //TopBar
-        drawHorizontalBarTiledTexture(poseStack, topBarPosX, topBarPosY, panelWidth, zOffset, topBarTextureData[0], topBarTextureData[2], topBarTextureData[1], topBarTextureData[3]);
+        drawHorizontalBarTiledTexture(poseStack, topBarPosX, topBarPosY, panelWidth, zOffset, topBarTextureData[0], topBarTextureData[2],
+                topBarTextureData[1], topBarTextureData[3]);
 
         //RightBar
-        drawVerticalBarTiledTexture(poseStack, rightBarPosX, rightBarPosY, panelHeight, zOffset, rightBarTextureData[0], rightBarTextureData[2], rightBarTextureData[1], rightBarTextureData[3]);
+        drawVerticalBarTiledTexture(poseStack, rightBarPosX, rightBarPosY, panelHeight, zOffset, rightBarTextureData[0],
+                rightBarTextureData[2], rightBarTextureData[1], rightBarTextureData[3]);
 
         //BottomBar
-        drawHorizontalBarTiledTexture(poseStack, bottomBarPosX, bottomBarPosY, panelWidth, zOffset, bottomBarTextureData[0], bottomBarTextureData[2], bottomBarTextureData[1], bottomBarTextureData[3]);
+        drawHorizontalBarTiledTexture(poseStack, bottomBarPosX, bottomBarPosY, panelWidth, zOffset, bottomBarTextureData[0],
+                bottomBarTextureData[2], bottomBarTextureData[1], bottomBarTextureData[3]);
 
         //LeftBar
-        drawVerticalBarTiledTexture(poseStack, leftBarPosX, leftBarPosY, panelHeight, zOffset, leftBarTextureData[0], leftBarTextureData[2], leftBarTextureData[1], leftBarTextureData[3]);
+        drawVerticalBarTiledTexture(poseStack, leftBarPosX, leftBarPosY, panelHeight, zOffset, leftBarTextureData[0],
+                leftBarTextureData[2], leftBarTextureData[1], leftBarTextureData[3]);
     }
 
     /**

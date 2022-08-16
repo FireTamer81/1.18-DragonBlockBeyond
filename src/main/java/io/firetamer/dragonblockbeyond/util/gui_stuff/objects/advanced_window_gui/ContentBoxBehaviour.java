@@ -1,6 +1,5 @@
 package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.advanced_window_gui;
 
-import io.firetamer.dragonblockbeyond.util.gui_stuff.GuiDrawingContext;
 import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.BorderTextureObject;
 import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
 
@@ -46,6 +45,11 @@ public class ContentBoxBehaviour {
     public boolean shouldDrawContentBoxBackground;
     public boolean shouldDrawBorder;
     public BorderTextureObject borderFont;
+    public int xOffsetAbsolute;
+    public int yOffsetAbsolute;
+    public float xOffsetDynamic;
+    public float yOffsetDynamic;
+    public boolean shouldUseDynamicOffset;
 
     public List<ContentBox> interiorDynamicItems;
     public List<ContentBox> exteriorPanels;
@@ -61,6 +65,11 @@ public class ContentBoxBehaviour {
         this.shouldDrawContentBoxBackground = properties.shouldDrawContentBoxBackground;
         this.shouldDrawBorder = properties.shouldDrawBorder;
         this.borderFont = properties.borderFont;
+        this.xOffsetAbsolute = properties.xOffsetAbsolute;
+        this.yOffsetAbsolute = properties.yOffsetAbsolute;
+        this.xOffsetDynamic = properties.xOffsetDynamic;
+        this.yOffsetDynamic = properties.yOffsetDynamic;
+        this.shouldUseDynamicOffset = properties.shouldUseDynamicOffset;
 
         this.interiorDynamicItems = children.interiorDynamicItems;
         this.exteriorPanels = children.exteriorPanels;
@@ -79,9 +88,14 @@ public class ContentBoxBehaviour {
         protected InteriorContentBoxPosition interiorPosition = InteriorContentBoxPosition.TOP_LEFT;
         protected ExteriorContentBoxPosition exteriorPosition = ExteriorContentBoxPosition.RIGHT_TOP;
         protected boolean shouldDrawContentBoxBackground = true;
-
         protected boolean shouldDrawBorder = false;
-        protected BorderTextureObject borderFont;
+        protected BorderTextureObject borderFont = null;
+        protected int xOffsetAbsolute = 0;
+        protected int yOffsetAbsolute = 0;
+        protected float xOffsetDynamic = 0.0f;
+        protected float yOffsetDynamic = 0.0f;
+        protected boolean shouldUseDynamicOffset = false;
+
 
 
         /**
@@ -140,7 +154,39 @@ public class ContentBoxBehaviour {
         }
 
         /**
-         * This method makes the content box draw a border around itself using a BorderTextureObject
+         * This method offsets the contentBox by pixels.
+         * It is most useful for offsetting elements where gui scale changes don't matter
+         */
+        public ContentBoxBehaviour.Properties absolutePositionOffset(int xOffsetIn, int yOffsetIn) {
+            xOffsetAbsolute = xOffsetIn;
+            yOffsetAbsolute = yOffsetIn;
+
+            shouldUseDynamicOffset = false;
+
+            return this;
+        }
+
+        /**
+         * This method offsets the content box based on a percentage of the parent element.
+         * This is most useful for offsetting interior child elements.
+         * For instance, if you have 2 child element with a position of "TOP_LEFT".
+         * One element can remain without an offset, and the 2nd can be offset by either the height or width
+         * of the first, so it can appear paired to the 1st without actually being so.
+         */
+        public ContentBoxBehaviour.Properties dynamicPositionOffset(float xOffsetIn, float yOffsetIn) {
+            xOffsetDynamic = xOffsetIn;
+            yOffsetDynamic = yOffsetIn;
+
+            shouldUseDynamicOffset = true;
+
+            return this;
+        }
+
+        /**
+         * This method makes the content box draw a border around itself using a BorderTextureObject.
+         * One problem has presented itself with borders. If you have a very small content box,
+         * whichever axis that is too small (height/width) will have the sidebars of the border
+         * placed at the top or side of the screen.
          */
         public ContentBoxBehaviour.Properties borderFont(BorderTextureObject borderFontIn) {
             borderFont = borderFontIn;
@@ -166,7 +212,7 @@ public class ContentBoxBehaviour {
          * Adds a IContentBox object to the interiorDynamicItems List, which are then added to the interior of the content box in question.
          * These objects are dynamically placed based on the order they were added and their own properties
          */
-        public ContentBoxBehaviour.Children addInteriorItem(ContentBox newItemIn) {
+        public ContentBoxBehaviour.Children addInteriorChild(ContentBox newItemIn) {
             interiorDynamicItems.add(newItemIn);
 
             return this;
@@ -176,7 +222,7 @@ public class ContentBoxBehaviour {
          * Adds a IContentBox object to the exteriorPanels list, which are placed outside the parent content box in question.
          * These objects are placed outside of the parent content box based on the objects properties.
          */
-        public ContentBoxBehaviour.Children addExteriorPanels(ContentBox newPanelIn) {
+        public ContentBoxBehaviour.Children addExteriorChild(ContentBox newPanelIn) {
             exteriorPanels.add(newPanelIn);
 
             return this;

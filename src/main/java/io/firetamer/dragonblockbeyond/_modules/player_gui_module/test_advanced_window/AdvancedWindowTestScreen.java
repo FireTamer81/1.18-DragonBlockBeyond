@@ -51,82 +51,78 @@ public class AdvancedWindowTestScreen extends AbstractAdvancedWindow {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-    public static final ContentBox testExteriorPanel = new ContentBox(
+    public static final ContentBox testPanel1A = new ContentBox(
+            new ContentBoxBehaviour.Properties()
+                    .backgroundColor(new FireLibColor(255, 0, 255))
+                    .heightPercentageOfParent(0.4f)
+                    .widthPercentageOfParent(0.6f)
+                    //.position(ContentBoxBehaviour.InteriorContentBoxPosition.TOP_MIDDLE)
+                    .exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.BOTTOM_MIDDLE)
+                    .borderFont(TextureHandler.BORDER_2)
+            ,
+
+            new ContentBoxBehaviour.Children()
+    );
+
+    public static final ContentBox testPanel = new ContentBox(
             new ContentBoxBehaviour.Properties()
                     .backgroundColor(new FireLibColor(255, 0, 0))
-                    .heightPercentageOfParent(0.5f)
-                    .widthPercentageOfParent(0.5f)
-                    //.position(ContentBoxBehaviour.InteriorContentBoxPosition.TOP_LEFT)
-                    .exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.RIGHT_MIDDLE)
+                    .heightPercentageOfParent(0.2f)
+                    .widthPercentageOfParent(0.8f)
+                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.TOP_MIDDLE)
+                    //.exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.TOP_LEFT)
                     .borderFont(TextureHandler.BORDER_1)
             ,
 
             new ContentBoxBehaviour.Children()
+                    .addExteriorChild(testPanel1A)
     );
 
-    public static final ContentBox testInteriorPanel2 = new ContentBox(
+    public static final ContentBox testPanel2A = new ContentBox(
+            new ContentBoxBehaviour.Properties()
+                    .backgroundColor(new FireLibColor(255, 0, 255))
+                    .heightPercentageOfParent(0.4f)
+                    .widthPercentageOfParent(0.6f)
+                    //.position(ContentBoxBehaviour.InteriorContentBoxPosition.TOP_MIDDLE)
+                    .exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.BOTTOM_MIDDLE)
+                    .borderFont(TextureHandler.BORDER_2)
+            ,
+
+            new ContentBoxBehaviour.Children()
+    );
+
+    public static final ContentBox testPanel2 = new ContentBox(
             new ContentBoxBehaviour.Properties()
                     .backgroundColor(new FireLibColor(255, 0, 0))
                     .heightPercentageOfParent(0.2f)
-                    .widthPercentageOfParent(0.2f)
-                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.TOP_RIGHT)
-                    //.exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.LEFT_TOP)
+                    .widthPercentageOfParent(0.8f)
+                    //.position(ContentBoxBehaviour.InteriorContentBoxPosition.TOP_MIDDLE)
+                    .exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.RIGHT_TOP)
+                    .borderFont(TextureHandler.BORDER_1)
             ,
 
             new ContentBoxBehaviour.Children()
+                    .addExteriorChild(testPanel2A)
     );
 
-    public static final ContentBox testInteriorPanel3 = new ContentBox(
-            new ContentBoxBehaviour.Properties()
-                    .backgroundColor(new FireLibColor(0, 0, 255))
-                    .heightPercentageOfParent(0.2f)
-                    .widthPercentageOfParent(0.2f)
-                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.CENTER)
-                    //.exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.LEFT_MIDDLE)
-            ,
 
-            new ContentBoxBehaviour.Children()
-    );
 
-    public static final ContentBox testInteriorPanel4 = new ContentBox(
-            new ContentBoxBehaviour.Properties()
-                    .backgroundColor(new FireLibColor(255, 0, 0))
-                    .heightPercentageOfParent(0.2f)
-                    .widthPercentageOfParent(0.2f)
-                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.BOTTOM_LEFT)
-                    //.exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.LEFT_BOTTOM)
-            ,
 
-            new ContentBoxBehaviour.Children()
-    );
-
-    public static final ContentBox testInteriorPanel5 = new ContentBox(
-            new ContentBoxBehaviour.Properties()
-                    .backgroundColor(new FireLibColor(255, 0, 0))
-                    .heightPercentageOfParent(0.2f)
-                    .widthPercentageOfParent(0.2f)
-                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.BOTTOM_RIGHT)
-                    //.exteriorPosition(ContentBoxBehaviour.ExteriorContentBoxPosition.BOTTOM_LEFT)
-            ,
-
-            new ContentBoxBehaviour.Children()
-    );
 
     public static final ContentBox testContentBox = new ContentBox(
             new ContentBoxBehaviour.Properties()
                     .backgroundColor(new FireLibColor(0, 255, 255), new FireLibColor(0, 255, 0))
-                    .heightPercentageOfParent(0.4f)
-                    .widthPercentageOfParent(0.2f)
-                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.CENTER)
+                    .heightPercentageOfParent(0.5f)
+                    .widthPercentageOfParent(0.4f)
+                    .position(ContentBoxBehaviour.InteriorContentBoxPosition.MIDDLE_LEFT)
+                    //.absolutePositionOffset(-40, -40)
+                    //.dynamicPositionOffset(0.2f, -0.3f)
                     .borderFont(TextureHandler.BORDER_2)
                     //.noBackground()
             ,
 
             new ContentBoxBehaviour.Children()
-                    //.addExteriorPanels(testExteriorPanel)
-                    //.addInteriorItem(testInteriorPanel2)
-                    //.addInteriorItem(testInteriorPanel3)
-                    //.addInteriorItem(testInteriorPanel4)
-                    //.addInteriorItem(testInteriorPanel5)
+                    .addInteriorChild(testPanel)
+                    .addExteriorChild(testPanel2)
     );
 }
