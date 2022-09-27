@@ -1,9 +1,9 @@
-package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons;
+package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.GuiDrawingContext;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.SimpleSpriteObject;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GuiDrawingContext;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.SimpleSpriteObject;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.components.MultiLineLabel;
@@ -223,8 +223,6 @@ public class RadialMenuButton implements IRadialMenuButton {
 
             lines.renderCentered(drawContext.poseStack, (int) drawContext.originX, (int) y + 8, drawContext.fontRenderer.lineHeight, this.buttonTextColor);
         }
-
-
     }
 
     @Override

@@ -3,6 +3,7 @@ package io.firetamer.dragonblockbeyond.handlers;
 import com.mojang.blaze3d.platform.InputConstants;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
 import io.firetamer.dragonblockbeyond._modules.player_gui_module.test_advanced_window.AdvancedWindowTestScreen;
+import io.firetamer.dragonblockbeyond._modules.player_gui_module.test_advanced_window.V2_WindowTestScreen;
 import io.firetamer.dragonblockbeyond._modules.player_gui_module.test_radial_screen.RadialTestScreen;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -56,7 +57,7 @@ public class KeyBindHandler {
             }
 
             if (KeyBindHandler.openPlayerMenu.consumeClick()) {
-                Minecraft.getInstance().setScreen(new AdvancedWindowTestScreen());
+                Minecraft.getInstance().setScreen(new V2_WindowTestScreen());
             }
         }
     }

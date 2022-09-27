@@ -1,10 +1,10 @@
-package io.firetamer.dragonblockbeyond.util.gui_stuff;
+package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
 import io.firetamer.dragonblockbeyond.util.library_candidates.FireLibColor;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.texture_objects.BorderTextureObject;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.texture_objects.BorderTextureObject;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -324,6 +324,7 @@ public class GUIHelper {
         bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
 
         /**************************************************************************************************************/
+
         float f = (float)(color1 >> 24 & 255) / 255.0F;
         float f1 = (float)(color1 >> 16 & 255) / 255.0F;
         float f2 = (float)(color1 >> 8 & 255) / 255.0F;

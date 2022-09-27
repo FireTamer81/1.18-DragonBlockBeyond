@@ -3,10 +3,10 @@ package io.firetamer.dragonblockbeyond._modules.player_gui_module.test_radial_sc
 import io.firetamer.dragonblockbeyond.handlers.KeyBindHandler;
 import io.firetamer.dragonblockbeyond.handlers.TextureHandler;
 import io.firetamer.dragonblockbeyond.util.library_candidates.KeyBindsUtil;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.AbstractRadialMenu;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons.IRadialMenuButton;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons.RadialMenuButton;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons.RadialMenuCategoryButton;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.AbstractRadialMenu;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons.IRadialMenuButton;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons.RadialMenuButton;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons.RadialMenuCategoryButton;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;

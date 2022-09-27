@@ -1,12 +1,12 @@
-package io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu;
+package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu;
 
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import io.firetamer.dragonblockbeyond.DragonBlockBeyond;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.GuiDrawingContext;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons.IRadialMenuButton;
-import io.firetamer.dragonblockbeyond.util.gui_stuff.objects.radial_menu.buttons.IRadialMenuCategoryButton;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.GuiDrawingContext;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons.IRadialMenuButton;
+import io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.radial_menu.buttons.IRadialMenuCategoryButton;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
