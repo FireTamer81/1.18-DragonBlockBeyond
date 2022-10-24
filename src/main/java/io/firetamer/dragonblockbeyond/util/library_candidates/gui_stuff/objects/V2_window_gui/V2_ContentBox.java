@@ -9,8 +9,14 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
     public int topLeftYPos = 0;
     public int contentBoxWidth = 0;
     public int contentBoxHeight = 0;
+    public int endX = 0;
+    public int endY = 0;
 
     public V2_ContentBox(BasicBoxProperties properties) {
+        super(properties);
+    }
+
+    public V2_ContentBox(BasicButtonProperties properties) {
         super(properties);
     }
 
@@ -18,10 +24,28 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
         contentBoxWidth = (int) (drawContext.parentWidth * percentWidthOfParent);
         contentBoxHeight = (int) (drawContext.parentHeight * percentHeightOfParent);
 
-        topLeftXPos = getXPosForInteriorChildren(interiorPosition, drawContext, contentBoxWidth) + getXOffset(drawContext);
-        topLeftYPos = getYPosForInteriorChildren(interiorPosition, drawContext, contentBoxHeight) + getYOffset(drawContext);
-        int endX = topLeftXPos + contentBoxWidth;
-        int endY = topLeftYPos + contentBoxHeight;
+        int leftMarginOffset = 0;
+        int rightMarginOffset = 0;
+        int topMarginOffset = 0;
+        int bottomMarginOffset = 0;
+
+        if (shouldDrawBorder) {
+            leftMarginOffset = getLeftMargin();
+            rightMarginOffset = getRightMargin();
+            topMarginOffset = getTopMargin();
+            bottomMarginOffset = getBottomMargin();
+        }
+
+        if (isUsingInteriorPositioning) {
+            topLeftXPos = getXPosForInteriorChildren(interiorPosition, drawContext, contentBoxWidth) + getXOffset(drawContext);
+            topLeftYPos = getYPosForInteriorChildren(interiorPosition, drawContext, contentBoxHeight) + getYOffset(drawContext);
+        } else {
+            topLeftXPos = getXPosForExteriorChildren(exteriorPosition, drawContext, contentBoxWidth, leftMarginOffset, rightMarginOffset) + getXOffset(drawContext);
+            topLeftYPos = getYPosForExteriorChildren(exteriorPosition, drawContext, contentBoxHeight, topMarginOffset, bottomMarginOffset) + getYOffset(drawContext);
+        }
+
+        endX = topLeftXPos + contentBoxWidth;
+        endY = topLeftYPos + contentBoxHeight;
 
         if (shouldDrawContentBoxBackground) {
             if (shouldDrawBorder) {
@@ -49,7 +73,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
 
 
-    private int getXOffset(GuiDrawingContext parentDrawContext) {
+    protected int getXOffset(GuiDrawingContext parentDrawContext) {
         int xOffset;
 
         if (shouldUseDynamicOffset) {
@@ -60,7 +84,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         return xOffset;
     }
-    private int getYOffset(GuiDrawingContext parentDrawContext) {
+    protected int getYOffset(GuiDrawingContext parentDrawContext) {
         int yOffset;
 
         if (shouldUseDynamicOffset) {
@@ -80,7 +104,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
      * int4 = xOffset,
      * int5 = yOffset
      */
-    private int getLeftMargin() {
+    protected int getLeftMargin() {
         int leftMarginOffset = 0;
 
         int[] topLeftCornerTextureData = borderFont.getTopLeftCornerTextureData();
@@ -98,7 +122,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         return leftMarginOffset;
     }
-    private int getTopMargin() {
+    protected int getTopMargin() {
         int topMarginOffset = 0;
 
         int[] topLeftCornerTextureData = borderFont.getTopLeftCornerTextureData();
@@ -116,7 +140,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         return topMarginOffset;
     }
-    private int getRightMargin() {
+    protected int getRightMargin() {
         int rightMarginOffset = 0;
 
         int[] bottomRightCornerTextureData = borderFont.getBottomRightCornerTextureData();
@@ -134,7 +158,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         return rightMarginOffset;
     }
-    private int getBottomMargin() {
+    protected int getBottomMargin() {
         int bottomMarginOffset = 0;
 
         int[] bottomRightCornerTextureData = borderFont.getBottomRightCornerTextureData();
@@ -153,7 +177,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
         return bottomMarginOffset;
     }
 
-    private int getXPosForInteriorChildren(V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPositionIn, GuiDrawingContext context, int contentBoxWidth) {
+    protected int getXPosForInteriorChildren(V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPositionIn, GuiDrawingContext context, int contentBoxWidth) {
         int leftMarginOffset = 0;
         int rightMarginOffset = 0;
 
@@ -173,7 +197,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         else { return 0; }
     }
-    private int getYPosForInteriorChildren(V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPositionIn, GuiDrawingContext context, int contentBoxHeight) {
+    protected int getYPosForInteriorChildren(V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPositionIn, GuiDrawingContext context, int contentBoxHeight) {
         int topMarginOffset = 0;
         int bottomMarginOffset = 0;
 
@@ -194,7 +218,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
         else { return 0; }
     }
 
-    private int getXPosForExteriorChildren(V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPositionIn, GuiDrawingContext parentContext, int contentBoxWidth, int parentLeftMarginOffset, int parentRightMarginOffset) {
+    protected int getXPosForExteriorChildren(V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPositionIn, GuiDrawingContext parentContext, int contentBoxWidth, int parentLeftMarginOffset, int parentRightMarginOffset) {
         int leftMarginOffset = 0;
         int rightMarginOffset = 0;
 
@@ -220,7 +244,7 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         else { return 0; }
     }
-    private int getYPosForExteriorChildren(V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPositionIn, GuiDrawingContext parentContext, int contentBoxHeight, int parentTopMarginOffset, int parentBottomMarginOffset) {
+    protected int getYPosForExteriorChildren(V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPositionIn, GuiDrawingContext parentContext, int contentBoxHeight, int parentTopMarginOffset, int parentBottomMarginOffset) {
         int topMarginOffset = 0;
         int bottomMarginOffset = 0;
 
@@ -246,5 +270,4 @@ public class V2_ContentBox extends V2_ContentBoxBehaviour {
 
         else { return 0; }
     }
-
 }

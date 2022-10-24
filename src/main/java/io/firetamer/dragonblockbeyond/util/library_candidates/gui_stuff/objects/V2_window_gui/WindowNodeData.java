@@ -1,30 +1,41 @@
 package io.firetamer.dragonblockbeyond.util.library_candidates.gui_stuff.objects.V2_window_gui;
 
-public class WindowNodeData {
-    private String identifier; //name
-    private V2_ContentBox object; //This holds the position, color, and other data used in drawing the object
+import javax.annotation.Nullable;
 
-    public WindowNodeData(String identifierIn, V2_ContentBox contentBoxObject) {
+public class WindowNodeData {
+    private final String identifier; //name
+    private final V2_ContentBox contentBoxObject; //This holds the position, color, and other data used in drawing the object
+    //private final V2_WindowButton buttonObject;
+
+    public WindowNodeData(String identifierIn, V2_ContentBox contentBoxObjectIn) {
         this.identifier = identifierIn;
-        this.object = contentBoxObject;
+        this.contentBoxObject = contentBoxObjectIn;
+        //this.buttonObject = null;
+    }
+
+    public WindowNodeData(String identifierIn, V2_WindowButton buttonObjectIn) {
+        this.identifier = identifierIn;
+        this.contentBoxObject = buttonObjectIn;
+        //this.buttonObject = buttonObjectIn;
+    }
+
+    /*
+    public boolean isObjectButton() {
+        if (buttonObject != null && contentBoxObject == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    */
+
+    public boolean isObjectButton() {
+        if (contentBoxObject instanceof V2_WindowButton) {
+            return true;
+        } else return false;
     }
 
     public String getIdentifier() { return identifier; }
-
-    //For some reason, I highly doubt that this will work
-    public boolean isObjectButton() {
-        if (object instanceof V2_ContentBox) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    //If isObjectbutton returns false, use this method to retrieve the node object.
-    public V2_ContentBox getObject() {
-        return object;
-    }
-
-    //If isObjectbutton returns true, use this method to retrieve the node object (Which would be a child extension of the contentBox class).
-    //public V2_ContentBox getButtonObject() { return object; }
+    public V2_ContentBox getContentBoxObject() { return contentBoxObject; }
+    //public V2_WindowButton getBasicButtonObject() { return buttonObject; }
 }

@@ -39,6 +39,7 @@ public class V2_ContentBoxBehaviour {
     public FireLibColor hoverColor;
     public V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPosition;
     public V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPosition;
+    public boolean isUsingInteriorPositioning;
     public boolean shouldDrawContentBoxBackground;
     public boolean shouldDrawBorder;
     public BorderTextureObject borderFont;
@@ -64,6 +65,7 @@ public class V2_ContentBoxBehaviour {
         this.hoverColor = new FireLibColor(255, 255, 255, 0);
         this.interiorPosition = properties.interiorPosition;
         this.exteriorPosition = properties.exteriorPosition;
+        this.isUsingInteriorPositioning = properties.isUsingInteriorPositioning;
         this.shouldDrawContentBoxBackground = properties.shouldDrawContentBoxBackground;
         this.shouldDrawBorder = properties.shouldDrawBorder;
         this.borderFont = properties.borderFont;
@@ -86,6 +88,7 @@ public class V2_ContentBoxBehaviour {
         this.hoverColor = properties.hoverColor;
         this.interiorPosition = properties.interiorPosition;
         this.exteriorPosition = properties.exteriorPosition;
+        this.isUsingInteriorPositioning = properties.isUsingInteriorPositioning;
         this.shouldDrawContentBoxBackground = properties.shouldDrawContentBoxBackground;
         this.shouldDrawBorder = properties.shouldDrawBorder;
         this.borderFont = properties.borderFont;
@@ -108,6 +111,7 @@ public class V2_ContentBoxBehaviour {
         private boolean isColor2Used = false;
         private V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPosition = V2_ContentBoxBehaviour.InteriorContentBoxPosition.TOP_LEFT;
         private V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPosition = V2_ContentBoxBehaviour.ExteriorContentBoxPosition.RIGHT_TOP;
+        private boolean isUsingInteriorPositioning;
         private boolean shouldDrawContentBoxBackground = true;
         private boolean shouldDrawBorder = false;
         private BorderTextureObject borderFont = null;
@@ -160,7 +164,7 @@ public class V2_ContentBoxBehaviour {
          */
         public V2_ContentBoxBehaviour.BasicBoxProperties position(V2_ContentBoxBehaviour.InteriorContentBoxPosition positionIn) {
             interiorPosition = positionIn;
-
+            isUsingInteriorPositioning = true;
             return this;
         }
 
@@ -169,7 +173,7 @@ public class V2_ContentBoxBehaviour {
          */
         public V2_ContentBoxBehaviour.BasicBoxProperties exteriorPosition(V2_ContentBoxBehaviour.ExteriorContentBoxPosition positionIn) {
             exteriorPosition = positionIn;
-
+            isUsingInteriorPositioning = false;
             return this;
         }
 
@@ -225,22 +229,23 @@ public class V2_ContentBoxBehaviour {
     }
 
     public static class BasicButtonProperties {
-        protected float widthPercentage = 1.0F;
-        protected float heightPercentage = 1.0F;
-        protected FireLibColor color1 = new FireLibColor(255, 255, 255);
-        protected FireLibColor color2 = new FireLibColor(255, 255, 255);
-        protected boolean isColor2Used = false;
-        protected FireLibColor hoverColor = new FireLibColor(100, 100, 100, 100);
-        protected V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPosition = V2_ContentBoxBehaviour.InteriorContentBoxPosition.TOP_LEFT;
-        protected V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPosition = V2_ContentBoxBehaviour.ExteriorContentBoxPosition.RIGHT_TOP;
-        protected boolean shouldDrawContentBoxBackground = true;
-        protected boolean shouldDrawBorder = false;
-        protected BorderTextureObject borderFont = null;
-        protected int xOffsetAbsolute = 0;
-        protected int yOffsetAbsolute = 0;
-        protected float xOffsetDynamic = 0.0f;
-        protected float yOffsetDynamic = 0.0f;
-        protected boolean shouldUseDynamicOffset = false;
+        private float widthPercentage = 1.0F;
+        private float heightPercentage = 1.0F;
+        private FireLibColor color1 = new FireLibColor(255, 255, 255);
+        private FireLibColor color2 = new FireLibColor(255, 255, 255);
+        private boolean isColor2Used = false;
+        private FireLibColor hoverColor = new FireLibColor(100, 100, 100, 100);
+        private V2_ContentBoxBehaviour.InteriorContentBoxPosition interiorPosition = V2_ContentBoxBehaviour.InteriorContentBoxPosition.TOP_LEFT;
+        private V2_ContentBoxBehaviour.ExteriorContentBoxPosition exteriorPosition = V2_ContentBoxBehaviour.ExteriorContentBoxPosition.RIGHT_TOP;
+        private boolean isUsingInteriorPositioning;
+        private boolean shouldDrawContentBoxBackground = true;
+        private boolean shouldDrawBorder = false;
+        private BorderTextureObject borderFont = null;
+        private int xOffsetAbsolute = 0;
+        private int yOffsetAbsolute = 0;
+        private float xOffsetDynamic = 0.0f;
+        private float yOffsetDynamic = 0.0f;
+        private boolean shouldUseDynamicOffset = false;
 
 
         /**
@@ -290,20 +295,20 @@ public class V2_ContentBoxBehaviour {
         }
 
         /**
-         * Takes the ContentBoxBehaviour.InteriorContentBoxPosition Enum to determine where the Content Box will be placed within it's parent
+         * Takes the ContentBoxBehaviour.InteriorContentBoxPosition Enum to determine where the Content Box will be placed within it's parent.
          */
         public V2_ContentBoxBehaviour.BasicButtonProperties position(V2_ContentBoxBehaviour.InteriorContentBoxPosition positionIn) {
             interiorPosition = positionIn;
-
+            isUsingInteriorPositioning = true;
             return this;
         }
 
         /**
-         * Takes the ContentBoxBehaviour.ExteriorContentBoxPosition Enum to determine where the Content Box will be placed outside it's parent
+         * Takes the ContentBoxBehaviour.ExteriorContentBoxPosition Enum to determine where the Content Box will be placed outside it's parent.
          */
         public V2_ContentBoxBehaviour.BasicButtonProperties exteriorPosition(V2_ContentBoxBehaviour.ExteriorContentBoxPosition positionIn) {
             exteriorPosition = positionIn;
-
+            isUsingInteriorPositioning = false;
             return this;
         }
 
