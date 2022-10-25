@@ -479,7 +479,7 @@ public class BasicButton extends ContentBox implements WidgetEventListener {
     }
 
     @SubscribeEvent
-    public void onMouseRelease(ScreenEvent.MouseReleasedEvent.Pre event) {
+    public void onMouseRelease(ScreenEvent.MouseButtonReleased.Pre event) {
         processClick(true, event.getButton());
     }
 

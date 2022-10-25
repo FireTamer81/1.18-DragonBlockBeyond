@@ -21,6 +21,8 @@ import net.minecraft.world.phys.HitResult;
 
 import java.util.function.Supplier;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class WarenaiBlockStairs extends StairBlock implements EntityBlock {
     public static final EnumProperty<WarenaiBlockConditionEnum> BLOCK_CONDITION = WarenaiBlockStateProperties.BLOCK_CONDITION;
     public static final EnumProperty<WarenaiBlockPatternEnum> BLOCK_PATTERN = WarenaiBlockStateProperties.BLOCK_PATTERN;

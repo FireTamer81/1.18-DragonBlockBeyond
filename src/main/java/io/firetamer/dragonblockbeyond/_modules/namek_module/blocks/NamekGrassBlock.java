@@ -16,6 +16,8 @@ import net.minecraft.world.level.lighting.LayerLightEngine;
 
 import java.util.Random;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class NamekGrassBlock extends Block implements BonemealableBlock {
 
     public NamekGrassBlock(Properties p_49795_) {

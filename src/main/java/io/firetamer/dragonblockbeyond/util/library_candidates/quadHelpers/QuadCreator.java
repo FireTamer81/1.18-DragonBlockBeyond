@@ -5,7 +5,7 @@ import com.mojang.blaze3d.vertex.VertexFormatElement;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Direction;
-import net.minecraftforge.client.model.pipeline.BakedQuadBuilder;
+import net.minecraftforge.client.model.pipeline.QuadBakingVertexConsumer;
 
 public class QuadCreator {
     public static BakedQuad createQuad(DBVector3d v1, DBVector3d v2, DBVector3d v3, DBVector3d v4, TextureAtlasSprite sprite, Direction side) {
@@ -13,7 +13,7 @@ public class QuadCreator {
         int tw = sprite.getWidth();
         int th = sprite.getHeight();
         if (side == null) {
-            BakedQuadBuilder builder = new BakedQuadBuilder(sprite);
+            QuadBakingVertexConsumer builder = new QuadBakingVertexConsumer(sprite);
             builder.setQuadOrientation(Direction.getNearest(normal.x, normal.y, normal.z));
             putVertex(builder, normal, v1.x, v1.y, v1.z, 0, 0, sprite, 1.0f, 1.0f, 1.0f);
             putVertex(builder, normal, v2.x, v2.y, v2.z, 0, th, sprite, 1.0f, 1.0f, 1.0f);
@@ -21,7 +21,7 @@ public class QuadCreator {
             putVertex(builder, normal, v4.x, v4.y, v4.z, tw, 0, sprite, 1.0f, 1.0f, 1.0f);
             return builder.build();
         }
-        return new BakedQuadBuilder(sprite).build();
+        return new QuadBakingVertexConsumer(sprite).build();
     }
 
     public static BakedQuad createQuadTransparent(DBVector3d v1, DBVector3d v2, DBVector3d v3, DBVector3d v4, TextureAtlasSprite sprite, Direction side, float alpha) {
@@ -29,7 +29,7 @@ public class QuadCreator {
         int tw = sprite.getWidth();
         int th = sprite.getHeight();
         if (side == null) {
-            BakedQuadBuilder builder = new BakedQuadBuilder(sprite);
+            QuadBakingVertexConsumer builder = new QuadBakingVertexConsumer(sprite);
             builder.setQuadOrientation(Direction.getNearest(normal.x, normal.y, normal.z));
             putVertexTransparent(builder, normal, v1.x, v1.y, v1.z, 0, 0, sprite, 1.0f, 1.0f, 1.0f, alpha);
             putVertexTransparent(builder, normal, v2.x, v2.y, v2.z, 0, th, sprite, 1.0f, 1.0f, 1.0f, alpha);
@@ -37,7 +37,7 @@ public class QuadCreator {
             putVertexTransparent(builder, normal, v4.x, v4.y, v4.z, tw, 0, sprite, 1.0f, 1.0f, 1.0f, alpha);
             return builder.build();
         }
-        return new BakedQuadBuilder(sprite).build();
+        return new QuadBakingVertexConsumer(sprite).build();
     }
 
     public static BakedQuad createTriangle(DBVector3d v1, DBVector3d v2, DBVector3d v3, TextureAtlasSprite sprite, Direction side) {
@@ -45,7 +45,7 @@ public class QuadCreator {
         int tw = sprite.getWidth();
         int th = sprite.getHeight();
         if (side == null) {
-            BakedQuadBuilder builder = new BakedQuadBuilder(sprite);
+            QuadBakingVertexConsumer builder = new QuadBakingVertexConsumer(sprite);
             builder.setQuadOrientation(Direction.getNearest(normal.x, normal.y, normal.z));
             putVertex(builder, normal, v1.x, v1.y, v1.z, tw / 2f, th / 2f, sprite, 1.0f, 1.0f, 1.0f);
             putVertex(builder, normal, v2.x, v2.y, v2.z, 0, 0, sprite, 1.0f, 1.0f, 1.0f);
@@ -53,10 +53,10 @@ public class QuadCreator {
             putVertex(builder, normal, v3.x, v3.y, v3.z, tw, 0, sprite, 1.0f, 1.0f, 1.0f);
             return builder.build();
         }
-        return new BakedQuadBuilder(sprite).build();
+        return new QuadBakingVertexConsumer(sprite).build();
     }
 
-    private static void putVertex(BakedQuadBuilder builder, DBVector3d normal, double x, double y, double z, float u, float v, TextureAtlasSprite sprite, float r, float g, float b) {
+    private static void putVertex(QuadBakingVertexConsumer builder, DBVector3d normal, double x, double y, double z, float u, float v, TextureAtlasSprite sprite, float r, float g, float b) {
         ImmutableList<VertexFormatElement> elements = builder.getVertexFormat().getElements().asList();
         for (int j = 0; j < elements.size(); j++) {
             VertexFormatElement e = elements.get(j);
@@ -92,7 +92,7 @@ public class QuadCreator {
         }
     }
 
-    private static void putVertexTransparent(BakedQuadBuilder builder, DBVector3d normal, double x, double y, double z, float u, float v, TextureAtlasSprite sprite, float r, float g, float b, float a) {
+    private static void putVertexTransparent(QuadBakingVertexConsumer builder, DBVector3d normal, double x, double y, double z, float u, float v, TextureAtlasSprite sprite, float r, float g, float b, float a) {
         ImmutableList<VertexFormatElement> elements = builder.getVertexFormat().getElements().asList();
         for (int j = 0; j < elements.size(); j++) {
             VertexFormatElement e = elements.get(j);

@@ -23,6 +23,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class FabricatorBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -83,7 +85,7 @@ public class FabricatorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof FabricatorBlockTile) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (FabricatorBlockTile)entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (FabricatorBlockTile)entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

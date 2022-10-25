@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 @SuppressWarnings("deprecated")
 public class NamekLog extends RotatedPillarBlock {
     public NamekLog(Properties properties) {

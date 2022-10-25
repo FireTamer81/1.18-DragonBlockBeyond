@@ -21,7 +21,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -105,7 +105,7 @@ public class StrongBlockModule extends ModuleBase {
     }
 
     @SubscribeEvent
-    public static void registerColorHandlers(ColorHandlerEvent.Item event) {
+    public static void registerColorHandlers(RegisterColorHandlersEvent.Item event) {
         event.getBlockColors()
                 .register(new WarenaiBlockColor(),
                         RegistryHandler.BLOCKS.getEntries().stream().map(RegistryObject::get).toArray(Block[]::new));

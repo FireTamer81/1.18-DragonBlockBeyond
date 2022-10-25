@@ -17,8 +17,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityViewRenderEvent;
-import net.minecraftforge.client.event.RenderBlockOverlayEvent;
+import net.minecraftforge.client.event.ViewportEvent;
+import net.minecraftforge.client.event.RenderBlockScreenEffectEvent;
 import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -114,7 +114,7 @@ public class EventHandler {
          * Creates green fog when in Namek Water to reduce visibility
          */
         @SubscribeEvent
-        public static void greenFogInNamekWater(EntityViewRenderEvent.FogColors event) {
+        public static void greenFogInNamekWater(ViewportEvent.ComputeFogColor event) {
             LocalPlayer player = Minecraft.getInstance().player;
             double eyeHeight = player.getEyeY() - 1 / 9d;
             FluidState fluidstate = player.level.getFluidState(new BlockPos(player.getX(), eyeHeight, player.getZ()));
@@ -132,7 +132,7 @@ public class EventHandler {
          * Prevents the vanilla water overlay (which gives the view a blue tint instead of green)
          */
         @SubscribeEvent
-        public static void cancelVanillaWaterOverlay(RenderBlockOverlayEvent event) {
+        public static void cancelVanillaWaterOverlay(RenderBlockScreenEffectEvent event) {
             @SuppressWarnings("resource")
             LocalPlayer player = Minecraft.getInstance().player;
             double eyeHeight = player.getEyeY() - 1 / 9d;

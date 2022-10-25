@@ -11,6 +11,8 @@ import net.minecraft.world.level.material.FluidState;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class NamekKelpHead extends KelpBlock {
 
     public NamekKelpHead(Properties properties) {

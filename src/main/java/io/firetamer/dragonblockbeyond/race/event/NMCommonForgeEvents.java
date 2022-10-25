@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.EntityEvent;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 
 public class NMCommonForgeEvents {
     public static void register() {
@@ -48,7 +48,7 @@ public class NMCommonForgeEvents {
         }
     }
 
-    private static void onEntityJoinWorld(EntityJoinWorldEvent event) {
+    private static void onEntityJoinWorld(EntityJoinLevelEvent event) {
         if (event.getEntity() instanceof Player entity) {
             RaceHolderAttacher.getCurrentRace(entity).ifPresent(currentRace -> currentRace.setMaxRaceHealth(entity));
         }

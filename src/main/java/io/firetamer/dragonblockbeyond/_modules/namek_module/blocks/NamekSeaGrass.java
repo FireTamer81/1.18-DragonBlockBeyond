@@ -18,6 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class NamekSeaGrass extends SeagrassBlock {
 
     public NamekSeaGrass(Properties properties) {

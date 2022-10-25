@@ -21,6 +21,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'org.spongepowered.mixin'
 
+//Automatic Mappings Updater (Thank you Shrimp!)
+apply from: 'https://raw.githubusercontent.com/SizableShrimp/ForgeUpdatesRemapper/main/remapper.gradle'
+
 
 version = '0.1.0'
 group = 'io.firetamer.dragonblockbeyond' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -30,7 +33,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: "1.19.2"
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -96,18 +99,30 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { //TOP
+    maven {
+
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }   // location of the maven that hosts JEI files
+    maven {
+
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }   // location of a maven mirror for JEI files, as a fallback
+
+    maven {
         url "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
-    }
+    }   //TOP
     maven {
         name = '100Media'
         url = 'https://maven.100media.dev/'
     }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
+
 mixin {
     add sourceSets.main, "${mod_id}.refmap.json"
 
@@ -115,17 +130,29 @@ mixin {
 
     debug.export = true
 }
+
 configurations {
     implementation.extendsFrom shadow
 }
+
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.54'
+    minecraft 'net.minecraftforge:forge:1.19.2-43.1.1'
 
     // Mixin annotation processor - generates the refmap
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 
-    implementation fg.deobf("curse.maven:top-245211:3671753")
-    implementation fg.deobf("software.bernie.geckolib:geckolib-${geckolib_version}")
+    // compile against the JEI API but do not include it at runtime
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
+
+    implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
+        transitive = false
+    })
+
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.21')
+
     // Capability Syncer
     shadow fg.deobf("dev._100media.capabilitysyncer:capabilitysyncer:${capabilitysyncer_version}")
 }

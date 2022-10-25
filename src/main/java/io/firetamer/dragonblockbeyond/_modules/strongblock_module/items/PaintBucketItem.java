@@ -27,6 +27,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import net.minecraft.world.item.Item.Properties;
+
 public class PaintBucketItem extends Item {
     public PaintBucketItem() {
         super(new Properties().defaultDurability(500).setNoRepair());

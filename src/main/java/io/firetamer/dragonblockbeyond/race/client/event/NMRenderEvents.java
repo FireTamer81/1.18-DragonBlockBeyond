@@ -60,12 +60,12 @@ public class NMRenderEvents {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onRenderPlayerPre(RenderPlayerEvent.Pre event) {
-        if (renderingPlayerPre || (event.getPlayer().isSpectator()))
+        if (renderingPlayerPre || (event.getEntity().isSpectator()))
             return;
 
         renderingPlayerPre = true;
         float partialTick = event.getPartialTick();
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         PoseStack poseStack = event.getPoseStack();
 
         RaceHolderAttacher.getCurrentRace(player).ifPresent(currentRace -> {

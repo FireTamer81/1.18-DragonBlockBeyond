@@ -274,7 +274,7 @@ public abstract class V2_AbstractWindow extends Screen {
     }
 
     @SubscribeEvent
-    public void onMouseRelease(ScreenEvent.MouseReleasedEvent.Pre event) {
+    public void onMouseRelease(ScreenEvent.MouseButtonReleased.Pre event) {
         processClick(true, event.getButton());
     }
 

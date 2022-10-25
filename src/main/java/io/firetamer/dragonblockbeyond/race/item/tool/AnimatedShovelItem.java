@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.Tier;
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
@@ -42,10 +42,10 @@ public class AnimatedShovelItem extends ShovelItem implements IAnimatable, IAnim
     }
 
     @Override
-    public void initializeClient(Consumer<IItemRenderProperties> consumer) {
-        consumer.accept(new IItemRenderProperties() {
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(new IClientItemExtensions() {
                             @Override
-                            public BlockEntityWithoutLevelRenderer getItemStackRenderer() {
+                            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
                                 return new GeoToolRenderer<>();
                             }
                         }

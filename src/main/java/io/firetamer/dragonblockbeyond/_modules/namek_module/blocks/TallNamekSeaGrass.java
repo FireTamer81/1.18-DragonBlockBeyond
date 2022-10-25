@@ -14,6 +14,8 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class TallNamekSeaGrass extends TallSeagrassBlock {
 
     public TallNamekSeaGrass(Properties properties) {

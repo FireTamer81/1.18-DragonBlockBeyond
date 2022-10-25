@@ -18,6 +18,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
+import net.minecraft.world.item.Item.Properties;
+
 public class WarenaiBlockItem extends BlockItem {
     public WarenaiBlockItem(Block blockIn) {
         super(blockIn, new Properties());

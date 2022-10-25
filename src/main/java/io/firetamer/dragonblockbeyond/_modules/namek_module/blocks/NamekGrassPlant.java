@@ -12,6 +12,9 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Random;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.OffsetType;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class NamekGrassPlant extends BushBlock {
     public NamekGrassPlant(Properties properties) {
         super(properties);

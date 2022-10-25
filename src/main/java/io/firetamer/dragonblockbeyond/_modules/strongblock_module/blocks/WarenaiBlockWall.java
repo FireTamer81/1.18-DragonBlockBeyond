@@ -20,6 +20,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.HitResult;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class WarenaiBlockWall extends WallBlock implements EntityBlock, SimpleWaterloggedBlock {
     public static final EnumProperty<WarenaiBlockConditionEnum> BLOCK_CONDITION = WarenaiBlockStateProperties.BLOCK_CONDITION;
     public static final EnumProperty<WarenaiBlockPatternEnum> BLOCK_PATTERN = WarenaiBlockStateProperties.BLOCK_PATTERN;

@@ -601,7 +601,7 @@ public class ContentBox extends ContentBoxBehaviour implements WidgetEventListen
     }
 
     @SubscribeEvent
-    public void onMouseRelease(ScreenEvent.MouseReleasedEvent.Pre event) {
+    public void onMouseRelease(ScreenEvent.MouseButtonReleased.Pre event) {
         processClick(true, event.getButton());
     }
 

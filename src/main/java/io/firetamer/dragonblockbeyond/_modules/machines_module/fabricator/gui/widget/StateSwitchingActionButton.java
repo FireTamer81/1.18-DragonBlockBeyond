@@ -8,6 +8,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 
+import net.minecraft.client.gui.components.Button.OnPress;
+
 public class StateSwitchingActionButton extends Button {
     private int topLeftPosX, topLeftPosY, width, height;
     private int texTopLeftX, texTopLeftY, texWidth, texHeight;

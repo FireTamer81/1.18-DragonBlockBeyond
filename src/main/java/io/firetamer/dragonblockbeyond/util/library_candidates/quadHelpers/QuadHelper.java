@@ -4,7 +4,7 @@ import com.mojang.math.Matrix4f;
 import com.mojang.math.Transformation;
 import com.mojang.math.Vector3f;
 import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraftforge.client.model.QuadTransformer;
+import net.minecraftforge.client.model.IQuadTransformer;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,26 +12,26 @@ import java.util.stream.Collectors;
 
 public class QuadHelper {
     public static BakedQuad scaleQuad(BakedQuad quad, float scaleX, float scaleY, float scaleZ) {
-        QuadTransformer transformer = new QuadTransformer(new Transformation(Matrix4f.createScaleMatrix(scaleX, scaleY, scaleZ)));
+        IQuadTransformer transformer = new IQuadTransformer(new Transformation(Matrix4f.createScaleMatrix(scaleX, scaleY, scaleZ)));
         return transformer.processOne(quad);
     }
 
     public static List<BakedQuad> scaleModel(List<BakedQuad> quads, float scaleX, float scaleY, float scaleZ) {
-        QuadTransformer transformer = new QuadTransformer(new Transformation(Matrix4f.createScaleMatrix(scaleX, scaleY, scaleZ)));
+        IQuadTransformer transformer = new IQuadTransformer(new Transformation(Matrix4f.createScaleMatrix(scaleX, scaleY, scaleZ)));
         return transformer.processMany(quads);
     }
 
     public static BakedQuad rotateQuad(BakedQuad quads, int rotX, int rotY, int rotZ) {
         Matrix4f matrix4f = new Matrix4f();
         matrix4f.setIdentity();
-        QuadTransformer transformer = new QuadTransformer(new Transformation(rotateMatrix(matrix4f, rotX, rotY, rotZ)));
+        IQuadTransformer transformer = new IQuadTransformer(new Transformation(rotateMatrix(matrix4f, rotX, rotY, rotZ)));
         return transformer.processOne(quads);
     }
 
     public static List<BakedQuad> rotateModel(List<BakedQuad> quads, int rotX, int rotY, int rotZ) {
         Matrix4f matrix4f = new Matrix4f();
         matrix4f.setIdentity();
-        QuadTransformer transformer = new QuadTransformer(new Transformation(rotateMatrix(matrix4f, rotX, rotY, rotZ)));
+        IQuadTransformer transformer = new IQuadTransformer(new Transformation(rotateMatrix(matrix4f, rotX, rotY, rotZ)));
         return transformer.processMany(quads);
     }
 

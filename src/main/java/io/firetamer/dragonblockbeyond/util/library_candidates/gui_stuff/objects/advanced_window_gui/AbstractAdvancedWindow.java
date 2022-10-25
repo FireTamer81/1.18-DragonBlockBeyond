@@ -10,9 +10,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.client.event.RenderGuiOverlayEvent;
 import net.minecraftforge.client.event.ScreenEvent;
-import net.minecraftforge.client.gui.ForgeIngameGui;
+import net.minecraftforge.client.gui.overlay.ForgeGui;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -129,8 +129,8 @@ public abstract class AbstractAdvancedWindow extends Screen {
      * Renders the mouse
      */
     @SubscribeEvent
-    public static void overlayEvent(RenderGameOverlayEvent.PreLayer event) {
-        if (event.getOverlay() != ForgeIngameGui.CROSSHAIR_ELEMENT) return;
+    public static void overlayEvent(RenderGuiOverlayEvent.Pre event) {
+        if (event.getOverlay() != ForgeGui.CROSSHAIR_ELEMENT) return;
 
         if (Minecraft.getInstance().screen instanceof AbstractAdvancedWindow) {
             event.setCanceled(true);
@@ -142,7 +142,7 @@ public abstract class AbstractAdvancedWindow extends Screen {
 
 
     @SubscribeEvent
-    public void onMouseScroll(ScreenEvent.MouseScrollEvent.Pre event) {
+    public void onMouseScroll(ScreenEvent.MouseScrolled.Pre event) {
         if (Minecraft.getInstance().screen instanceof AbstractAdvancedWindow) {
             if (!isScrollInverted()) {
                 if (event.getScrollDelta() < 0) {
@@ -209,7 +209,7 @@ public abstract class AbstractAdvancedWindow extends Screen {
     }
 
     @SubscribeEvent
-    public void onMouseRelease(ScreenEvent.MouseReleasedEvent.Pre event) {
+    public void onMouseRelease(ScreenEvent.MouseButtonReleased.Pre event) {
         processClick(true, event.getButton());
     }
 

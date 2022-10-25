@@ -9,6 +9,8 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Supplier;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class WarenaiGlassStairsBlock extends WarenaiBlockStairs {
 
     public WarenaiGlassStairsBlock(Supplier<BlockState> state) {
